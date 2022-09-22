@@ -1,0 +1,23 @@
+{
+    "name": "Lisk",
+    "website": "https://lisk.com/",
+    "description": "Blockchain application platform",
+    "explorer": "https://lisk.observer/",
+    "symbol": "LSK",
+    "type": "coin",
+    "status": "active",
+    "links": [
+        {
+            "name": "github",
+            "url": "https://github.com/LiskHQ"
+        },
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/LiskHQ"
+        },
+        {
+            "name": "reddit",
+            "url": "https://www.reddit.com/r/Lisk"
+        }
+    ]
+}
