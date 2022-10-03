@@ -7,6 +7,9 @@
   "symbol": "BTC",
   "type": "coin",
   "decimals": 8,
+  "minBalance": 0.00001,
+  "cryptoTransferDecimals": 8,
+  "minTransferAmount": 0.00000546,
   "status": "active",
   "links": [
       {

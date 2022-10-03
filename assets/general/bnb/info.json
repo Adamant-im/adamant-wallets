@@ -6,6 +6,7 @@
     "symbol": "BNB",
     "type": "coin",
     "decimals": 8,
+    "cryptoTransferDecimals": 6,
     "status": "active",
     "links": [
         {

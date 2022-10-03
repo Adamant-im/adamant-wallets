@@ -6,6 +6,7 @@
     "symbol": "USDS",
     "type": "token",
     "decimals": 6,
+    "cryptoTransferDecimals": 6,
     "status": "active",
     "links": [
         {

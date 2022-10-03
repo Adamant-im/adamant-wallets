@@ -5,6 +5,8 @@
     "explorer": "https://explorer.adamant.im/",
     "symbol": "ADM",
     "type": "coin",
+    "decimals": 8,
+    "cryptoTransferDecimals": 8,
     "status": "active",
     "links": [
         {

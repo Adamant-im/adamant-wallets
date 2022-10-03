@@ -6,6 +6,7 @@
     "symbol": "ETH",
     "type": "coin",
     "decimals": 18,
+    "cryptoTransferDecimals": 6,
     "status": "active",
     "links": [
         {
