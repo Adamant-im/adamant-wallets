@@ -5,8 +5,10 @@
     "explorer": "https://lisk.observer/",
     "symbol": "LSK",
     "type": "coin",
+    "decimals": 8,
     "minBalance": 0.05,
     "cryptoTransferDecimals": 8,
+    "fixedFee": 0.00142,
     "status": "active",
     "links": [
         {

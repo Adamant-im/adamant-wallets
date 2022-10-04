@@ -7,6 +7,7 @@
     "type": "coin",
     "decimals": 8,
     "cryptoTransferDecimals": 8,
+    "fixedFee": 0.5,
     "status": "active",
     "links": [
         {
