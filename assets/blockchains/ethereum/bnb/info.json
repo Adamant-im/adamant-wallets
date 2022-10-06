@@ -1,9 +1,9 @@
 {
-  "name": "BNB",
+  "name": "Binance Coin",
   "symbol": "BNB",
   "type": "ERC20",
   "status": "active",
-  "id": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
+  "contractId": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
   "decimals": 18,
   "explorer": "https://etherscan.io/token/0xB8c77482e45F1F44dE1745F52C74426C631bDD52"
 }

@@ -1,8 +1,8 @@
 {
     "name": "Lisk",
-    "website": "https://lisk.com/",
+    "website": "https://lisk.com",
     "description": "Blockchain application platform",
-    "explorer": "https://lisk.observer/",
+    "explorer": "https://lisk.observer",
     "symbol": "LSK",
     "type": "coin",
     "decimals": 8,

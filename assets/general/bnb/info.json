@@ -1,8 +1,8 @@
 {
     "name": "Binance Coin",
-    "website": "https://www.bnbchain.org/en",
+    "website": "https://www.bnbchain.org",
     "description": "Cryptocurrency that powers the BNB Chain ecosystem",
-    "explorer": "https://explorer.bnbchain.org/",
+    "explorer": "https://explorer.bnbchain.org",
     "symbol": "BNB",
     "type": "coin",
     "decimals": 8,

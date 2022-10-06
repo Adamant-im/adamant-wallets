@@ -1,8 +1,8 @@
 {
-    "name": "Adamant",
+    "name": "Adamant Messenger",
     "website": "https://adamant.im",
     "description": "Decentralized Messenger",
-    "explorer": "https://explorer.adamant.im/",
+    "explorer": "https://explorer.adamant.im",
     "symbol": "ADM",
     "type": "coin",
     "decimals": 8,

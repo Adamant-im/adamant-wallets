@@ -3,7 +3,7 @@
   "symbol": "USDS",
   "type": "ERC20",
   "status": "active",
-  "id": "0xa4bdb11dc0a2bec88d24a3aa1e6bb17201112ebe",
+  "contractId": "0xa4bdb11dc0a2bec88d24a3aa1e6bb17201112ebe",
   "decimals": 6,
   "explorer": "https://etherscan.io/token/0xa4bdb11dc0a2bec88d24a3aa1e6bb17201112ebe"
 }
