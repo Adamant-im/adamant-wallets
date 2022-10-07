@@ -1,17 +1,17 @@
 {
-    "name": "Stably USD",
-    "website": "https://stably.io/usds",
-    "description": "One-to-one U.S. Dollar backed, redeemable stablecoin",
-    "explorer": "https://etherscan.io/token/0xa4bdb11dc0a2bec88d24a3aa1e6bb17201112ebe",
-    "symbol": "USDS",
-    "type": "token",
-    "decimals": 6,
-    "cryptoTransferDecimals": 6,
-    "status": "active",
-    "links": [
-        {
-            "name": "twitter",
-            "url": "https://twitter.com/stably_official"
-        }
-    ]
+  "name": "Stably USD",
+  "website": "https://stably.io/usds",
+  "description": "One-to-one U.S. Dollar backed, redeemable stablecoin",
+  "explorer": "https://etherscan.io/token/0xa4bdb11dc0a2bec88d24a3aa1e6bb17201112ebe",
+  "symbol": "USDS",
+  "type": "token",
+  "decimals": 6,
+  "cryptoTransferDecimals": 6,
+  "status": "active",
+  "links": [
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/stably_official"
+    }
+  ]
 }

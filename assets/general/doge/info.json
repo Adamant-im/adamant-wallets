@@ -11,21 +11,21 @@
   "fixedFee": 1,
   "status": "active",
   "links": [
-      {
-          "name": "github",
-          "url": "https://github.com/dogecoin/dogecoin"
-      },
-      {
-          "name": "twitter",
-          "url": "https://twitter.com/dogecoin"
-      },
-      {
-          "name": "reddit",
-          "url": "https://reddit.com/r/dogecoin"
-      },
-      {
-          "name": "whitepaper",
-          "url": "https://github.com/dogecoin/dogecoin/blob/master/README.md"
-      }
+    {
+      "name": "github",
+      "url": "https://github.com/dogecoin/dogecoin"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/dogecoin"
+    },
+    {
+      "name": "reddit",
+      "url": "https://reddit.com/r/dogecoin"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://github.com/dogecoin/dogecoin/blob/master/README.md"
+    }
   ]
 }

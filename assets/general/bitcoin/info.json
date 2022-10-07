@@ -13,21 +13,21 @@
   "fixedFee": 0.00003153,
   "status": "active",
   "links": [
-      {
-          "name": "github",
-          "url": "https://github.com/bitcoin"
-      },
-      {
-          "name": "twitter",
-          "url": "https://twitter.com/Bitcoin"
-      },
-      {
-          "name": "reddit",
-          "url": "https://reddit.com/r/Bitcoin"
-      },
-      {
-          "name": "whitepaper",
-          "url": "https://bitcoin.org/bitcoin.pdf"
-      }
+    {
+      "name": "github",
+      "url": "https://github.com/bitcoin"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/Bitcoin"
+    },
+    {
+      "name": "reddit",
+      "url": "https://reddit.com/r/Bitcoin"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://bitcoin.org/bitcoin.pdf"
+    }
   ]
 }
