@@ -9,6 +9,7 @@
   "decimals": 8,
   "cryptoTransferDecimals": 8,
   "fixedFee": 1,
+  "qqPrefix": "doge",
   "status": "active",
   "links": [
     {

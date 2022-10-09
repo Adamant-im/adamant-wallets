@@ -9,6 +9,7 @@
   "minBalance": 0.05,
   "cryptoTransferDecimals": 8,
   "fixedFee": 0.00142,
+  "qqPrefix": "lisk",
   "status": "active",
   "links": [
     {

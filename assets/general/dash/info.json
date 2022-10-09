@@ -11,6 +11,7 @@
   "cryptoTransferDecimals": 8,
   "minTransferAmount": 0.00002,
   "fixedFee": 0.0001,
+  "qqPrefix": "dash",
   "status": "active",
   "links": [
     {

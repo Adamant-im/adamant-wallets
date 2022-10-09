@@ -8,6 +8,7 @@
   "decimals": 8,
   "cryptoTransferDecimals": 6,
   "status": "active",
+  "qqPrefix": "ethereum",
   "links": [
     {
       "name": "github",

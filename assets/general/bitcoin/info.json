@@ -11,6 +11,7 @@
   "cryptoTransferDecimals": 8,
   "minTransferAmount": 0.00000546,
   "fixedFee": 0.00003153,
+  "qqPrefix": "bitcoin",
   "status": "active",
   "links": [
     {
