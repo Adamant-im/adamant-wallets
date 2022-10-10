@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.0.3",
   "info": {
     "version": "1.0.0",
     "title": "Swagger Adamant-wallets"
@@ -8,139 +8,117 @@
   "components": {
     "schemas": {
       "TokenGeneral": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TokenGeneral"
+        "type": "object",
+        "required": [
+          "name",
+          "website",
+          "description",
+          "explorer",
+          "symbol",
+          "type",
+          "decimals",
+          "qqPrefix",
+          "status",
+          "links"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
           },
-          {
-            "type": "object",
-            "required": [
-              "name",
-              "website",
-              "description",
-              "explorer",
-              "symbol",
-              "type",
-              "decimals",
-              "qqPrefix",
-              "status",
-              "links"
-            ],
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "website": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },  
-              "explorer": {
-                "type": "string"
-              },
-              "symbol": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "coin",
-                  "ERC20"
-                ]
-              },    
-              "decimals": {
-                "type": "integer"
-              },
-              "minBalance": {
-                "type": "integer"
-              },
-              "cryptoTransferDecimals": {
-                "type": "integer"
-              },
-              "minTransferAmount": {
-                "type": "integer"
-              },
-              "fixedFee": {
-                "type": "integer"
-              },  
-              "qqPrefix": {
-                "type": "string"
-              },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "active",
-                  "disabled"
-                ]
-              },
-              "links": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "url": {
-                      "type": "string"
-                    }
-                  }
+          "website": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "explorer": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["coin", "ERC20"]
+          },
+          "decimals": {
+            "type": "integer"
+          },
+          "minBalance": {
+            "type": "number",
+            "description": "Minimum balance to maintain on a wallet"
+          },
+          "cryptoTransferDecimals": {
+            "type": "integer",
+            "description": "Number of decimal places to send transfers for the different crypto amounts"
+          },
+          "minTransferAmount": {
+            "type": "number",
+            "description": "Minimum transferable amount"
+          },
+          "fixedFee": {
+            "type": "number"
+          },
+          "qqPrefix": {
+            "type": "string",
+            "description": "Used to generate QR codes for wallets like lisk:lskk42c2ut4fmpcxf8swwcpy64fokqmfuzwupjnat"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "disabled"]
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
                 }
-              }  
-            }
-          }
-        ]
-      },
-      "TokenAsset": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TokenAsset"
-          },
-          {
-            "type": "object",
-            "required": [
-              "name",
-              "symbol",
-              "type",
-              "status",
-              "contractId",
-              "decimals",
-              "explorer"
-            ],
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "symbol": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "coin",
-                  "ERC20"
-                ]
-              }, 
-              "status": {
-                "type": "string",
-                "enum": [
-                  "active",
-                  "disabled"
-                ]
-              },
-              "contractId": {
-                "type": "string"
-              },
-              "decimals": {
-                "type": "integer"
-              },
-              "explorer": {
-                "type": "string"
               }
             }
           }
-        ]
+        }
+      },
+      "TokenAsset": {
+        "type": "object",
+        "required": [
+          "name",
+          "symbol",
+          "type",
+          "status",
+          "contractId",
+          "decimals",
+          "explorer"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["coin", "ERC20"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "disabled"]
+          },
+          "contractId": {
+            "type": "string"
+          },
+          "decimals": {
+            "type": "integer"
+          },
+          "explorer": {
+            "type": "string"
+          }
+        }
       }
     }
   }
