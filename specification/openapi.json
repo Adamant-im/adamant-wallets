@@ -4,73 +4,7 @@
     "version": "1.0.0",
     "title": "Swagger Adamant-wallets"
   },
-  "paths": {
-    "/general/{token}": {
-      "get": {
-        "description": "Returns common info on token",
-        "parameters": [
-          {
-            "name": "token",
-            "in": "path",
-            "description": "Name of token to fetch",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "token response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TokenGeneral"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/assets/{blockchain}/{token}": {
-      "get": {
-        "description": "Returns common info on token",
-        "parameters": [
-          {
-            "name": "token",
-            "in": "path",
-            "description": "Name of token to fetch",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "blockchain",
-            "in": "path",
-            "description": "Name of blockchain to fetch token from",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "token response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TokenGeneral"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
+  "paths": {},
   "components": {
     "schemas": {
       "TokenGeneral": {
@@ -109,7 +43,11 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "coin",
+                  "ERC20"
+                ]
               },    
               "decimals": {
                 "type": "integer"
@@ -130,7 +68,11 @@
                 "type": "string"
               },
               "status": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "active",
+                  "disabled"
+                ]
               },
               "links": {
                 "type": "array",
@@ -174,10 +116,18 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "coin",
+                  "ERC20"
+                ]
               }, 
               "status": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "active",
+                  "disabled"
+                ]
               },
               "contractId": {
                 "type": "string"
