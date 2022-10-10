@@ -1,0 +1,197 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger Adamant-wallets"
+  },
+  "paths": {
+    "/general/{token}": {
+      "get": {
+        "description": "Returns common info on token",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "description": "Name of token to fetch",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "token response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenGeneral"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/assets/{blockchain}/{token}": {
+      "get": {
+        "description": "Returns common info on token",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "description": "Name of token to fetch",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "blockchain",
+            "in": "path",
+            "description": "Name of blockchain to fetch token from",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "token response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenGeneral"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TokenGeneral": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TokenGeneral"
+          },
+          {
+            "type": "object",
+            "required": [
+              "name",
+              "website",
+              "description",
+              "explorer",
+              "symbol",
+              "type",
+              "decimals",
+              "qqPrefix",
+              "status",
+              "links"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "website": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },  
+              "explorer": {
+                "type": "string"
+              },
+              "symbol": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },    
+              "decimals": {
+                "type": "integer"
+              },
+              "minBalance": {
+                "type": "integer"
+              },
+              "cryptoTransferDecimals": {
+                "type": "integer"
+              },
+              "minTransferAmount": {
+                "type": "integer"
+              },
+              "fixedFee": {
+                "type": "integer"
+              },  
+              "qqPrefix": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }  
+            }
+          }
+        ]
+      },
+      "TokenAsset": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TokenAsset"
+          },
+          {
+            "type": "object",
+            "required": [
+              "name",
+              "symbol",
+              "type",
+              "status",
+              "contractId",
+              "decimals",
+              "explorer"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "symbol": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }, 
+              "status": {
+                "type": "string"
+              },
+              "contractId": {
+                "type": "string"
+              },
+              "decimals": {
+                "type": "integer"
+              },
+              "explorer": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
