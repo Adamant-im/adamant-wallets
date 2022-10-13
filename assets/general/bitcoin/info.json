@@ -9,7 +9,7 @@
   "minBalance": 0.00001,
   "cryptoTransferDecimals": 8,
   "minTransferAmount": 0.00000546,
-  "fixedFee": 0.00003153,
+  "defaultFee": 0.00003153,
   "qqPrefix": "bitcoin",
   "status": "active",
   "links": [
