@@ -3,6 +3,8 @@
   "website": "https://adamant.im",
   "description": "Decentralized Messenger",
   "explorer": "https://explorer.adamant.im",
+  "explorerTx": "https://explorer.adamant.im/tx/${ID}",
+  "explorerAddress": "https://explorer.adamant.im/address/${ID}",
   "symbol": "ADM",
   "type": "coin",
   "decimals": 8,
