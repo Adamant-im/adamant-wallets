@@ -37,8 +37,8 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 - `type` Coin or token mainly
 - `decimals` Decimal places
 - `cryptoTransferDecimals` Max precision for transactions
-- `minBalance` If the is blockchain limitations on minimum amount for an address
-- `minTransferAmount` If the is blockchain limitations on minimum amount to transfer
+- `minBalance` If there are blockchain limitations on minimum amount for an address
+- `minTransferAmount` If there are blockchain limitations on minimum amount to transfer
 - `fixedFee` If to use fixed tx transfer fee
 - `defaultFee` If tx fee is variable, but an app had not calculated it yet
 - `qqPrefix` QR code prefix for address
@@ -46,6 +46,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 - `createCoin` If an app should create a coin itself. `false` means use info only for blockchains.
 - `consensus` Blockchain consensus type
 - `blockTimeFixed` Fixed block time in ms
+- `blockTimeAvg` Average block time in ms
 - `nodes` Node links for API
 - `links` Additional project links
 
