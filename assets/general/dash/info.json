@@ -5,6 +5,7 @@
   "explorer": "https://dashblockexplorer.com",
   "explorerTx": "https://dashblockexplorer.com/tx/${ID}",
   "explorerAddress": "https://dashblockexplorer.com/address/${ID}",
+  "regexAddress": "/^[7X][1-9A-HJ-NP-Za-km-z]{33,}$/",
   "research": "https://research.binance.com/en/projects/dash",
   "symbol": "DASH",
   "type": "coin",

@@ -5,6 +5,7 @@
   "explorer": "https://etherscan.io",
   "explorerTx": "https://etherscan.io/tx/${ID}",
   "explorerAddress": "https://etherscan.io/address/${ID}",
+  "regexAddress": "/^U([0-9]{6,})$/i",
   "symbol": "ETH",
   "type": "coin",
   "decimals": 18,
