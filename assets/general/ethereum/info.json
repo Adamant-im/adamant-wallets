@@ -13,6 +13,7 @@
   "status": "active",
   "qqPrefix": "ethereum",
   "createCoin": true,
+  "blockTime": 12000,
   "nodes": [
     {
       "url": "https://ethnode1.adamant.im",

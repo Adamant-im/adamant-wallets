@@ -17,6 +17,7 @@
   "qqPrefix": "dash",
   "status": "active",
   "createCoin": true,
+  "blockTimeAvg": 160000,
   "nodes": [
     { "url": "https://dashnode1.adamant.im" }
   ],
