@@ -69,3 +69,15 @@ Transaction considered as new or old depending on how much time passed from in-c
 ``` js
 export const isNew = (admTransferTimestamp) => (Date.now() - admTransferTimestamp) < newPendingTxFetchAttempts * newPendingTxFetchInterval
 ```
+
+## Icons
+
+Coin icons/images files are stored `\general\${token_name}` folders:
+
+- `icon.svg` Vector image for PWA
+- `icon_muted_55.png` @x1 resolution for iOS app, muted
+- `icon_muted_110.png` @x2 resolution for iOS app, muted
+- `icon_muted_165.png` @x3 resolution for iOS app, muted
+- `icon_original_165.png` @x3 resolution for iOS app, original color
+
+Muted means image with reduced saturation, about -30%.
