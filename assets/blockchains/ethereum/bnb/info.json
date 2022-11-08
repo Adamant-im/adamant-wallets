@@ -1,7 +1,6 @@
 {
   "name": "Binance Coin",
   "symbol": "BNB",
-  "type": "ERC20",
   "status": "active",
   "contractId": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
   "decimals": 18,
