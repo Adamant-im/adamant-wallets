@@ -14,6 +14,35 @@
   "qqPrefix": "adm",
   "status": "active",
   "createCoin": true,
+  "nodes": [
+    {
+      "url": "https://clown.adamant.im"
+    },
+    {
+      "url": "https://lake.adamant.im"
+    },
+    {
+      "url": "https://endless.adamant.im"
+    },
+    {
+      "url": "https://bid.adamant.im"
+    },
+    {
+      "url": "https://unusual.adamant.im"
+    },
+    {
+      "url": "https://debate.adamant.im"
+    },
+    {
+      "url": "http://23.226.231.225:36666"
+    },
+    {
+      "url": "http://78.47.205.206:36666"
+    },
+    {
+      "url": "http://5.161.53.74:36666"
+    }
+  ],
   "links": [
     {
       "name": "github",

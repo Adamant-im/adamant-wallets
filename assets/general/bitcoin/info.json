@@ -16,6 +16,10 @@
   "qqPrefix": "bitcoin",
   "status": "active",
   "createCoin": true,
+  "nodes": [
+    { "url": "https://btcnode1.adamant.im" },
+    { "url": "https://btcnode2.adamant.im" }
+  ],
   "links": [
     {
       "name": "github",

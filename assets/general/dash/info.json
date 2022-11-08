@@ -17,6 +17,9 @@
   "qqPrefix": "dash",
   "status": "active",
   "createCoin": true,
+  "nodes": [
+    { "url": "https://dashnode1.adamant.im" }
+  ],
   "links": [
     {
       "name": "github",

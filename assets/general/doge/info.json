@@ -15,6 +15,10 @@
   "qqPrefix": "doge",
   "status": "active",
   "createCoin": true,
+  "nodes": [
+    { "url": "https://dogenode1.adamant.im" },
+    { "url": "https://dogenode2.adamant.im" }
+  ],
   "links": [
     {
       "name": "github",
