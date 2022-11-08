@@ -14,6 +14,7 @@
   "defaultFee": 0.00003153,
   "qqPrefix": "bitcoin",
   "status": "active",
+  "createCoin": true,
   "links": [
     {
       "name": "github",

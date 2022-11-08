@@ -15,6 +15,7 @@
   "fixedFee": 0.0001,
   "qqPrefix": "dash",
   "status": "active",
+  "createCoin": true,
   "links": [
     {
       "name": "github",

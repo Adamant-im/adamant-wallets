@@ -13,6 +13,7 @@
   "defaultFee": 0.00142,
   "qqPrefix": "lisk",
   "status": "active",
+  "createCoin": true,
   "links": [
     {
       "name": "github",

@@ -13,6 +13,7 @@
   "fixedFee": 1,
   "qqPrefix": "doge",
   "status": "active",
+  "createCoin": true,
   "links": [
     {
       "name": "github",

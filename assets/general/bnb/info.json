@@ -9,6 +9,7 @@
   "cryptoTransferDecimals": 6,
   "status": "active",
   "qqPrefix": "ethereum",
+  "createCoin": false,
   "links": [
     {
       "name": "github",
