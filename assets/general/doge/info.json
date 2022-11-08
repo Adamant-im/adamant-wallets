@@ -15,6 +15,7 @@
   "qqPrefix": "doge",
   "status": "active",
   "createCoin": true,
+  "consensus": "PoW",
   "blockTimeAvg": 60000,
   "nodes": [
     { "url": "https://dogenode1.adamant.im" },

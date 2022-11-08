@@ -15,6 +15,7 @@
   "qqPrefix": "lisk",
   "status": "active",
   "createCoin": true,
+  "consensus": "dPoS",
   "blockTime": 10000,
   "nodes": [
     { "url": "https://lisknode3.adamant.im" },

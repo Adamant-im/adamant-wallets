@@ -13,6 +13,7 @@
   "status": "active",
   "qqPrefix": "ethereum",
   "createCoin": true,
+  "consensus": "PoS",
   "blockTime": 12000,
   "nodes": [
     {

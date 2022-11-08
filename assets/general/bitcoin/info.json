@@ -16,6 +16,7 @@
   "qqPrefix": "bitcoin",
   "status": "active",
   "createCoin": true,
+  "consensus": "PoW",
   "blockTimeAvg": 600000,
   "nodes": [
     { "url": "https://btcnode1.adamant.im" },

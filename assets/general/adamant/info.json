@@ -14,6 +14,7 @@
   "qqPrefix": "adm",
   "status": "active",
   "createCoin": true,
+  "consensus": "dPoS",
   "blockTime": 5000,
   "nodes": [
     {
