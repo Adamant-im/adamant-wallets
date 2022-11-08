@@ -24,6 +24,7 @@
   "registeredTxFetchInterval": 30000,
   "newPendingTxFetchAttempts": 20,
   "oldPendingTxFetchAttempts": 3,
+  "txConsistencyMaxTime": 800000,
   "nodes": [
     { "url": "https://dashnode1.adamant.im" }
   ],
