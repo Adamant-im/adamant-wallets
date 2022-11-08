@@ -7,7 +7,6 @@
   "type": "token",
   "decimals": 6,
   "cryptoTransferDecimals": 6,
-  "qqPrefix": "ethereum",
   "status": "active",
   "createCoin": false,
   "links": [
