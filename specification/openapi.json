@@ -14,58 +14,144 @@
           "website",
           "description",
           "explorer",
+          "explorerTx",
+          "explorerAddress",
+          "regexAddress",
           "symbol",
           "type",
           "decimals",
           "qqPrefix",
           "status",
-          "links"
+          "links",
+          "createCoin",
+          "consensus"
         ],
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "Readable coin name"
           },
           "website": {
-            "type": "string"
+            "type": "string",
+            "description": "Project website"
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "description": "Short description"
           },
           "explorer": {
-            "type": "string"
+            "type": "string",
+            "description": "Explorer url"
+          },
+          "explorerTx": {
+            "type": "string",
+            "description": "URL to receive tx info"
+          },
+          "explorerAddress": {
+            "type": "string",
+            "description": "URL to receive address info"
+          },
+          "regexAddress": {
+            "type": "string",
+            "description": "Regex to validate coin address"
+          },
+          "research": {
+            "type": "string",
+            "description": "Research url"
           },
           "symbol": {
-            "type": "string"
+            "type": "string",
+            "description": "Coin ticker"
           },
           "type": {
             "type": "string",
-            "enum": ["coin", "ERC20"]
+            "enum": ["coin", "ERC20"],
+            "description": "Coin or token mainly"
           },
           "decimals": {
-            "type": "integer"
-          },
-          "minBalance": {
-            "type": "number",
-            "description": "Minimum balance to maintain on a wallet"
+            "type": "integer",
+            "description": "Decimal places"
           },
           "cryptoTransferDecimals": {
             "type": "integer",
-            "description": "Number of decimal places to send transfers for the different crypto amounts"
+            "description": "Max precision for transactions"
+          },
+          "minBalance": {
+            "type": "number",
+            "description": "If there are blockchain limitations on minimum amount for an address"
           },
           "minTransferAmount": {
             "type": "number",
-            "description": "Minimum transferable amount"
+            "description": "If there are blockchain limitations on minimum amount to transfer"
           },
           "fixedFee": {
-            "type": "number"
+            "type": "number",
+            "description": "If to use fixed tx transfer fee"
+          },
+          "defaultFee": {
+            "type": "number",
+            "description": "If tx fee is variable, but an app had not calculated it yet"
           },
           "qqPrefix": {
             "type": "string",
-            "description": "Used to generate QR codes for wallets like lisk:lskk42c2ut4fmpcxf8swwcpy64fokqmfuzwupjnat"
+            "description": "QR code prefix for address"
           },
           "status": {
             "type": "string",
-            "enum": ["active", "disabled"]
+            "enum": ["active", "disabled"],
+            "description": "If an app should process a coin"
+          },
+          "createCoin": {
+            "type": "boolean",
+            "description": "If an app should create a coin itself. false means use info only for blockchains."
+          },
+          "consensus": {
+            "type": "string",
+            "description": "Blockchain consensus type"
+          },
+          "blockTimeFixed": {
+            "type": "number",
+            "description": "Fixed block time in ms"
+          },
+          "blockTimeAvg": {
+            "type": "number",
+            "description": "Average block time in ms"
+          },
+          "newPendingTxFetchInterval": {
+            "type": "number",
+            "description": "Time in ms between fetching Tx when its current status is Pending for new transactions"
+          },
+          "oldPendingTxFetchInterval": {
+            "type": "number",
+            "description": "Time in ms between fetching Tx when its current status is Pending for old transactions"
+          },
+          "registeredTxFetchInterval": {
+            "type": "number",
+            "description": "Time in ms between fetching Tx when its current status is Registered"
+          },
+          "newPendingTxFetchAttempts": {
+            "type": "number",
+            "description": "Attempts to fetch Tx when its current status is Pending for new transactions"
+          },
+          "oldPendingTxFetchAttempts": {
+            "type": "number",
+            "description": "Attempts to fetch Tx when its current status is Pending for old transactions"
+          },
+          "txConsistencyMaxTime": {
+            "type": "number",
+            "description": "Time in ms when difference between in-chat transfer and Tx timestamp considered as acceptable"
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Node links for API"
           },
           "links": {
             "type": "array",
@@ -79,7 +165,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "description": "Additional project links"
           }
         }
       },
@@ -116,6 +203,30 @@
             "type": "integer"
           },
           "explorer": {
+            "type": "string"
+          }
+        }
+      },
+      "Blockchain": {
+        "type": "object",
+        "required": [
+          "blockchain",
+          "type",
+          "mainCoin",
+          "fees"
+        ],
+        "properties": {
+          "blockchain": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["coin", "ERC20"]
+          },
+          "mainCoin": {
+            "type": "string"
+          },
+          "fees": {
             "type": "string"
           }
         }
