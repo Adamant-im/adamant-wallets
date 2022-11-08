@@ -14,7 +14,7 @@
   "qqPrefix": "ethereum",
   "createCoin": true,
   "consensus": "PoS",
-  "blockTime": 12000,
+  "blockTimeFixed": 12000,
   "newPendingTxFetchInterval": 4000,
   "oldPendingTxFetchInterval": 3000,
   "registeredTxFetchInterval": 5000,

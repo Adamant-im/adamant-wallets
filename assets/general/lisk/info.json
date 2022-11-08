@@ -16,7 +16,7 @@
   "status": "active",
   "createCoin": true,
   "consensus": "dPoS",
-  "blockTime": 10000,
+  "blockTimeFixed": 10000,
   "newPendingTxFetchInterval": 3000,
   "oldPendingTxFetchInterval": 3000,
   "registeredTxFetchInterval": 5000,
