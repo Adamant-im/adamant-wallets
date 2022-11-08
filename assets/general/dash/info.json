@@ -19,6 +19,11 @@
   "createCoin": true,
   "consensus": "PoW",
   "blockTimeAvg": 160000,
+  "newPendingTxFetchInterval": 5000,
+  "oldPendingTxFetchInterval": 3000,
+  "registeredTxFetchInterval": 30000,
+  "newPendingTxFetchAttempts": 20,
+  "oldPendingTxFetchAttempts": 3,
   "nodes": [
     { "url": "https://dashnode1.adamant.im" }
   ],

@@ -16,6 +16,11 @@
   "createCoin": true,
   "consensus": "dPoS",
   "blockTime": 5000,
+  "newPendingTxFetchInterval": 3000,
+  "oldPendingTxFetchInterval": 3000,
+  "registeredTxFetchInterval": 3000,
+  "newPendingTxFetchAttempts": 5,
+  "oldPendingTxFetchAttempts": 3,
   "nodes": [
     {
       "url": "https://clown.adamant.im"

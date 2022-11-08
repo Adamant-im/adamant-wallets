@@ -17,6 +17,11 @@
   "createCoin": true,
   "consensus": "dPoS",
   "blockTime": 10000,
+  "newPendingTxFetchInterval": 3000,
+  "oldPendingTxFetchInterval": 3000,
+  "registeredTxFetchInterval": 5000,
+  "newPendingTxFetchAttempts": 10,
+  "oldPendingTxFetchAttempts": 3,
   "nodes": [
     { "url": "https://lisknode3.adamant.im" },
     { "url": "https://lisknode4.adamant.im" }

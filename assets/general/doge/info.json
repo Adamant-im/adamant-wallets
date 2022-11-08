@@ -17,6 +17,11 @@
   "createCoin": true,
   "consensus": "PoW",
   "blockTimeAvg": 60000,
+  "newPendingTxFetchInterval": 5000,
+  "oldPendingTxFetchInterval": 3000,
+  "registeredTxFetchInterval": 20000,
+  "newPendingTxFetchAttempts": 20,
+  "oldPendingTxFetchAttempts": 3,
   "nodes": [
     { "url": "https://dogenode1.adamant.im" },
     { "url": "https://dogenode2.adamant.im" }

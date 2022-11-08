@@ -18,6 +18,11 @@
   "createCoin": true,
   "consensus": "PoW",
   "blockTimeAvg": 600000,
+  "newPendingTxFetchInterval": 10000,
+  "oldPendingTxFetchInterval": 3000,
+  "registeredTxFetchInterval": 40000,
+  "newPendingTxFetchAttempts": 20,
+  "oldPendingTxFetchAttempts": 3,
   "nodes": [
     { "url": "https://btcnode1.adamant.im" },
     { "url": "https://btcnode2.adamant.im" }
