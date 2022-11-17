@@ -68,7 +68,9 @@ To help apps with updating statuses, additional fields are introduced:
 Transaction considered as new or old depending on how much time passed from in-chat transfer.
 
 ``` js
-export const isNew = (admTransferTimestamp) => (Date.now() - admTransferTimestamp) < newPendingTxFetchAttempts * newPendingTxFetchInterval
+export const isNew = (admTransferTimestamp) => {
+  return (Date.now() - admTransferTimestamp) < newPendingTxFetchAttempts * newPendingTxFetchInterval
+}
 ```
 
 ## Icons
