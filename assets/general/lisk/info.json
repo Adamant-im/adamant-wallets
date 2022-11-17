@@ -30,7 +30,7 @@
   "serviceNodes": [
     { "url": "https://liskservice3.adamant.im" },
     { "url": "https://liskservice4.adamant.im" }
-  ],  
+  ],
   "links": [
     {
       "name": "github",
@@ -42,7 +42,7 @@
     },
     {
       "name": "reddit",
-      "url": "https://www.reddit.com/r/Lisk"
+      "url": "https://reddit.com/r/Lisk"
     }
   ]
 }
