@@ -15,11 +15,13 @@
   "createCoin": true,
   "consensus": "PoS",
   "blockTimeFixed": 12000,
-  "newPendingTxFetchInterval": 4000,
-  "oldPendingTxFetchInterval": 3000,
-  "registeredTxFetchInterval": 5000,
-  "newPendingTxFetchAttempts": 15,
-  "oldPendingTxFetchAttempts": 3,
+  "txFetchInfo": {
+    "newPendingTxFetchInterval": 4000,
+    "oldPendingTxFetchInterval": 3000,
+    "registeredTxFetchInterval": 5000,
+    "newPendingTxFetchAttempts": 15,
+    "oldPendingTxFetchAttempts": 3
+  },
   "txConsistencyMaxTime": 1200000,
   "nodes": [
     {

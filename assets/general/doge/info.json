@@ -17,11 +17,13 @@
   "createCoin": true,
   "consensus": "PoW",
   "blockTimeAvg": 60000,
-  "newPendingTxFetchInterval": 5000,
-  "oldPendingTxFetchInterval": 3000,
-  "registeredTxFetchInterval": 20000,
-  "newPendingTxFetchAttempts": 20,
-  "oldPendingTxFetchAttempts": 3,
+  "txFetchInfo": {
+    "newPendingTxFetchInterval": 5000,
+    "oldPendingTxFetchInterval": 3000,
+    "registeredTxFetchInterval": 20000,
+    "newPendingTxFetchAttempts": 20,
+    "oldPendingTxFetchAttempts": 3
+  },
   "txConsistencyMaxTime": 900000,
   "nodes": [
     { "url": "https://dogenode1.adamant.im" },

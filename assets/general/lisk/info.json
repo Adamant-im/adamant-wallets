@@ -17,11 +17,13 @@
   "createCoin": true,
   "consensus": "dPoS",
   "blockTimeFixed": 10000,
-  "newPendingTxFetchInterval": 3000,
-  "oldPendingTxFetchInterval": 3000,
-  "registeredTxFetchInterval": 5000,
-  "newPendingTxFetchAttempts": 10,
-  "oldPendingTxFetchAttempts": 3,
+  "txFetchInfo": {
+    "newPendingTxFetchInterval": 3000,
+    "oldPendingTxFetchInterval": 3000,
+    "registeredTxFetchInterval": 5000,
+    "newPendingTxFetchAttempts": 10,
+    "oldPendingTxFetchAttempts": 3
+  },
   "txConsistencyMaxTime": 60000,
   "nodes": [
     { "url": "https://lisknode3.adamant.im" },
