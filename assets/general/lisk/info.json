@@ -18,11 +18,11 @@
   "consensus": "dPoS",
   "blockTimeFixed": 10000,
   "txFetchInfo": {
-    "newPendingTxFetchInterval": 3000,
-    "oldPendingTxFetchInterval": 3000,
-    "registeredTxFetchInterval": 5000,
-    "newPendingTxFetchAttempts": 10,
-    "oldPendingTxFetchAttempts": 3
+    "newPendingInterval": 3000,
+    "oldPendingInterval": 3000,
+    "registeredInterval": 5000,
+    "newPendingAttempts": 10,
+    "oldPendingAttempts": 3
   },
   "txConsistencyMaxTime": 60000,
   "nodes": [

@@ -20,11 +20,11 @@
   "consensus": "PoW",
   "blockTimeAvg": 160000,
   "txFetchInfo" : {
-    "newPendingTxFetchInterval": 5000,
-    "oldPendingTxFetchInterval": 3000,
-    "registeredTxFetchInterval": 30000,
-    "newPendingTxFetchAttempts": 20,
-    "oldPendingTxFetchAttempts": 3
+    "newPendingInterval": 5000,
+    "oldPendingInterval": 3000,
+    "registeredInterval": 30000,
+    "newPendingAttempts": 20,
+    "oldPendingAttempts": 3
   },
   "txConsistencyMaxTime": 800000,
   "nodes": [
