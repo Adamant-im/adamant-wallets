@@ -24,31 +24,61 @@ Each blockchain in `\blockchains` includes `info.json`, which links to main coin
 
 ## Coin/token info
 
-Coin/token info stored in `\general\${token_name}` folders. Specific blockchain info in `\blockchains\${blockchain_name}` overrides it.
+Coin/token info stored in `\general\${token_name}` folders. Specific blockchain info in `\blockchains\${blockchain_name}` overrides it. For example:
 
-- `name` Readable coin name
-- `website` Project website
-- `description` Short description
-- `explorer` Explorer url
-- `explorerTx` URL to receive tx info
-- `explorerAddress` URL to receive address info
-- `regexAddress` Regex to validate coin address
-- `symbol` Coin ticker
-- `type` Coin or token mainly
-- `decimals` Decimal places
-- `cryptoTransferDecimals` Max precision for transactions
-- `minBalance` If there are blockchain limitations on minimum amount for an address
-- `minTransferAmount` If there are blockchain limitations on minimum amount to transfer
-- `fixedFee` If to use fixed tx transfer fee
-- `defaultFee` If tx fee is variable, but an app had not calculated it yet
-- `qqPrefix` QR code prefix for address
-- `status` If an app should process a coin
-- `createCoin` If an app should create a coin itself. `false` means use info only for blockchains.
-- `consensus` Blockchain consensus type
-- `blockTimeFixed` Fixed block time in ms
-- `blockTimeAvg` Average block time in ms
-- `nodes` Node links for API
-- `links` Additional project links
+```jsonc
+{
+  "name": "Example Coin", // Readable coin name
+  "website": "https://example.com", // Project website URL
+  "description": "Non existing coin", // Short description
+
+  "explorer": "https://explorer.example.com", // Optional. Explorer URL
+  "explorerTx": "https://explorer.example.com/tx/${ID}", // Optional. URL to get tx info
+  "explorerAddress": "https://explorer.example.com/address/${ID}", // Optional.  URL to get address info
+
+  "regexAddress": "/^EC([0-9]{8,})$/i", // Optional. RegEx to validate coin address
+  "symbol": "SYM", // Coin ticker
+  "type": "coin", // "coin" or "token"
+
+  "decimals": 8, // Decimal places
+  "cryptoTransferDecimals": 8, // Max precision for tx
+
+  "minBalance": 0.00001, // Optional. Minimum acceptable amount for an address
+  "minTransferAmount": 0.00000546, // Optional. Minimum acceptable amount for tx
+
+  "fixedFee": 0.5, // Optional. Fixed transfer fee
+
+  // Optional. When the transfer fee is variable, but an app has not yet calculated it
+  "defaultFee": 0.00003153,
+
+  "qqPrefix": "exmpl", // Optional. QR code prefix for an address
+  "status": "active", // "active" or "disabled". Should the coin be processed
+
+  // Should an app itself create the coin or only use the info for the blockchain
+  "createCoin": true,
+
+  "consensus": "dPoS", // Optional. Blockchain consensus type
+  "blockTimeFixed": 5000, // Optional. Fixed block time in ms
+  "blockTimeAvg": 600000, // Optional. Average block time in ms
+
+  // Optional. Node links for API
+  "nodes": [
+    { "url": "https://node.example.com" },
+    { "url": "http://0.0.0.0:36666" }
+  ],
+  // Optional. Additional project links
+  "links": [
+    {
+      "name": "github",
+      "url": "https://github.com/--example"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://example.com/whitepaper.pdf"
+    }
+  ]
+}
+```
 
 ### Info for updating in-chat coin transfer tx statuses
 
