@@ -122,7 +122,7 @@ const isNew = (admTransferTimestamp) => (
 
 ## Icons
 
-Coin icons/images files are stored `\general\${token_name}\images` folders:
+Coin icons/images files are stored `\general\${token_name}\Images` folders:
 
 - `icon.svg` — Vector image for PWA
 - `${token_name}_wallet.png` — @x1 resolution for iOS app
