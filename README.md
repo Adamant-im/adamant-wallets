@@ -122,12 +122,15 @@ const isNew = (admTransferTimestamp) => (
 
 ## Icons
 
-Coin icons/images files are stored `\general\${token_name}` folders:
+Coin icons/images files are stored `\general\${token_name}\images` folders:
 
 - `icon.svg` — Vector image for PWA
-- `icon_muted_55.png` — @x1 resolution for iOS app, muted
-- `icon_muted_110.png` — @x2 resolution for iOS app, muted
-- `icon_muted_165.png` — @x3 resolution for iOS app, muted
-- `icon_original_165.png` — @x3 resolution for iOS app, original color
-
-Muted means image with reduced saturation, about -30%.
+- `${token_name}_wallet.png` — @x1 resolution for iOS app
+- `${token_name}_wallet@2x.png` — @x2 resolution for iOS app
+- `${token_name}_wallet@3x.png` — @x3 resolution for iOS app
+- `${token_name}_wallet_dark.png` — @x1 resolution for iOS app, dark icon. Optional!
+- `${token_name}_wallet_dark@2x.png` — @x2 resolution for iOS app, dark icon. Optional!
+- `${token_name}_wallet_dark@3x.png` — @x3 resolution for iOS app, dark icon. Optional!
+- `${token_name}_notification.png` — @x1 resolution for iOS notification
+- `${token_name}_notification@2x.png` — @x2 resolution for iOS notification
+- `${token_name}_notification@3x.png` — @x3 resolution for iOS notification
