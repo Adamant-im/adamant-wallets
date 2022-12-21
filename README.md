@@ -31,6 +31,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 ```jsonc
 {
   "name": "Example Coin", // Readable coin name
+  "nameShort": "Example", // Optional. Readable coin short name
   "website": "https://example.com", // Project website URL
   "description": "Non existing coin", // Short description
 
