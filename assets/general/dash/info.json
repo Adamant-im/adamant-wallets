@@ -1,0 +1,51 @@
+{
+  "name": "Dash",
+  "website": "https://dash.org",
+  "description": "Dash (DASH) is digital cash designed to offer financial freedom to everyone. Payments are instant, easy and secure, with near-zero fees.",
+  "explorer": "https://dashblockexplorer.com",
+  "explorerTx": "https://dashblockexplorer.com/tx/${ID}",
+  "explorerAddress": "https://dashblockexplorer.com/address/${ID}",
+  "regexAddress": "/^[7X][1-9A-HJ-NP-Za-km-z]{33,}$/",
+  "research": "https://research.binance.com/en/projects/dash",
+  "symbol": "DASH",
+  "type": "coin",
+  "decimals": 8,
+  "minBalance": 0.0001,
+  "cryptoTransferDecimals": 8,
+  "minTransferAmount": 0.00002,
+  "fixedFee": 0.0001,
+  "qqPrefix": "dash",
+  "status": "active",
+  "createCoin": true,
+  "consensus": "PoW",
+  "blockTimeAvg": 160000,
+  "txFetchInfo" : {
+    "newPendingInterval": 5000,
+    "oldPendingInterval": 3000,
+    "registeredInterval": 30000,
+    "newPendingAttempts": 20,
+    "oldPendingAttempts": 3
+  },
+  "txConsistencyMaxTime": 800000,
+  "nodes": [
+    { "url": "https://dashnode1.adamant.im" }
+  ],
+  "links": [
+    {
+      "name": "github",
+      "url": "https://github.com/dashpay/dash"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/Dashpay"
+    },
+    {
+      "name": "reddit",
+      "url": "https://reddit.com/r/dashpay"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://github.com/dashpay/dash/wiki/Whitepaper"
+    }
+  ]
+}
