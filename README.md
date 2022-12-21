@@ -124,7 +124,8 @@ const isNew = (admTransferTimestamp) => (
 
 Coin icons/images files are stored `\general\${token_name}\Images` folders:
 
-- `icon.svg` — Vector image for PWA
+- `icon.svg` — Vector image file
+- `icon.vue` — Vector image vue template for PWA
 - `${token_name}_wallet.png` — @x1 resolution for iOS app
 - `${token_name}_wallet@2x.png` — @x2 resolution for iOS app
 - `${token_name}_wallet@3x.png` — @x3 resolution for iOS app
