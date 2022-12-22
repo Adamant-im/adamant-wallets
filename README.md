@@ -31,6 +31,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 ```jsonc
 {
   "name": "Example Coin", // Readable coin name
+  "nameShort": "Example", // Optional. Readable coin short name
   "website": "https://example.com", // Project website URL
   "description": "Non existing coin", // Short description
 
@@ -122,16 +123,26 @@ const isNew = (admTransferTimestamp) => (
 
 ## Icons
 
-Coin icons/images files are stored `\general\${token_name}\Images` folders:
+Coin icons/images files are stored `\general\${token_name}\Images` folders.
+
+Required:
 
 - `icon.svg` — Vector image file
 - `icon.vue` — Vector image vue template for PWA
-- `${token_name}_wallet.png` — @x1 resolution for iOS app
-- `${token_name}_wallet@2x.png` — @x2 resolution for iOS app
-- `${token_name}_wallet@3x.png` — @x3 resolution for iOS app
-- `${token_name}_wallet_dark.png` — @x1 resolution for iOS app, dark icon. Optional!
-- `${token_name}_wallet_dark@2x.png` — @x2 resolution for iOS app, dark icon. Optional!
-- `${token_name}_wallet_dark@3x.png` — @x3 resolution for iOS app, dark icon. Optional!
-- `${token_name}_notification.png` — @x1 resolution for iOS notification
-- `${token_name}_notification@2x.png` — @x2 resolution for iOS notification
-- `${token_name}_notification@3x.png` — @x3 resolution for iOS notification
+- `${token_name}_wallet.png` — @x1 (55px) resolution for iOS app
+- `${token_name}_wallet@2x.png` — same, @x2 resolution
+- `${token_name}_wallet@3x.png` — same, @x3 resolution
+
+Optional:
+
+- `${token_name}_wallet_dark.png` — @x1 (55px) resolution for iOS app, dark icon
+- `${token_name}_wallet_dark@2x.png` — same, @x2 resolution
+- `${token_name}_wallet_dark@3x.png` — same, @x3 resolution
+- `${token_name}_notification.png` — @x1 (55px) resolution for iOS push notifications
+- `${token_name}_notification@2x.png` — same, @x2 resolution
+- `${token_name}_notification@3x.png` — same, @x3 resolution
+- `${token_name}_wallet_row.png` — @x1 (21px) resolution for iOS app for private key screen
+- `${token_name}_wallet_row@2x.png` — same, @x2 resolution
+- `${token_name}_wallet_row@3x.png` — same, @x3 resolution
+
+If there will be no optional icons, apps will take regular `_wallet` icons.
