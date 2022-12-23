@@ -60,6 +60,9 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   // Should an app itself create the coin or only use the info for the blockchain
   "createCoin": true,
 
+  "defaultVisibility": true, // Optional. To show a coin by default, or hide it
+  "defaultOrder": 0, // Optional. Default order in a wallet list. Coins with the same order are sorted alphabetically. Coins without an order are shown last, alphabetically
+
   "consensus": "dPoS", // Optional. Blockchain consensus type
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms
   "blockTimeAvg": 600000, // Optional. Average block time in ms
