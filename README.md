@@ -61,7 +61,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "createCoin": true,
 
   "defaultVisibility": true, // Optional. To show a coin by default, or hide it
-  "defaultOrder": 0, // Optional. Default order in a wallet list. Coins with the same order are sorted alphabetically. Coins without an order are shown last, alphabetically
+  "defaultOrdinalLevel": 0, // Optional. Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically
 
   "consensus": "dPoS", // Optional. Blockchain consensus type
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms

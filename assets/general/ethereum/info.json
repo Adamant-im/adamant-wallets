@@ -15,7 +15,7 @@
   "qqPrefix": "ethereum",
   "createCoin": true,
   "defaultVisibility": true,
-  "defaultOrder": 20,
+  "defaultOrdinalLevel": 20,
   "consensus": "PoS",
   "blockTimeFixed": 12000,
   "txFetchInfo": {

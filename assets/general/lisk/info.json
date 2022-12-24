@@ -16,7 +16,7 @@
   "status": "active",
   "createCoin": true,
   "defaultVisibility": true,
-  "defaultOrder": 30,
+  "defaultOrdinalLevel": 30,
   "consensus": "dPoS",
   "blockTimeFixed": 10000,
   "txFetchInfo": {
