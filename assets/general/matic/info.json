@@ -1,0 +1,36 @@
+{
+  "name": "Polygon",
+  "website": "https://polygon.technology",
+  "description": "Tokens used to govern and secure the Polygon network and pay transaction fees",
+  "explorer": "https://polygonscan.com",
+  "explorerTx": "https://polygonscan.com/tx/${ID}",
+  "explorerAddress": "https://polygonscan.com/address/${ID}",
+  "explorerContract": "https://polygonscan.com/token/${ID}",
+  "regexAddress": "/^U([0-9]{6,})$/i",
+  "symbol": "MATIC",
+  "type": "coin",
+  "decimals": 18,
+  "cryptoTransferDecimals": 18,
+  "status": "active",
+  "createCoin": true,
+  "consensus": "PoS",
+  "blockTimeAvg": 2250,
+  "links": [
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/0xPolygon"
+    },
+    {
+      "name": "reddit",
+      "url": "https://www.reddit.com/r/0xPolygon"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/maticnetwork"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://github.com/maticnetwork/whitepaper"
+    }
+  ]
+}
