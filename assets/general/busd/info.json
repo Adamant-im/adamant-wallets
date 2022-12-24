@@ -10,6 +10,10 @@
   "createCoin": false,
   "links": [
     {
+      "name": "twitter",
+      "url": "https://twitter.com/PaxosGlobal"
+    },
+    {
       "name": "github",
       "url": "https://github.com/paxosglobal/busd-contract"
     }

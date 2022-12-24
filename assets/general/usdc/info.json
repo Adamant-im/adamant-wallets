@@ -10,12 +10,20 @@
   "createCoin": false,
   "links": [
     {
+      "name": "twitter",
+      "url": "https://twitter.com/centre_io"
+    },
+    {
       "name": "reddit",
       "url": "https://www.reddit.com/r/USDC/"
     },
     {
-      "name": "twitter",
-      "url": "https://twitter.com/centre_io"
+      "name": "github",
+      "url": "https://github.com/centrehq"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://f.hubspotusercontent30.net/hubfs/9304636/PDF/centre-whitepaper.pdf"
     }
   ]
 }
