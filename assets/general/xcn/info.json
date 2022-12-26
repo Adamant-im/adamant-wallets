@@ -1,0 +1,25 @@
+{
+  "name": "Chain",
+  "website": "https://www.chain.com",
+  "description": "Chain is a cloud blockchain infrastructure that enables organizations to build better financial services from the ground up",
+  "symbol": "XCN",
+  "type": "token",
+  "decimals": 18,
+  "cryptoTransferDecimals": 18,
+  "status": "active",
+  "createCoin": false,
+  "links": [
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/Chain"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/Chain"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://assets.chain.com/mkt_site_v2/wp.pdf"
+    }
+  ]
+}
