@@ -12,7 +12,7 @@
   "decimals": 18,
   "cryptoTransferDecimals": 6,
   "status": "active",
-  "createCoin": true,
+  "createCoin": false,
   "consensus": "PoS",
   "blockTimeFixed": 1100,
   "links": [
