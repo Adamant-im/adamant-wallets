@@ -10,7 +10,7 @@
   "symbol": "INJ",
   "type": "coin",
   "decimals": 18,
-  "cryptoTransferDecimals": 18,
+  "cryptoTransferDecimals": 6,
   "status": "active",
   "createCoin": true,
   "consensus": "PoS",
