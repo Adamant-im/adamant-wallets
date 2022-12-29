@@ -38,6 +38,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "explorer": "https://explorer.example.com", // Optional. Explorer URL
   "explorerTx": "https://explorer.example.com/tx/${ID}", // Optional. URL to get tx info
   "explorerAddress": "https://explorer.example.com/address/${ID}", // Optional. URL to get address info
+  "explorerContract": "https://explorer.example.com/contract/${ID}", // Optional. URL to get contract info
 
   "regexAddress": "/^EC([0-9]{8,})$/i", // Optional. RegEx to validate coin address
   "symbol": "SYM", // Coin ticker
