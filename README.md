@@ -38,6 +38,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "explorer": "https://explorer.example.com", // Optional. Explorer URL
   "explorerTx": "https://explorer.example.com/tx/${ID}", // Optional. URL to get tx info
   "explorerAddress": "https://explorer.example.com/address/${ID}", // Optional. URL to get address info
+  "explorerContract": "https://explorer.example.com/contract/${ID}", // Optional. URL to get contract info
 
   "regexAddress": "/^EC([0-9]{8,})$/i", // Optional. RegEx to validate coin address
   "symbol": "SYM", // Coin ticker
@@ -59,6 +60,9 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 
   // Should an app itself create the coin or only use the info for the blockchain
   "createCoin": true,
+
+  "defaultVisibility": true, // Optional. To show a coin by default, or hide it
+  "defaultOrdinalLevel": 0, // Optional. Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically
 
   "consensus": "dPoS", // Optional. Blockchain consensus type
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms
