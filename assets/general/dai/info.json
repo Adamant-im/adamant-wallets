@@ -5,7 +5,7 @@
   "symbol": "DAI",
   "type": "token",
   "decimals": 18,
-  "cryptoTransferDecimals": 18,
+  "cryptoTransferDecimals": 6,
   "status": "active",
   "createCoin": false,
   "links": [
