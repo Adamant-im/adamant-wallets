@@ -16,6 +16,8 @@
   "qqPrefix": "bitcoin",
   "status": "active",
   "createCoin": true,
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 10,
   "consensus": "PoW",
   "blockTimeAvg": 600000,
   "txFetchInfo": {

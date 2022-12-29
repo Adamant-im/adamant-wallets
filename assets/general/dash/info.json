@@ -17,6 +17,8 @@
   "qqPrefix": "dash",
   "status": "active",
   "createCoin": true,
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 50,
   "consensus": "PoW",
   "blockTimeAvg": 160000,
   "txFetchInfo" : {
