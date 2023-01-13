@@ -127,7 +127,7 @@ const isNew = (admTransferTimestamp) => (
 
 ## Icons
 
-Coin icons/images files are stored `\general\${token_name}\Images` folders.
+Coin icons/images files are stored `\general\${token_name}\images` folders.
 
 Required:
 
