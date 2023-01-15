@@ -13,7 +13,7 @@ Root directory includes:
 
 Each blockchain in `\blockchains\` includes `info.json`, which links to main coin in `\general\`:
 
-``` jsonc
+```jsonc
 {
   "blockchain": "Ethereum", // Blockchain readable name
   "type": "ERC20", // How an app should mark token blockchain
@@ -101,28 +101,28 @@ To help apps with updating statuses, additional fields are introduced:
   "txFetchInfo": {
     // Interval between fetching Tx in ms when its current status is
     "newPendingInterval": 10000, // "Pending" for new transactions
-    "oldPendingInterval": 3000,  // "Pending" for old transactions
+    "oldPendingInterval": 3000, // "Pending" for old transactions
     "registeredInterval": 40000, // "Registered"
 
     // Attempts to fetch Tx when its current status is `Pending`
     "newPendingAttempts": 20, // for new transactions
-    "oldPendingAttempts": 3,  // for old transactions
+    "oldPendingAttempts": 3 // for old transactions
   },
 
   /**
    * Time in ms when difference between in-chat transfer and Tx timestamp considered
    * as acceptable. Otherwise, an app should mark Tx as `Inconsistent`.
    */
-  "txConsistencyMaxTime": 60000,
+  "txConsistencyMaxTime": 60000
 }
 ```
 
 Transaction considered as new or old depending on how much time passed from in-chat transfer.
 
-``` js
-const isNew = (admTransferTimestamp) => (
-  (Date.now() - admTransferTimestamp) < (newPendingTxFetchAttempts * newPendingTxFetchInterval)
-)
+```js
+const isNew = (admTransferTimestamp) =>
+  Date.now() - admTransferTimestamp <
+  newPendingTxFetchAttempts * newPendingTxFetchInterval;
 ```
 
 ## Icons
@@ -150,3 +150,7 @@ Optional:
 - `${token_name}_wallet_row@3x.png` — same, @x3 resolution
 
 If there will be no optional icons, apps will take regular `_wallet` icons.
+
+## Contribution
+
+Please have a look at the [CONTRIBUTING.md](./.github/CONTRIBUTING.md).
