@@ -150,3 +150,7 @@ Optional:
 - `${token_name}_wallet_row@3x.png` — same, @x3 resolution
 
 If there will be no optional icons, apps will take regular `_wallet` icons.
+
+## Contribution
+
+Please have a look at the [CONTRIBUTING.md](./.github/CONTRIBUTING.md).
