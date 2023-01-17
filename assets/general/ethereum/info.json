@@ -26,6 +26,11 @@
     "oldPendingAttempts": 3
   },
   "txConsistencyMaxTime": 1200000,
+  "reliabilityGasPricePercent": 10,
+  "reliabilityGasLimitPercent": 10,
+  "defaultGasPriceGwei": 30,
+  "defaultGasLimit": 22000,
+  "warningGasPriceGwei": 70,
   "nodes": [
     {
       "url": "https://ethnode1.adamant.im",
