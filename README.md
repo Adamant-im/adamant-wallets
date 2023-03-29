@@ -87,6 +87,20 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 }
 ```
 
+### Ethereum & ERC20 tx fee calculation
+
+The total cost of a transaction is the product of the gas limit and gas price:
+
+```math
+Tx \, fee = gas \, limit \times gas \, price
+```
+
+ADAMANT apps estimate gas limit and gas price using [web3](https://github.com/web3/web3.js) library. To make sure the Ethereum blockchain will include the tx, these estimates must be multiplied by `reliabilityGasLimitPercent` and `reliabilityGasPricePercent`.
+
+If it’s not possible to get estimates, apps will use `defaultGasLimit` and `defaultGasPriceGwei`. When gas price is higher than `warningGasPriceGwei`, apps will show a note/warning.
+
+These parameters are set inside `general\ethereum\info.json` and may be overridden by `blockchains\ethereum\info.json` and specific tokens.
+
 ### Info for updating in-chat coin transfer tx statuses
 
 > Read [AIP-12: Non-ADM crypto transfer messages](https://aips.adamant.im/AIPS/aip-12) to learn more about Tx statuses.
