@@ -23,8 +23,8 @@
     "newPendingInterval": 3000,
     "oldPendingInterval": 3000,
     "registeredInterval": 5000,
-    "newPendingAttempts": 10,
-    "oldPendingAttempts": 3
+    "newPendingAttempts": 15,
+    "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 60000,
   "nodes": [
