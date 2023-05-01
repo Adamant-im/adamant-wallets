@@ -1,7 +1,7 @@
 {
-  "name": "Chain",
-  "website": "https://www.chain.com",
-  "description": "Chain is a cloud blockchain infrastructure that enables organizations to build better financial services from the ground up",
+  "name": "Onyxcoin",
+  "website": "https://onyx.org",
+  "description": "Onyx DeFi Liquidity Protocol supported by the Onyx DAO",
   "symbol": "XCN",
   "type": "token",
   "decimals": 18,
@@ -11,15 +11,23 @@
   "links": [
     {
       "name": "twitter",
-      "url": "https://twitter.com/Chain"
+      "url": "https://twitter.com/OnyxProtocol"
     },
     {
       "name": "github",
-      "url": "https://github.com/Chain"
+      "url": "https://github.com/Onyx-Protocol"
     },
     {
       "name": "whitepaper",
-      "url": "https://assets.chain.com/mkt_site_v2/wp.pdf"
+      "url": "https://onyx.org/Whitepaper.pdf"
+    },
+    {
+      "name": "telegram_chat",
+      "url": "https://t.me/OnyxOrg"
+    },
+    {
+      "name": "blog",
+      "url": "https://medium.com/OnyxProtocol"
     }
   ]
 }
