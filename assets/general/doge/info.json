@@ -11,6 +11,7 @@
   "type": "coin",
   "decimals": 8,
   "cryptoTransferDecimals": 8,
+  "minTransferAmount": 1,
   "fixedFee": 1,
   "qqPrefix": "doge",
   "status": "active",
