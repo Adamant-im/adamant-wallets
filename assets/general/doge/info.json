@@ -11,10 +11,13 @@
   "type": "coin",
   "decimals": 8,
   "cryptoTransferDecimals": 8,
+  "minTransferAmount": 1,
   "fixedFee": 1,
   "qqPrefix": "doge",
   "status": "active",
   "createCoin": true,
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 70,
   "consensus": "PoW",
   "blockTimeAvg": 60000,
   "txFetchInfo": {
@@ -22,7 +25,7 @@
     "oldPendingInterval": 3000,
     "registeredInterval": 20000,
     "newPendingAttempts": 20,
-    "oldPendingAttempts": 3
+    "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 900000,
   "nodes": [

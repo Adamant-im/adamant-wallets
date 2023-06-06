@@ -14,23 +14,26 @@
   "status": "active",
   "qqPrefix": "ethereum",
   "createCoin": true,
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 20,
   "consensus": "PoS",
   "blockTimeFixed": 12000,
   "txFetchInfo": {
     "newPendingInterval": 4000,
     "oldPendingInterval": 3000,
     "registeredInterval": 5000,
-    "newPendingAttempts": 15,
-    "oldPendingAttempts": 3
+    "newPendingAttempts": 20,
+    "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 1200000,
+  "reliabilityGasPricePercent": 10,
+  "reliabilityGasLimitPercent": 10,
+  "defaultGasPriceGwei": 30,
+  "defaultGasLimit": 22000,
+  "warningGasPriceGwei": 70,
   "nodes": [
     {
       "url": "https://ethnode1.adamant.im",
-      "hasIndex": true
-    },
-    {
-      "url": "https://ethnode2.adamant.im",
       "hasIndex": true
     }
   ],

@@ -16,6 +16,8 @@
   "qqPrefix": "bitcoin",
   "status": "active",
   "createCoin": true,
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 10,
   "consensus": "PoW",
   "blockTimeAvg": 600000,
   "txFetchInfo": {
@@ -23,7 +25,7 @@
     "oldPendingInterval": 3000,
     "registeredInterval": 40000,
     "newPendingAttempts": 20,
-    "oldPendingAttempts": 3
+    "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 10800000,
   "nodes": [

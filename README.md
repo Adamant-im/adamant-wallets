@@ -13,7 +13,7 @@ Root directory includes:
 
 Each blockchain in `\blockchains\` includes `info.json`, which links to main coin in `\general\`:
 
-``` jsonc
+```jsonc
 {
   "blockchain": "Ethereum", // Blockchain readable name
   "type": "ERC20", // How an app should mark token blockchain
@@ -38,6 +38,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "explorer": "https://explorer.example.com", // Optional. Explorer URL
   "explorerTx": "https://explorer.example.com/tx/${ID}", // Optional. URL to get tx info
   "explorerAddress": "https://explorer.example.com/address/${ID}", // Optional. URL to get address info
+  "explorerContract": "https://explorer.example.com/contract/${ID}", // Optional. URL to get contract info
 
   "regexAddress": "/^EC([0-9]{8,})$/i", // Optional. RegEx to validate coin address
   "symbol": "SYM", // Coin ticker
@@ -59,6 +60,9 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 
   // Should an app itself create the coin or only use the info for the blockchain
   "createCoin": true,
+
+  "defaultVisibility": true, // Optional. To show a coin by default, or hide it
+  "defaultOrdinalLevel": 0, // Optional. Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically
 
   "consensus": "dPoS", // Optional. Blockchain consensus type
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms
@@ -83,6 +87,20 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 }
 ```
 
+### Ethereum & ERC20 tx fee calculation
+
+The total cost of a transaction is the product of the gas limit and gas price:
+
+```math
+Tx \, fee = gas \, limit \times gas \, price
+```
+
+ADAMANT apps estimate gas limit and gas price using [web3](https://github.com/web3/web3.js) library. To make sure the Ethereum blockchain will include the tx, these estimates must be multiplied by `reliabilityGasLimitPercent` and `reliabilityGasPricePercent`.
+
+If it’s not possible to get estimates, apps will use `defaultGasLimit` and `defaultGasPriceGwei`. When gas price is higher than `warningGasPriceGwei`, apps will show a note/warning.
+
+These parameters are set inside `general\ethereum\info.json` and may be overridden by `blockchains\ethereum\info.json` and specific tokens.
+
 ### Info for updating in-chat coin transfer tx statuses
 
 > Read [AIP-12: Non-ADM crypto transfer messages](https://aips.adamant.im/AIPS/aip-12) to learn more about Tx statuses.
@@ -97,33 +115,33 @@ To help apps with updating statuses, additional fields are introduced:
   "txFetchInfo": {
     // Interval between fetching Tx in ms when its current status is
     "newPendingInterval": 10000, // "Pending" for new transactions
-    "oldPendingInterval": 3000,  // "Pending" for old transactions
+    "oldPendingInterval": 3000, // "Pending" for old transactions
     "registeredInterval": 40000, // "Registered"
 
     // Attempts to fetch Tx when its current status is `Pending`
     "newPendingAttempts": 20, // for new transactions
-    "oldPendingAttempts": 3,  // for old transactions
+    "oldPendingAttempts": 3 // for old transactions
   },
 
   /**
    * Time in ms when difference between in-chat transfer and Tx timestamp considered
    * as acceptable. Otherwise, an app should mark Tx as `Inconsistent`.
    */
-  "txConsistencyMaxTime": 60000,
+  "txConsistencyMaxTime": 60000
 }
 ```
 
 Transaction considered as new or old depending on how much time passed from in-chat transfer.
 
-``` js
-const isNew = (admTransferTimestamp) => (
-  (Date.now() - admTransferTimestamp) < (newPendingTxFetchAttempts * newPendingTxFetchInterval)
-)
+```js
+const isNew = (admTransferTimestamp) =>
+  Date.now() - admTransferTimestamp <
+  newPendingTxFetchAttempts * newPendingTxFetchInterval;
 ```
 
 ## Icons
 
-Coin icons/images files are stored `\general\${token_name}\Images` folders.
+Coin icons/images files are stored `\general\${token_name}\images` folders.
 
 Required:
 
@@ -146,3 +164,7 @@ Optional:
 - `${token_name}_wallet_row@3x.png` — same, @x3 resolution
 
 If there will be no optional icons, apps will take regular `_wallet` icons.
+
+## Contribution
+
+Please have a look at the [CONTRIBUTING.md](./.github/CONTRIBUTING.md).

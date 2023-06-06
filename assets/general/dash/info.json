@@ -17,19 +17,19 @@
   "qqPrefix": "dash",
   "status": "active",
   "createCoin": true,
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 80,
   "consensus": "PoW",
   "blockTimeAvg": 160000,
-  "txFetchInfo" : {
+  "txFetchInfo": {
     "newPendingInterval": 5000,
     "oldPendingInterval": 3000,
     "registeredInterval": 30000,
     "newPendingAttempts": 20,
-    "oldPendingAttempts": 3
+    "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 800000,
-  "nodes": [
-    { "url": "https://dashnode1.adamant.im" }
-  ],
+  "nodes": [{ "url": "https://dashnode1.adamant.im" }],
   "links": [
     {
       "name": "github",
