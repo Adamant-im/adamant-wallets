@@ -13,27 +13,25 @@
           "name",
           "website",
           "description",
-          "explorer",
-          "explorerTx",
-          "explorerAddress",
-          "regexAddress",
           "symbol",
           "type",
           "decimals",
-          "qqPrefix",
+          "cryptoTransferDecimals",
           "status",
-          "links",
-          "createCoin",
-          "consensus"
+          "createCoin"
         ],
         "properties": {
           "name": {
             "type": "string",
             "description": "Readable coin name"
           },
+          "nameShort": {
+            "type": "string",
+            "description": "Readable coin short name"
+         },
           "website": {
             "type": "string",
-            "description": "Project website"
+            "description": "Project website URL"
           },
           "description": {
             "type": "string",
@@ -41,23 +39,27 @@
           },
           "explorer": {
             "type": "string",
-            "description": "Explorer url"
+            "description": "Explorer URL"
           },
           "explorerTx": {
             "type": "string",
-            "description": "URL to receive tx info"
+            "description": "URL to get tx info"
           },
           "explorerAddress": {
             "type": "string",
-            "description": "URL to receive address info"
+            "description": "URL to get address info"
+          },
+          "explorerContract": {
+            "type": "string",
+            "description": "URL to get contract info"
           },
           "regexAddress": {
             "type": "string",
-            "description": "Regex to validate coin address"
+            "description": "RegEx to validate coin address"
           },
           "research": {
             "type": "string",
-            "description": "Research url"
+            "description": "Research URL"
           },
           "symbol": {
             "type": "string",
@@ -74,71 +76,79 @@
           },
           "cryptoTransferDecimals": {
             "type": "integer",
-            "description": "Max precision for transactions"
+            "description": "Max precision for tx"
           },
           "minBalance": {
             "type": "number",
-            "description": "If there are blockchain limitations on minimum amount for an address"
+            "description": "Minimum acceptable amount for an address"
           },
           "minTransferAmount": {
             "type": "number",
-            "description": "If there are blockchain limitations on minimum amount to transfer"
+            "description": "Minimum acceptable amount for tx"
           },
           "fixedFee": {
             "type": "number",
-            "description": "If to use fixed tx transfer fee"
+            "description": "Fixed transfer fee"
           },
           "defaultFee": {
             "type": "number",
-            "description": "If tx fee is variable, but an app had not calculated it yet"
+            "description": "When the transfer fee is variable, but an app has not yet calculated it"
           },
           "qqPrefix": {
             "type": "string",
-            "description": "QR code prefix for address"
+            "description": "QR code prefix for an address"
           },
           "status": {
             "type": "string",
             "enum": ["active", "disabled"],
-            "description": "If an app should process a coin"
+            "description": "Should the coin be processed"
           },
           "createCoin": {
             "type": "boolean",
-            "description": "If an app should create a coin itself. false means use info only for blockchains."
+            "description": "Should an app itself create the coin or only use the info for the blockchain"
+          },
+          "defaultVisibility": {
+            "type": "boolean",
+            "description": "To show a coin by default, or hide it"
+          },
+          "defaultOrdinalLevel": {
+            "type": "integer",
+            "description": "Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically"
           },
           "consensus": {
             "type": "string",
             "description": "Blockchain consensus type"
           },
           "blockTimeFixed": {
-            "type": "number",
+            "type": "integer",
             "description": "Fixed block time in ms"
           },
           "blockTimeAvg": {
-            "type": "number",
+            "type": "integer",
             "description": "Average block time in ms"
           },
-          "newPendingTxFetchInterval": {
-            "type": "number",
-            "description": "Time in ms between fetching Tx when its current status is Pending for new transactions"
-          },
-          "oldPendingTxFetchInterval": {
-            "type": "number",
-            "description": "Time in ms between fetching Tx when its current status is Pending for old transactions"
-          },
-          "registeredTxFetchInterval": {
-            "type": "number",
-            "description": "Time in ms between fetching Tx when its current status is Registered"
-          },
-          "newPendingTxFetchAttempts": {
-            "type": "number",
-            "description": "Attempts to fetch Tx when its current status is Pending for new transactions"
-          },
-          "oldPendingTxFetchAttempts": {
-            "type": "number",
-            "description": "Attempts to fetch Tx when its current status is Pending for old transactions"
+          "txFetchInfo": {
+            "type": "object",
+            "properties": {
+              "newPendingInterval": {
+                "type": "integer"
+              },
+              "oldPendingInterval": {
+                "type": "integer"
+              },
+              "registeredInterval": {
+                "type": "integer"
+              },
+              "newPendingAttempts": {
+                "type": "integer"
+              },
+              "oldPendingAttempts": {
+                "type": "integer"
+              }
+            }
           },
           "txConsistencyMaxTime": {
-            "type": "number",
+            "type": "integer",
             "description": "Time in ms when difference between in-chat transfer and Tx timestamp considered as acceptable"
           },
           "nodes": {
