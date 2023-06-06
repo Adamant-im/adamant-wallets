@@ -198,11 +198,6 @@
             "type": "string",
             "description": "Coin ticker"
           },
-          "type": {
-            "type": "string",
-            "enum": ["coin", "ERC20"],
-            "description": "Coin or token mainly"
-          },
           "status": {
             "type": "string",
             "enum": ["active", "disabled"],
