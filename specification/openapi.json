@@ -228,6 +228,9 @@
           },
           "fees": {
             "type": "string"
+          }, 
+          "defaultGasLimit": {
+            "type": "number"
           }
         }
       }
