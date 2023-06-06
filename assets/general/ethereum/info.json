@@ -1,0 +1,55 @@
+{
+  "name": "Ethereum",
+  "website": "https://ethereum.org",
+  "description": "Open source platform to write and distribute decentralized applications",
+  "explorer": "https://etherscan.io",
+  "explorerTx": "https://etherscan.io/tx/${ID}",
+  "explorerAddress": "https://etherscan.io/address/${ID}",
+  "explorerContract": "https://etherscan.io/token/${ID}",
+  "regexAddress": "/^U([0-9]{6,})$/i",
+  "symbol": "ETH",
+  "type": "coin",
+  "decimals": 18,
+  "cryptoTransferDecimals": 6,
+  "status": "active",
+  "qqPrefix": "ethereum",
+  "createCoin": true,
+  "consensus": "PoS",
+  "blockTimeFixed": 12000,
+  "txFetchInfo": {
+    "newPendingInterval": 4000,
+    "oldPendingInterval": 3000,
+    "registeredInterval": 5000,
+    "newPendingAttempts": 15,
+    "oldPendingAttempts": 3
+  },
+  "txConsistencyMaxTime": 1200000,
+  "nodes": [
+    {
+      "url": "https://ethnode1.adamant.im",
+      "hasIndex": true
+    },
+    {
+      "url": "https://ethnode2.adamant.im",
+      "hasIndex": true
+    }
+  ],
+  "links": [
+    {
+      "name": "github",
+      "url": "https://github.com/ethereum"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/ethereum"
+    },
+    {
+      "name": "reddit",
+      "url": "https://reddit.com/r/ethereum"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://github.com/ethereum/wiki/wiki/White-Paper"
+    }
+  ]
+}

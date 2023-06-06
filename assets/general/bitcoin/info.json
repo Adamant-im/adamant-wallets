@@ -1,0 +1,51 @@
+{
+  "name": "Bitcoin",
+  "website": "https://bitcoin.org",
+  "description": "Bitcoin is a cryptocurrency and worldwide payment system. It is the first decentralized digital currency, as the system works without a central bank or single administrator.",
+  "explorer": "https://explorer.btc.com",
+  "explorerTx": "https://explorer.btc.com/btc/transaction/${ID}",
+  "explorerAddress": "https://explorer.btc.com/btc/address/${ID}",
+  "regexAddress": "/^(bc1|[13])[a-km-zA-HJ-NP-Z02-9]{25,39}$/",
+  "symbol": "BTC",
+  "type": "coin",
+  "decimals": 8,
+  "minBalance": 0.00001,
+  "cryptoTransferDecimals": 8,
+  "minTransferAmount": 0.00000546,
+  "defaultFee": 0.00003153,
+  "qqPrefix": "bitcoin",
+  "status": "active",
+  "createCoin": true,
+  "consensus": "PoW",
+  "blockTimeAvg": 600000,
+  "txFetchInfo": {
+    "newPendingInterval": 10000,
+    "oldPendingInterval": 3000,
+    "registeredInterval": 40000,
+    "newPendingAttempts": 20,
+    "oldPendingAttempts": 3
+  },
+  "txConsistencyMaxTime": 10800000,
+  "nodes": [
+    { "url": "https://btcnode1.adamant.im" },
+    { "url": "https://btcnode2.adamant.im" }
+  ],
+  "links": [
+    {
+      "name": "github",
+      "url": "https://github.com/bitcoin"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/Bitcoin"
+    },
+    {
+      "name": "reddit",
+      "url": "https://reddit.com/r/Bitcoin"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://bitcoin.org/bitcoin.pdf"
+    }
+  ]
+}
