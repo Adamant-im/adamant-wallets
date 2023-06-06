@@ -185,35 +185,44 @@
         "required": [
           "name",
           "symbol",
-          "type",
           "status",
           "contractId",
-          "decimals",
-          "explorer"
+          "decimals"
         ],
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "description": "Readable coin name"
           },
           "symbol": {
-            "type": "string"
+            "type": "string",
+            "description": "Coin ticker"
           },
           "type": {
             "type": "string",
-            "enum": ["coin", "ERC20"]
+            "enum": ["coin", "ERC20"],
+            "description": "Coin or token mainly"
           },
           "status": {
             "type": "string",
-            "enum": ["active", "disabled"]
+            "enum": ["active", "disabled"],
+            "description": "Should the coin be processed"
           },
           "contractId": {
-            "type": "string"
+            "type": "string",
+            "description": "ID of contract"
+          },
+          "defaultVisibility": {
+            "type": "boolean",
+            "description": "To show a coin by default, or hide it"
+          },
+          "defaultOrdinalLevel": {
+            "type": "integer",
+            "description": "Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically"
           },
           "decimals": {
-            "type": "integer"
-          },
-          "explorer": {
-            "type": "string"
+            "type": "integer",
+            "description": "Decimal places"
           }
         }
       },
