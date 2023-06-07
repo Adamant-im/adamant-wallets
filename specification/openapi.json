@@ -131,19 +131,24 @@
             "type": "object",
             "properties": {
               "newPendingInterval": {
-                "type": "integer"
+                "type": "integer",
+                "description": "Interval between fetching Tx in ms when its current status is \"Pending\" for new transactions"
               },
               "oldPendingInterval": {
-                "type": "integer"
+                "type": "integer",
+                "description": "Interval between fetching Tx in ms when its current status is \"Pending\" for old transactions"
               },
               "registeredInterval": {
-                "type": "integer"
+                "type": "integer",
+                "description": "Interval between fetching Tx in ms when its current status is \"Registered\""
               },
               "newPendingAttempts": {
-                "type": "integer"
+                "type": "integer",
+                "description": "Attempts to fetch Tx when its current status is \"Pending\" for new transactions"
               },
               "oldPendingAttempts": {
-                "type": "integer"
+                "type": "integer",
+                "description": "Attempts to fetch Tx when its current status is \"Pending\" for old transactions"
               }
             }
           },
