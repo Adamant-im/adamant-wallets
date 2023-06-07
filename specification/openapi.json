@@ -231,17 +231,20 @@
         ],
         "properties": {
           "blockchain": {
-            "type": "string"
+            "type": "string",
+            "description": "Blockchain readable name"
           },
           "type": {
             "type": "string",
-            "enum": ["coin", "ERC20"]
+            "description": "How an app should mark token blockchain"
           },
           "mainCoin": {
-            "type": "string"
+            "type": "string",
+            "description": "A coin containing parameters common to the blockchain"
           },
           "fees": {
-            "type": "string"
+            "type": "string",
+            "description": "Coin to pay fees in"
           }, 
           "defaultGasLimit": {
             "type": "number"
