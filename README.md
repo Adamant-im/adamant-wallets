@@ -69,15 +69,15 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "blockTimeAvg": 600000, // Optional. Average block time in ms
 
   // Optional. Node links for API
-  // Parameter "alt_ip" - alternative way to connect if the domain of the node is blocked 
   "nodes": [
     { "url": "https://node.example.com" },
-    { "url": "http://0.0.0.0:36666" },
+    { "url": "http://0.0.0.0:36666" }, // It's possible to use IP:port URI
     {
-      "url": "https://secondNode.example.com",
-      "alt_ip": "0.0.0.1:36666"
+      "url": "https://second-node.example.com",
+      "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored 
     }
   ],
+
   // Optional. Additional project links
   "links": [
     {
