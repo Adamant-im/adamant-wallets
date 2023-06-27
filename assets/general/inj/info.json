@@ -6,7 +6,7 @@
   "explorerTx": "https://explorer.injective.network/transaction/${ID}",
   "explorerAddress": "https://explorer.injective.network/account/${ID}",
   "explorerContract": "https://explorer.injective.network/contract/${ID}",
-  "regexAddress": "/^(inj)[a-zA-HJ-NP-Z0-9]{25,39}$/",
+  "regexAddress": "^(inj)[a-zA-HJ-NP-Z0-9]{25,39}$",
   "symbol": "INJ",
   "type": "coin",
   "decimals": 18,

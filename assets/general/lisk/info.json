@@ -5,7 +5,7 @@
   "explorer": "https://liskscan.com",
   "explorerTx": "https://liskscan.com/transaction/${ID}",
   "explorerAddress": "https://liskscan.com/account/${ID}",
-  "regexAddress": "/^lsk[a-z2-9]{38}$/",
+  "regexAddress": "^lsk[a-z2-9]{38}$",
   "symbol": "LSK",
   "type": "coin",
   "decimals": 8,

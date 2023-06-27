@@ -5,7 +5,7 @@
   "explorer": "https://explorer.btc.com",
   "explorerTx": "https://explorer.btc.com/btc/transaction/${ID}",
   "explorerAddress": "https://explorer.btc.com/btc/address/${ID}",
-  "regexAddress": "/^(bc1|[13])[a-km-zA-HJ-NP-Z02-9]{25,39}$/",
+  "regexAddress": "^(bc1|[13])[a-km-zA-HJ-NP-Z02-9]{25,39}$",
   "symbol": "BTC",
   "type": "coin",
   "decimals": 8,
