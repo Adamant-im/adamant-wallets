@@ -6,7 +6,7 @@
   "explorer": "https://explorer.adamant.im",
   "explorerTx": "https://explorer.adamant.im/tx/${ID}",
   "explorerAddress": "https://explorer.adamant.im/address/${ID}",
-  "regexAddress": "^[Uu]([0-9]{6,21})$",
+  "regexAddress": "^U([0-9]{6,21})$",
   "symbol": "ADM",
   "type": "coin",
   "decimals": 8,
