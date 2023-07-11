@@ -40,7 +40,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "explorerAddress": "https://explorer.example.com/address/${ID}", // Optional. URL to get address info
   "explorerContract": "https://explorer.example.com/contract/${ID}", // Optional. URL to get contract info
 
-  "regexAddress": "/^EC([0-9]{8,})$/i", // Optional. RegEx to validate coin address
+  "regexAddress": "^EC([0-9]{8,})$", // Optional. RegEx to validate coin address
   "research": "https://research.binance.com/en/projects/${project}", // Optional. Research URL
   "symbol": "SYM", // Coin ticker
   "type": "coin", // "coin" or "token"
@@ -72,8 +72,13 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   // Optional. Node links for API
   "nodes": [
     { "url": "https://node.example.com" },
-    { "url": "http://0.0.0.0:36666" }
+    { "url": "http://0.0.0.0:36666" }, // It's possible to use IP:port URI
+    {
+      "url": "https://second-node.example.com",
+      "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored 
+    }
   ],
+
   // Optional. Additional project links
   "links": [
     {
