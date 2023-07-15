@@ -181,6 +181,10 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "name",
+                "url"
+              ],
               "properties": {
                 "name": {
                   "type": "string"
