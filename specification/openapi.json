@@ -160,9 +160,18 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "url"
+              ],
               "properties": {
                 "url": {
                   "type": "string"
+                },
+                "alt_ip": {
+                  "type": "string"
+                },
+                "hasIndex": {
+                  "type": "boolean"
                 }
               }
             },
