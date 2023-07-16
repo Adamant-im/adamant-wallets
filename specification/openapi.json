@@ -1,0 +1,274 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger Adamant-wallets"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "TokenGeneral": {
+        "type": "object",
+        "required": [
+          "name",
+          "website",
+          "description",
+          "symbol",
+          "type",
+          "decimals",
+          "cryptoTransferDecimals",
+          "status",
+          "createCoin"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Readable coin name"
+          },
+          "nameShort": {
+            "type": "string",
+            "description": "Readable coin short name"
+         },
+          "website": {
+            "type": "string",
+            "description": "Project website URL"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description"
+          },
+          "explorer": {
+            "type": "string",
+            "description": "Explorer URL"
+          },
+          "explorerTx": {
+            "type": "string",
+            "description": "URL to get tx info"
+          },
+          "explorerAddress": {
+            "type": "string",
+            "description": "URL to get address info"
+          },
+          "explorerContract": {
+            "type": "string",
+            "description": "URL to get contract info"
+          },
+          "regexAddress": {
+            "type": "string",
+            "description": "RegEx to validate coin address"
+          },
+          "research": {
+            "type": "string",
+            "description": "Research URL"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "Coin ticker"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["coin", "ERC20"],
+            "description": "Coin or token mainly"
+          },
+          "decimals": {
+            "type": "integer",
+            "description": "Decimal places"
+          },
+          "cryptoTransferDecimals": {
+            "type": "integer",
+            "description": "Max precision for tx"
+          },
+          "minBalance": {
+            "type": "number",
+            "description": "Minimum acceptable amount for an address"
+          },
+          "minTransferAmount": {
+            "type": "number",
+            "description": "Minimum acceptable amount for tx"
+          },
+          "fixedFee": {
+            "type": "number",
+            "description": "Fixed transfer fee"
+          },
+          "defaultFee": {
+            "type": "number",
+            "description": "When the transfer fee is variable, but an app has not yet calculated it"
+          },
+          "qqPrefix": {
+            "type": "string",
+            "description": "QR code prefix for an address"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "disabled"],
+            "description": "Should the coin be processed"
+          },
+          "createCoin": {
+            "type": "boolean",
+            "description": "Should an app itself create the coin or only use the info for the blockchain"
+          },
+          "defaultVisibility": {
+            "type": "boolean",
+            "description": "To show a coin by default, or hide it"
+          },
+          "defaultOrdinalLevel": {
+            "type": "integer",
+            "description": "Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically"
+          },
+          "consensus": {
+            "type": "string",
+            "description": "Blockchain consensus type"
+          },
+          "blockTimeFixed": {
+            "type": "integer",
+            "description": "Fixed block time in ms"
+          },
+          "blockTimeAvg": {
+            "type": "integer",
+            "description": "Average block time in ms"
+          },
+          "txFetchInfo": {
+            "type": "object",
+            "properties": {
+              "newPendingInterval": {
+                "type": "integer",
+                "description": "Interval between fetching Tx in ms when its current status is \"Pending\" for new transactions"
+              },
+              "oldPendingInterval": {
+                "type": "integer",
+                "description": "Interval between fetching Tx in ms when its current status is \"Pending\" for old transactions"
+              },
+              "registeredInterval": {
+                "type": "integer",
+                "description": "Interval between fetching Tx in ms when its current status is \"Registered\""
+              },
+              "newPendingAttempts": {
+                "type": "integer",
+                "description": "Attempts to fetch Tx when its current status is \"Pending\" for new transactions"
+              },
+              "oldPendingAttempts": {
+                "type": "integer",
+                "description": "Attempts to fetch Tx when its current status is \"Pending\" for old transactions"
+              }
+            }
+          },
+          "txConsistencyMaxTime": {
+            "type": "integer",
+            "description": "Time in ms when difference between in-chat transfer and Tx timestamp considered as acceptable"
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "url"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string"
+                },
+                "alt_ip": {
+                  "type": "string"
+                },
+                "hasIndex": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "Node links for API"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "url"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Additional project links"
+          }
+        }
+      },
+      "TokenAsset": {
+        "type": "object",
+        "required": [
+          "name",
+          "symbol",
+          "status",
+          "contractId",
+          "decimals"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Readable coin name"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "Coin ticker"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "disabled"],
+            "description": "Should the coin be processed"
+          },
+          "contractId": {
+            "type": "string",
+            "description": "ID of contract"
+          },
+          "defaultVisibility": {
+            "type": "boolean",
+            "description": "To show a coin by default, or hide it"
+          },
+          "defaultOrdinalLevel": {
+            "type": "integer",
+            "description": "Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically"
+          },
+          "decimals": {
+            "type": "integer",
+            "description": "Decimal places"
+          }
+        }
+      },
+      "Blockchain": {
+        "type": "object",
+        "required": [
+          "blockchain",
+          "type",
+          "mainCoin",
+          "fees"
+        ],
+        "properties": {
+          "blockchain": {
+            "type": "string",
+            "description": "Blockchain readable name"
+          },
+          "type": {
+            "type": "string",
+            "description": "How an app should mark token blockchain"
+          },
+          "mainCoin": {
+            "type": "string",
+            "description": "A coin containing parameters common to the blockchain"
+          },
+          "fees": {
+            "type": "string",
+            "description": "Coin to pay fees in"
+          }, 
+          "defaultGasLimit": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}
