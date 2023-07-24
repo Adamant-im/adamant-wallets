@@ -41,6 +41,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "explorerContract": "https://explorer.example.com/contract/${ID}", // Optional. URL to get contract info
 
   "regexAddress": "^EC([0-9]{8,})$", // Optional. RegEx to validate coin address
+  "research": "https://research.binance.com/en/projects/${project}", // Optional. Research URL
   "symbol": "SYM", // Coin ticker
   "type": "coin", // "coin" or "token"
 
