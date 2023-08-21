@@ -2,6 +2,8 @@
   "name": "Onyxcoin",
   "symbol": "XCN",
   "status": "active",
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 100,
   "contractId": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18",
   "decimals": 18
 }
