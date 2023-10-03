@@ -28,7 +28,7 @@
           "nameShort": {
             "type": "string",
             "description": "Readable coin short name"
-         },
+          },
           "website": {
             "type": "string",
             "description": "Project website URL"
@@ -160,9 +160,7 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "url"
-              ],
+              "required": ["url"],
               "properties": {
                 "url": {
                   "type": "string"
@@ -181,10 +179,7 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "name",
-                "url"
-              ],
+              "required": ["name", "url"],
               "properties": {
                 "name": {
                   "type": "string"
@@ -200,13 +195,7 @@
       },
       "TokenAsset": {
         "type": "object",
-        "required": [
-          "name",
-          "symbol",
-          "status",
-          "contractId",
-          "decimals"
-        ],
+        "required": ["name", "symbol", "status", "contractId", "decimals"],
         "properties": {
           "name": {
             "type": "string",
@@ -241,12 +230,7 @@
       },
       "Blockchain": {
         "type": "object",
-        "required": [
-          "blockchain",
-          "type",
-          "mainCoin",
-          "fees"
-        ],
+        "required": ["blockchain", "type", "mainCoin", "fees"],
         "properties": {
           "blockchain": {
             "type": "string",
@@ -263,7 +247,7 @@
           "fees": {
             "type": "string",
             "description": "Coin to pay fees in"
-          }, 
+          },
           "defaultGasLimit": {
             "type": "number"
           }
