@@ -76,6 +76,14 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
     {
       "url": "https://second-node.example.com",
       "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored 
+    },
+    {
+      "url": "http://third-node.example.com",
+      "wsPort": "45558" // Default to `36668` (depends on `url` protocol)
+    },
+    {
+      "url": "https://secured-node.example.com",
+      "wsPort": "45558" // Default to `443` (depends on `url` protocol)
     }
   ],
 
