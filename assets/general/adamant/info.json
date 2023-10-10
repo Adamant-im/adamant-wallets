@@ -39,8 +39,14 @@
     },
     { "url": "http://78.47.205.206:36666" },
     { "url": "http://5.161.53.74:36666" },
-    { "url": "http://184.94.215.92:45555" },
-    { "url": "https://node1.adamant.business" },
+    {
+      "url": "http://184.94.215.92:45555",
+      "wsPort": 45558
+    },
+    {
+      "url": "https://node1.adamant.business",
+      "wsPort": 45558
+    },
     { "url": "https://node2.blockchain2fa.io" }
   ],
   "links": [
