@@ -62,6 +62,9 @@
     }
   ],
   "tor": {
+    "explorer": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion",
+    "explorerTx": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion/tx/${ID}",
+    "explorerAddress": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion/address/${ID}",
     "nodes": [
       {
         "url": "http://37g5to2z6bdoeegun4hms2hvkfbdxh4rcon4e3p267wtfkh4ji2ns6id.onion"
