@@ -24,6 +24,7 @@
     "oldPendingInterval": 4000,
     "registeredInterval": 4000
   },
+  "nodeMinVersion": "0.5.2",
   "nodes": [
     { "url": "https://clown.adamant.im" },
     { "url": "https://lake.adamant.im" },
