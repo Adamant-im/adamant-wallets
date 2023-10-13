@@ -75,7 +75,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
     { "url": "http://0.0.0.0:36666" }, // It's possible to use IP:port URI
     {
       "url": "https://second-node.example.com",
-      "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored 
+      "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored
     }
   ],
 
