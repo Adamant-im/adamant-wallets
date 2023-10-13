@@ -251,6 +251,13 @@
                 "additionalProperties": {
                   "$ref": "#/components/schemas/Service"
                 }
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ProjectLink"
+                },
+                "description": "Additional project links (Tor)"
               }
             }
           }
