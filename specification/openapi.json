@@ -195,7 +195,7 @@
             "type": "integer",
             "description": "Time in ms when difference between in-chat transfer and Tx timestamp considered as acceptable"
           },
-          "nodeMinVersion": {
+          "minNodeVersion": {
             "type": "string",
             "description": "Minimal node API version",
             "example": "0.8.0"
