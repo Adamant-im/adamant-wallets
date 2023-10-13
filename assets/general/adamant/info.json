@@ -64,10 +64,6 @@
     {
       "name": "whitepaper",
       "url": "https://adamant.im/whitepaper/adamant-whitepaper-en.pdf"
-    },
-    {
-      "name": "infoService",
-      "url": "https://info.adamant.im"
     }
   ],
   "tor": {
