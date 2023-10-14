@@ -48,5 +48,15 @@
       "name": "reddit",
       "url": "https://reddit.com/r/Lisk"
     }
-  ]
+  ],
+  "tor": {
+    "nodes": [
+      {
+        "url": "http://nl2c4vcsdrd6je3ebt4236yst55mbso72ojmksrmlyoikapgnu647tid.onion"
+      },
+      {
+        "url": "http://qpjxvkathebm7oso3dk5hb4cggbeecqvcpcthuxlpovtn66plr6f4wyd.onion"
+      }
+    ]
+  }
 }

@@ -54,5 +54,13 @@
       "name": "whitepaper",
       "url": "https://github.com/ethereum/wiki/wiki/White-Paper"
     }
-  ]
+  ],
+  "tor": {
+    "nodes": [
+      {
+        "url": "http://vj3qid4h2d4cj2gexivjuuybah3mjzenpdyr5bj6z4hctp52jn6qsgid.onion",
+        "hasIndex": true
+      }
+    ]
+  }
 }

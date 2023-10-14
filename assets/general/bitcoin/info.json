@@ -49,5 +49,12 @@
       "name": "whitepaper",
       "url": "https://bitcoin.org/bitcoin.pdf"
     }
-  ]
+  ],
+  "tor": {
+    "nodes": [
+      {
+        "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion"
+      }
+    ]
+  }
 }
