@@ -69,7 +69,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms
   "blockTimeAvg": 600000, // Optional. Average block time in ms
 
-  "minNodeVersion": "0.8.0", // Optional. Minimal node API version used by the project
+  "minNodeVersion": "0.8.0", // Optional. Minimal supported node API version
 
   // Optional. Node links for API
   "nodes": [
@@ -81,7 +81,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
     }
   ],
 
-  // Optional. Services used by the project
+  // Optional. Services related to a project
   "services": {
     "infoService": [
       { "url": "https://info.example.com" },
@@ -104,7 +104,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
     }
   ]
 
-  // Optional. Tor configuration if the project uses Tor
+  // Optional. Tor configuration if a project uses Tor
   // It follows the same structure as the root properties
   // Currently supported props are described below:
   "tor": {
