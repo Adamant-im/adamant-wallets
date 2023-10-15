@@ -32,7 +32,7 @@
     { "url": "https://lisknode4.adamant.im" }
   ],
   "services": {
-    "liskService": [
+    "lskService": [
       { "url": "https://liskservice3.adamant.im" },
       { "url": "https://liskservice4.adamant.im" }
     ]
