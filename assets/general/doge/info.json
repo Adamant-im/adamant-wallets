@@ -30,7 +30,10 @@
   "txConsistencyMaxTime": 900000,
   "nodes": [
     { "url": "https://dogenode1.adamant.im" },
-    { "url": "https://dogenode2.adamant.im" }
+    {
+      "url": "https://dogenode2.adamant.im",
+      "alt_ip": "http://176.9.32.126:44098"
+    }
   ],
   "links": [
     {
