@@ -59,6 +59,9 @@
   "tor": {
     "nodes": [
       {
+        "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
+      },
+      {
         "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion"
       }
     ]
