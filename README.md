@@ -69,15 +69,28 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms
   "blockTimeAvg": 600000, // Optional. Average block time in ms
 
+  "minNodeVersion": "0.8.0", // Optional. Minimal supported node API version
+
   // Optional. Node links for API
   "nodes": [
     { "url": "https://node.example.com" },
     { "url": "http://0.0.0.0:36666" }, // It's possible to use IP:port URI
     {
       "url": "https://second-node.example.com",
-      "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored 
+      "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored
     }
   ],
+
+  // Optional. Services related to a project
+  "services": {
+    "infoService": [
+      { "url": "https://info.example.com" },
+      {
+        "url": "https://second-service.example.com",
+        "alt_ip": "0.0.0.1:80" // Alternative way to connect if the domain of a service is censored
+      }
+    ],
+  },
 
   // Optional. Additional project links
   "links": [
@@ -90,6 +103,19 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
       "url": "https://example.com/whitepaper.pdf"
     }
   ]
+
+  // Optional. Tor configuration if a project uses Tor
+  // It follows the same structure as the root properties
+  // Currently supported props are described below:
+  "tor": {
+    "website": "http://abc.onion",
+    "explorer": "http://xyz.onion",
+    "explorerTx": "http://xyz.onion/tx/${ID}",
+    "explorerAddress": "http://xyz.onion/address/${ID}",
+    "nodes": [/*...*/],
+    "services": {/*...*/},
+    "links": [/*...*/]
+  }
 }
 ```
 

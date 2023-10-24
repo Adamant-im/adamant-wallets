@@ -47,5 +47,12 @@
       "name": "whitepaper",
       "url": "https://github.com/dashpay/dash/wiki/Whitepaper"
     }
-  ]
+  ],
+  "tor": {
+    "nodes": [
+      {
+        "url": "http://ldod53womnlwjmd4noq5yuq26xx3mmbrr4uogkfymuakhofjcuqeygad.onion"
+      }
+    ]
+  }
 }

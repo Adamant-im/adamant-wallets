@@ -24,6 +24,7 @@
     "oldPendingInterval": 4000,
     "registeredInterval": 4000
   },
+  "minNodeVersion": "0.7.0",
   "nodes": [
     { "url": "https://clown.adamant.im" },
     { "url": "https://lake.adamant.im" },
@@ -43,6 +44,14 @@
     { "url": "https://node1.adamant.business" },
     { "url": "https://node2.blockchain2fa.io" }
   ],
+  "services": {
+    "infoService": [
+      {
+        "url": "https://info.adamant.im",
+        "alt_ip": "http://88.198.156.44:80"
+      }
+    ]
+  },
   "links": [
     {
       "name": "github",
@@ -56,5 +65,35 @@
       "name": "whitepaper",
       "url": "https://adamant.im/whitepaper/adamant-whitepaper-en.pdf"
     }
-  ]
+  ],
+  "tor": {
+    "website": "http://adamantim24okpwfr4wxjgsh6vtw4odoiabhsfaqaktnfqzrjrspjuid.onion",
+    "explorer": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion",
+    "explorerTx": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion/tx/${ID}",
+    "explorerAddress": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion/address/${ID}",
+    "nodes": [
+      {
+        "url": "http://37g5to2z6bdoeegun4hms2hvkfbdxh4rcon4e3p267wtfkh4ji2ns6id.onion"
+      },
+      {
+        "url": "http://fqjcvsibnbwhlwxndzqzziapiwoidgn24avfiauu4wo2fc3yyiy2qcid.onion"
+      },
+      {
+        "url": "http://omhrhpc45njpgzp4fggtndazaodwuwvb5in6hsn3k7tvaqennmfaa2qd.onion"
+      },
+      {
+        "url": "http://uxu6vnnrrnl7tmo7i657yvs4jbgdz734xvufryoi326az5dzufuwboad.onion"
+      },
+      {
+        "url": "http://rukehjd2yalzgny7mdjqtzown2mazsaeh4zr7zjdg4l5afkgc3z2kgqd.onion"
+      }
+    ],
+    "services": {
+      "infoService": [
+        {
+          "url": "http://czjsawp2crjmnkliw2h2kpk7wwd3a36zvvnvqgvzmi4t4vc2yzm7j2qd.onion"
+        }
+      ]
+    }
+  }
 }
