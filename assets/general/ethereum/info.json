@@ -34,6 +34,7 @@
   "nodes": [
     {
       "url": "https://ethnode1.adamant.im",
+      "alt_ip": "http://95.216.41.106:44099",
       "hasIndex": true
     }
   ],
