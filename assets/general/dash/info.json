@@ -29,7 +29,12 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 800000,
-  "nodes": [{ "url": "https://dashnode1.adamant.im" }],
+  "nodes": [
+    {
+      "url": "https://dashnode1.adamant.im",
+      "alt_ip": "http://95.216.208.142:44099"
+    }
+  ],
   "links": [
     {
       "name": "github",
