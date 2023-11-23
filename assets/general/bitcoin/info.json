@@ -5,7 +5,7 @@
   "explorer": "https://explorer.btc.com",
   "explorerTx": "https://explorer.btc.com/btc/transaction/${ID}",
   "explorerAddress": "https://explorer.btc.com/btc/address/${ID}",
-  "regexAddress": "^bc1(?i)[a-z0-9]{39,59}$|^[13][1-9A-HJ-NP-Za-km-z]{25,34}$",
+  "regexAddress": "^bc1[a-zA-Z0-9]{39,59}$|^[13][1-9A-HJ-NP-Za-km-z]{25,34}$",
   "symbol": "BTC",
   "type": "coin",
   "decimals": 8,
@@ -55,5 +55,15 @@
       "name": "whitepaper",
       "url": "https://bitcoin.org/bitcoin.pdf"
     }
-  ]
+  ],
+  "tor": {
+    "nodes": [
+      {
+        "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
+      },
+      {
+        "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion"
+      }
+    ]
+  }
 }

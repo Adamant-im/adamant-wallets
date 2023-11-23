@@ -37,16 +37,19 @@
       "alt_ip": "http://78.47.205.206:8002"
     }
   ],
-  "serviceNodes": [
-    {
-      "url": "https://liskservice3.adamant.im",
-      "alt_ip": "http://157.90.229.236:9904"
-    },
-    {
-      "url": "https://liskservice4.adamant.im",
-      "alt_ip": "http://78.47.205.206:9904"
-    }
-  ],
+  "services": {
+    "lskService": [
+      {
+        "url": "https://liskservice3.adamant.im",
+        "alt_ip": "http://157.90.229.236:9904"
+      },
+      {
+        "url": "https://liskservice4.adamant.im",
+        "alt_ip": "http://78.47.205.206:9904"
+      }
+    ]
+  },
+
   "links": [
     {
       "name": "github",
@@ -60,5 +63,25 @@
       "name": "reddit",
       "url": "https://reddit.com/r/Lisk"
     }
-  ]
+  ],
+  "tor": {
+    "nodes": [
+      {
+        "url": "http://nl2c4vcsdrd6je3ebt4236yst55mbso72ojmksrmlyoikapgnu647tid.onion"
+      },
+      {
+        "url": "http://qpjxvkathebm7oso3dk5hb4cggbeecqvcpcthuxlpovtn66plr6f4wyd.onion"
+      }
+    ],
+    "services": {
+      "lskService": [
+        {
+          "url": "http://xqrymra5go2nb3cslb3c3iv4weeuicybcxpjee4ay2indk2hgo7rw4qd.onion"
+        },
+        {
+          "url": "http://s2q6phc22icy73zjccjq66555gwtvyuyrodmadwhjdhmvyehb3qrcsid.onion"
+        }
+      ]
+    }
+  }
 }

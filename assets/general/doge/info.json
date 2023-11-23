@@ -55,5 +55,15 @@
       "name": "whitepaper",
       "url": "https://github.com/dogecoin/dogecoin/blob/master/README.md"
     }
-  ]
+  ],
+  "tor": {
+    "nodes": [
+      {
+        "url": "http://mtg4mq43p67cbj6qwcqgppjv7uzm7ximjlzapsbnbh5ls6zqkjsq26ad.onion"
+      },
+      {
+        "url": "http://bfu3iiofsagyhi22zijfilbkzlzbalpylhhfcluqmezx2avdwcxut7yd.onion"
+      }
+    ]
+  }
 }
