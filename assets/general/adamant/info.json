@@ -48,7 +48,7 @@
     "infoService": [
       {
         "url": "https://info.adamant.im",
-        "alt_ip": "http://88.198.156.44:80"
+        "alt_ip": "http://88.198.156.44:44099"
       }
     ]
   },
