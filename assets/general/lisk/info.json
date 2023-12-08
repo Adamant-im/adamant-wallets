@@ -35,6 +35,10 @@
     {
       "url": "https://lisknode4.adamant.im",
       "alt_ip": "http://78.47.205.206:8002"
+    },
+    {
+      "url": "https://lisknode5.adamant.im",
+      "alt_ip": "http://38.242.243.29:44099"
     }
   ],
   "services": {
@@ -46,6 +50,10 @@
       {
         "url": "https://liskservice4.adamant.im",
         "alt_ip": "http://78.47.205.206:9904"
+      },
+      {
+        "url": "https://liskservice5.adamant.im",
+        "alt_ip": "http://38.242.243.29:44098"
       }
     ]
   },
