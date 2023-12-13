@@ -11,7 +11,7 @@
   "decimals": 8,
   "minBalance": 0.05,
   "cryptoTransferDecimals": 8,
-  "defaultFee": 0.00142,
+  "defaultFee": 0.00164,
   "qqPrefix": "lisk",
   "status": "active",
   "createCoin": true,
