@@ -21,16 +21,16 @@ All notable changes to this project will be documented in this file.
 
 - Minimal supported node API version
 
-  ```json5
+  ```jsonc
   {
-    "minNodeVersion": "0.8.0", // Optional.
+    "minNodeVersion": "0.8.0" // Optional.
     // ...
   }
   ```
 
 - Tor nodes
 
-  ```json5
+  ```jsonc
   {
     // Optional. Tor configuration if a project uses Tor
     // It follows the same structure as the root properties
@@ -40,13 +40,18 @@ All notable changes to this project will be documented in this file.
       "explorer": "http://xyz.onion",
       "explorerTx": "http://xyz.onion/tx/${ID}",
       "explorerAddress": "http://xyz.onion/address/${ID}",
-      "nodes": [/*...*/],
-      "services": {/*...*/},
-      "links": [/*...*/]
+      "nodes": [
+        /*...*/
+      ],
+      "services": {
+        /*...*/
+      },
+      "links": [
+        /*...*/
+      ]
     }
   }
   ```
-
 
 ### Changed
 
@@ -54,25 +59,25 @@ All notable changes to this project will be documented in this file.
 
   Before:
 
-  ```json5
+  ```jsonc
   {
-    "serviceNodes": [
-      { "url": "https://example.com" }
-    ]
+    "serviceNodes": [{ "url": "https://example.com" }]
   }
   ```
 
   After:
 
-  ```json5
+  ```jsonc
   {
     "services": {
-      "infoService": [ // Optional.
+      "infoService": [
+        // Optional.
         { "url": "https://example.com" }
       ],
-      "lskService": [ // Optional.
+      "lskService": [
+        // Optional.
         { "url": "https://example.com" }
-      ],
+      ]
       // Other possible services...
     }
   }
