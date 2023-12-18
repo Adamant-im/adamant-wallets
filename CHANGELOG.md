@@ -4,8 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [2.1.0] - 2023-11-02
 
-- Flux listing with ordinal level 90. 
+- Flux listing with ordinal level 90.
 - Swarm listing with ordinal level 95.
+
+## [2.0.1] - 2023-10-25
+
+### Changed
+
+- Updated ADAMANT `minNodeVersion` from `v0.7.0` to `v0.8.0`
 
 ## [2.0.0] - 2023-10-24
 
