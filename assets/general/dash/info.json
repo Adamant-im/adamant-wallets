@@ -32,7 +32,7 @@
   "nodes": [
     {
       "url": "https://dashnode1.adamant.im",
-      "alt_ip": "http://95.216.208.142:44099"
+      "alt_ip": "http://45.85.147.224:44099"
     },
     {
       "url": "https://dashnode2.adamant.im",
