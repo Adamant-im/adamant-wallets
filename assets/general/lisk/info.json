@@ -11,7 +11,7 @@
   "decimals": 8,
   "minBalance": 0.05,
   "cryptoTransferDecimals": 8,
-  "defaultFee": 0.00142,
+  "defaultFee": 0.00164,
   "qqPrefix": "lisk",
   "status": "active",
   "createCoin": true,
@@ -28,13 +28,17 @@
   },
   "txConsistencyMaxTime": 60000,
   "nodes": [
-    { "url": "https://lisknode3.adamant.im" },
-    { "url": "https://lisknode4.adamant.im" }
+    {
+      "url": "https://lisknode5.adamant.im",
+      "alt_ip": "http://38.242.243.29:44099"
+    }
   ],
   "services": {
     "lskService": [
-      { "url": "https://liskservice3.adamant.im" },
-      { "url": "https://liskservice4.adamant.im" }
+      {
+        "url": "https://liskservice5.adamant.im",
+        "alt_ip": "http://38.242.243.29:44098"
+      }
     ]
   },
   "links": [
@@ -54,19 +58,13 @@
   "tor": {
     "nodes": [
       {
-        "url": "http://nl2c4vcsdrd6je3ebt4236yst55mbso72ojmksrmlyoikapgnu647tid.onion"
-      },
-      {
-        "url": "http://qpjxvkathebm7oso3dk5hb4cggbeecqvcpcthuxlpovtn66plr6f4wyd.onion"
+        "url": "http://4bsg7dijnpkiu6wylaad5fiom4iep73oz3o2rojkwnuteaawd2w3o2ad.onion"
       }
     ],
     "services": {
       "lskService": [
         {
-          "url": "http://xqrymra5go2nb3cslb3c3iv4weeuicybcxpjee4ay2indk2hgo7rw4qd.onion"
-        },
-        {
-          "url": "http://s2q6phc22icy73zjccjq66555gwtvyuyrodmadwhjdhmvyehb3qrcsid.onion"
+          "url": "http://cf6vf6xylvhza3t3ewffa7cmr2bqgaus5jwghiktjleids5ovdhoazad.onion"
         }
       ]
     }

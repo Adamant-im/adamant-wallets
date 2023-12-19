@@ -24,7 +24,7 @@
     "oldPendingInterval": 4000,
     "registeredInterval": 4000
   },
-  "minNodeVersion": "0.7.0",
+  "minNodeVersion": "0.8.0",
   "nodes": [
     { "url": "https://clown.adamant.im" },
     { "url": "https://lake.adamant.im" },
@@ -41,14 +41,18 @@
     { "url": "http://78.47.205.206:36666" },
     { "url": "http://5.161.53.74:36666" },
     { "url": "http://184.94.215.92:45555" },
-    { "url": "https://node1.adamant.business" },
-    { "url": "https://node2.blockchain2fa.io" }
+    {
+      "url": "https://node1.adamant.business",
+      "alt_ip": "http://194.233.75.29:45555"
+    },
+    { "url": "https://node2.blockchain2fa.io" },
+    { "url": "https://sunshine.adamant.im" }
   ],
   "services": {
     "infoService": [
       {
         "url": "https://info.adamant.im",
-        "alt_ip": "http://88.198.156.44:80"
+        "alt_ip": "http://88.198.156.44:44099"
       }
     ]
   },

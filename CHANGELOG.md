@@ -2,10 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.0] - 2023-12-19
+
+- Updated ADM node version to `v0.8.0`
+- Increased `defaultFee` to `0.00164` LSK
+- Added `dashnode2`, `lisknode5` and `liskservice5`
+- Removed temporarily `lisknode3`, `lisknode4`, `liskservice3` and `liskservice4` until v4 upgrade
+
 ## [2.1.0] - 2023-11-02
 
-- Flux listing with ordinal level 90. 
+- Flux listing with ordinal level 90.
 - Swarm listing with ordinal level 95.
+
+## [2.0.1] - 2023-10-25
+
+### Changed
+
+- Updated ADAMANT `minNodeVersion` from `v0.7.0` to `v0.8.0`
 
 ## [2.0.0] - 2023-10-24
 
@@ -15,16 +28,16 @@ All notable changes to this project will be documented in this file.
 
 - Minimal supported node API version
 
-  ```json5
+  ```jsonc
   {
-    "minNodeVersion": "0.8.0", // Optional.
+    "minNodeVersion": "0.8.0" // Optional.
     // ...
   }
   ```
 
 - Tor nodes
 
-  ```json5
+  ```jsonc
   {
     // Optional. Tor configuration if a project uses Tor
     // It follows the same structure as the root properties
@@ -34,13 +47,18 @@ All notable changes to this project will be documented in this file.
       "explorer": "http://xyz.onion",
       "explorerTx": "http://xyz.onion/tx/${ID}",
       "explorerAddress": "http://xyz.onion/address/${ID}",
-      "nodes": [/*...*/],
-      "services": {/*...*/},
-      "links": [/*...*/]
+      "nodes": [
+        /*...*/
+      ],
+      "services": {
+        /*...*/
+      },
+      "links": [
+        /*...*/
+      ]
     }
   }
   ```
-
 
 ### Changed
 
@@ -48,25 +66,25 @@ All notable changes to this project will be documented in this file.
 
   Before:
 
-  ```json5
+  ```jsonc
   {
-    "serviceNodes": [
-      { "url": "https://example.com" }
-    ]
+    "serviceNodes": [{ "url": "https://example.com" }]
   }
   ```
 
   After:
 
-  ```json5
+  ```jsonc
   {
     "services": {
-      "infoService": [ // Optional.
+      "infoService": [
+        // Optional.
         { "url": "https://example.com" }
       ],
-      "lskService": [ // Optional.
+      "lskService": [
+        // Optional.
         { "url": "https://example.com" }
-      ],
+      ]
       // Other possible services...
     }
   }
