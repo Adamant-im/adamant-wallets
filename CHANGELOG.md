@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2023-12-19
+
+- Updated ADM node version to `v0.8.0`
+- Increased `defaultFee` to `0.00164` LSK
+- Added `dashnode2`, `lisknode5` and `liskservice5`
+- Removed temporarily `lisknode3`, `lisknode4`, `liskservice3` and `liskservice4` until v4 upgrade
+
 ## [2.1.0] - 2023-11-02
 
 - Flux listing with ordinal level 90.
