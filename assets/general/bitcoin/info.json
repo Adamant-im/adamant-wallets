@@ -28,6 +28,10 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 10800000,
+  "nodeAdditionalInfo": {
+      "normalUpdateInterval": 360000,
+      "threshold": 2
+  }
   "nodes": [
     {
       "url": "https://btcnode1.adamant.im",

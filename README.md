@@ -69,8 +69,13 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms
   "blockTimeAvg": 600000, // Optional. Average block time in ms
 
-  "minNodeVersion": "0.8.0", // Optional. Minimal supported node API version
-
+  // Node additional information 
+  "nodeAdditionalInfo": {
+      "normalUpdateInterval": 210000, // Node status update interval in ms
+      "threshold": 3  // Node threshold
+      "minNodeVersion": "0.8.0", // Optional. Minimal supported node API version
+  }
+  
   // Optional. Node links for API
   "nodes": [
     { "url": "https://node.example.com" },

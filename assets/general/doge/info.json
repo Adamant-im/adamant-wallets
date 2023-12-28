@@ -28,6 +28,10 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 900000,
+  "nodeAdditionalInfo": {
+      "normalUpdateInterval": 390000,
+      "threshold": 3
+  }
   "nodes": [
     {
       "url": "https://dogenode1.adamant.im",

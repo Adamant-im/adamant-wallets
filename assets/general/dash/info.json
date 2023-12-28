@@ -29,6 +29,10 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 800000,
+  "nodeAdditionalInfo": {
+      "normalUpdateInterval": 210000,
+      "threshold": 3
+  }
   "nodes": [
     {
       "url": "https://dashnode1.adamant.im",

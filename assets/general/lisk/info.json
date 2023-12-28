@@ -26,6 +26,11 @@
     "newPendingAttempts": 15,
     "oldPendingAttempts": 4
   },
+  "nodeAdditionalInfo": {
+      "normalUpdateInterval": 270000,
+      "normalServiceUpdateInterval": 330000,
+      "threshold": 5
+  }
   "txConsistencyMaxTime": 60000,
   "nodes": [
     {

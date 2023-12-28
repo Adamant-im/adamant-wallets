@@ -31,6 +31,10 @@
   "defaultGasPriceGwei": 30,
   "defaultGasLimit": 22000,
   "warningGasPriceGwei": 70,
+  "nodeAdditionalInfo": {
+      "normalUpdateInterval": 300000,
+      "threshold": 5
+  }
   "nodes": [
     {
       "url": "https://ethnode1.adamant.im",
