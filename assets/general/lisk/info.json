@@ -29,6 +29,10 @@
   "nodeAdditionalInfo": {
       "normalUpdateInterval": 270000,
       "normalServiceUpdateInterval": 330000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "crucialServiceUpdateInterval": 30000,
+      "onScreenServiceUpdateInterval": 10000,
       "threshold": 5
   }
   "txConsistencyMaxTime": 60000,

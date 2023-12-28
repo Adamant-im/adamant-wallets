@@ -30,6 +30,8 @@
   "txConsistencyMaxTime": 900000,
   "nodeAdditionalInfo": {
       "normalUpdateInterval": 390000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
       "threshold": 3
   }
   "nodes": [

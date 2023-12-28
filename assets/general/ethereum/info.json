@@ -33,6 +33,8 @@
   "warningGasPriceGwei": 70,
   "nodeAdditionalInfo": {
       "normalUpdateInterval": 300000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
       "threshold": 5
   }
   "nodes": [

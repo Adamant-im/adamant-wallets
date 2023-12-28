@@ -26,6 +26,8 @@
   },
   "nodeAdditionalInfo": {
       "normalUpdateInterval": 300000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
       "threshold": 10,
       "minVersion": "0.8.0",
   }

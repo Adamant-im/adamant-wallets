@@ -72,7 +72,9 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   // Node additional information 
   "nodeAdditionalInfo": {
       "normalUpdateInterval": 210000, // Node status update interval in ms
-      "threshold": 3  // Permissible height difference between nodes
+      "crucialUpdateInterval": 30000, // Crucial node status update interval in ms
+      "onScreenUpdateInterval": 10000, // On the node screen, the status update interval in ms
+      "threshold": 3,  // Permissible height difference between nodes
       "minNodeVersion": "0.8.0", // Optional. Minimal supported node API version
   }
   
