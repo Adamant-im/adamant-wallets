@@ -33,7 +33,7 @@
       "crucialUpdateInterval": 30000,
       "onScreenUpdateInterval": 10000,
       "threshold": 2
-  }
+  },
   "nodes": [
     {
       "url": "https://btcnode1.adamant.im",

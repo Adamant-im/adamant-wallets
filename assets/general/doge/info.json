@@ -33,7 +33,7 @@
       "crucialUpdateInterval": 30000,
       "onScreenUpdateInterval": 10000,
       "threshold": 3
-  }
+  },
   "nodes": [
     {
       "url": "https://dogenode1.adamant.im",

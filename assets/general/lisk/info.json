@@ -34,7 +34,7 @@
       "crucialServiceUpdateInterval": 30000,
       "onScreenServiceUpdateInterval": 10000,
       "threshold": 5
-  }
+  },
   "txConsistencyMaxTime": 60000,
   "nodes": [
     {

@@ -34,7 +34,7 @@
       "crucialUpdateInterval": 30000,
       "onScreenUpdateInterval": 10000,
       "threshold": 3
-  }
+  },
   "nodes": [
     {
       "url": "https://dashnode1.adamant.im",

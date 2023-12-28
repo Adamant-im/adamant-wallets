@@ -36,7 +36,7 @@
       "crucialUpdateInterval": 30000,
       "onScreenUpdateInterval": 10000,
       "threshold": 5
-  }
+  },
   "nodes": [
     {
       "url": "https://ethnode1.adamant.im",

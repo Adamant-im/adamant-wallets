@@ -30,7 +30,7 @@
       "onScreenUpdateInterval": 10000,
       "threshold": 10,
       "minVersion": "0.8.0",
-  }
+  },
   "nodes": [
     { "url": "https://clown.adamant.im" },
     { "url": "https://lake.adamant.im" },
