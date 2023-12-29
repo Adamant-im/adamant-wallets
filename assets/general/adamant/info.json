@@ -57,12 +57,14 @@
       "minVersion": "0.8.0"
   },
   "services": {
-    "infoService": [
-      {
-        "url": "https://info.adamant.im",
-        "alt_ip": "http://88.198.156.44:44099"
+      "list": {
+          "infoService": [
+              {
+                "url": "https://info.adamant.im",
+                "alt_ip": "http://88.198.156.44:44099"
+              }
+          ]
       }
-    ]
   },
   "links": [
     {
