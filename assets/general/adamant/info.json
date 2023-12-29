@@ -48,13 +48,13 @@
           { "url": "https://node2.blockchain2fa.io" },
           { "url": "https://sunshine.adamant.im" }
       ],
-      "additionalInfo": {
+      "healthCheck": {
           "normalUpdateInterval": 300000,
           "crucialUpdateInterval": 30000,
           "onScreenUpdateInterval": 10000,
-          "threshold": 10,
-          "minVersion": "0.8.0"
-      }
+          "threshold": 10
+      },
+      "minVersion": "0.8.0"
   },
   "services": {
     "infoService": [

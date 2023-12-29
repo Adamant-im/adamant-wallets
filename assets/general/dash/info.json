@@ -40,7 +40,7 @@
               "alt_ip": "http://207.180.210.95:44099"
           }
       ],
-      "additionalInfo": {
+      "healthCheck": {
           "normalUpdateInterval": 210000,
           "crucialUpdateInterval": 30000,
           "onScreenUpdateInterval": 10000,

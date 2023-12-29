@@ -34,7 +34,7 @@
               "alt_ip": "http://38.242.243.29:44099"
           }
       ],
-      "additionalInfo": {
+      "healthCheck": {
           "normalUpdateInterval": 270000,
           "crucialUpdateInterval": 30000,
           "onScreenUpdateInterval": 10000,
@@ -42,17 +42,19 @@
       }
   },
   "services": {
-    "lskService": [
-      {
-        "url": "https://liskservice5.adamant.im",
-        "alt_ip": "http://38.242.243.29:44098"
+      "list": {
+          "lskService": [
+              {
+                  "url": "https://liskservice5.adamant.im",
+                  "alt_ip": "http://38.242.243.29:44098"
+              }
+          ]
+      },
+      "healthCheck": {
+          "normalUpdateInterval": 330000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000
       }
-    ],
-    "additionalInfo": {
-        "normalUpdateInterval": 330000,
-        "crucialUpdateInterval": 30000,
-        "onScreenUpdateInterval": 10000
-    }
   },
   "links": [
     {

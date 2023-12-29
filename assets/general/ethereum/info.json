@@ -44,7 +44,7 @@
               "hasIndex": true
           }
       ],
-      "additionalInfo": {
+      "healthCheck": {
           "normalUpdateInterval": 300000,
           "crucialUpdateInterval": 30000,
           "onScreenUpdateInterval": 10000,

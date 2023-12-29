@@ -39,7 +39,7 @@
               "alt_ip": "http://176.9.32.126:44098"
           }
       ],
-      "additionalInfo": {
+      "healthCheck": {
           "normalUpdateInterval": 390000,
           "crucialUpdateInterval": 30000,
           "onScreenUpdateInterval": 10000,
