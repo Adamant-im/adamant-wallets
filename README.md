@@ -79,6 +79,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
       "crucialServiceUpdateInterval": 30000, // Optional. Service status update interval when there are no active services, in ms
       "onScreenServiceUpdateInterval": 10000, // Optional. On the node screen, the status update interval in ms
       "minNodeVersion": "0.8.0", // Optional. Minimal supported node API version
+      "minServiceVersion": "1.0.0", // Optional. Minimal supported service API version      
   },
   
   // Optional. Node links for API
