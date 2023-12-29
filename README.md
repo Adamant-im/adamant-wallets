@@ -102,9 +102,9 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
     },
     // Optional: Service additional information (If not filled here, information is retrieved from nodes.additionalInfo)
     "healthCheck": {
-      "normalUpdateInterval": 210000, // Optional. Regular service status update interval in ms
-      "crucialUpdateInterval": 30000, // Optional. Service status update interval when there are no active services, in ms
-      "onScreenUpdateInterval": 10000 // Optional. On the node screen, the status update interval in ms
+      "normalUpdateInterval": 210000, // Regular service status update interval in ms
+      "crucialUpdateInterval": 30000, // Service status update interval when there are no active services, in ms
+      "onScreenUpdateInterval": 10000 // On the node screen, the status update interval in ms
     },
     "minVersion": "1.0.0", // Optional. Minimal supported service API version    
   },
