@@ -28,22 +28,24 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 10800000,
-  "nodeAdditionalInfo": {
-      "normalUpdateInterval": 360000,
-      "crucialUpdateInterval": 30000,
-      "onScreenUpdateInterval": 10000,
-      "threshold": 2
+  "nodes": {
+      "list": [
+          {
+              "url": "https://btcnode1.adamant.im",
+              "alt_ip": "http://176.9.38.204:44099"
+          },
+          {
+              "url": "https://btcnode2.adamant.im",
+              "alt_ip": "http://176.9.32.126:44099"
+          }
+      ],
+      "additionalInfo": {
+          "normalUpdateInterval": 360000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000,
+          "threshold": 2
+      }
   },
-  "nodes": [
-    {
-      "url": "https://btcnode1.adamant.im",
-      "alt_ip": "http://176.9.38.204:44099"
-    },
-    {
-      "url": "https://btcnode2.adamant.im",
-      "alt_ip": "http://176.9.32.126:44099"
-    }
-  ],
   "links": [
     {
       "name": "github",

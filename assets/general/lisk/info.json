@@ -26,29 +26,33 @@
     "newPendingAttempts": 15,
     "oldPendingAttempts": 4
   },
-  "nodeAdditionalInfo": {
-      "normalUpdateInterval": 270000,
-      "normalServiceUpdateInterval": 330000,
-      "crucialUpdateInterval": 30000,
-      "onScreenUpdateInterval": 10000,
-      "crucialServiceUpdateInterval": 30000,
-      "onScreenServiceUpdateInterval": 10000,
-      "threshold": 5
-  },
   "txConsistencyMaxTime": 60000,
-  "nodes": [
-    {
-      "url": "https://lisknode5.adamant.im",
-      "alt_ip": "http://38.242.243.29:44099"
-    }
-  ],
+  "nodes": {
+      "list": [
+          {
+              "url": "https://lisknode5.adamant.im",
+              "alt_ip": "http://38.242.243.29:44099"
+          }
+      ],
+      "additionalInfo": {
+          "normalUpdateInterval": 270000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000,
+          "threshold": 5
+      }
+  },
   "services": {
     "lskService": [
       {
         "url": "https://liskservice5.adamant.im",
         "alt_ip": "http://38.242.243.29:44098"
       }
-    ]
+    ],
+    "additionalInfo": {
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
+    }
   },
   "links": [
     {

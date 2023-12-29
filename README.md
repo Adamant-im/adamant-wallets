@@ -83,14 +83,24 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   },
   
   // Optional. Node links for API
-  "nodes": [
-    { "url": "https://node.example.com" },
-    { "url": "http://0.0.0.0:36666" }, // It's possible to use IP:port URI
-    {
-      "url": "https://second-node.example.com",
-      "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored
+  "nodes": {
+    "list": [
+      { "url": "https://node.example.com" },
+      { "url": "http://0.0.0.0:36666" }, // It's possible to use IP:port URI
+      {
+        "url": "https://second-node.example.com",
+        "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored
+      }
+    ],
+    // Node additional information 
+    "additionalInfo": {
+      "normalUpdateInterval": 210000, // Regular node status update interval in ms
+      "crucialUpdateInterval": 30000, // Node status update interval when there are no active nodes, in ms
+      "onScreenUpdateInterval": 10000, // On the node screen, the status update interval in ms
+      "threshold": 3,  // Permissible height difference between nodes
+      "minVersion": "1.0.0" // Optional. Minimal supported service API version      
     }
-  ],
+  },
 
   // Optional. Services related to a project
   "services": {
@@ -101,6 +111,13 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
         "alt_ip": "0.0.0.1:80" // Alternative way to connect if the domain of a service is censored
       }
     ],
+    // Optional: Service additional information (If not filled here, information is retrieved from nodes.additionalInfo)
+    "additionalInfo": {
+      "normalUpdateInterval": 210000, // Optional. Regular service status update interval in ms
+      "crucialUpdateInterval": 30000, // Optional. Service status update interval when there are no active services, in ms
+      "onScreenUpdateInterval": 10000, // Optional. On the node screen, the status update interval in ms
+      "minVersion": "1.0.0", // Optional. Minimal supported service API version    
+    }
   },
 
   // Optional. Additional project links

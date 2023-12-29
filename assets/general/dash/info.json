@@ -29,22 +29,24 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 800000,
-  "nodeAdditionalInfo": {
-      "normalUpdateInterval": 210000,
-      "crucialUpdateInterval": 30000,
-      "onScreenUpdateInterval": 10000,
-      "threshold": 3
+  "nodes": {
+      "list": [
+          {
+              "url": "https://dashnode1.adamant.im",
+              "alt_ip": "http://45.85.147.224:44099"
+          },
+          {
+              "url": "https://dashnode2.adamant.im",
+              "alt_ip": "http://207.180.210.95:44099"
+          }
+      ],
+      "additionalInfo": {
+          "normalUpdateInterval": 210000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000,
+          "threshold": 3
+      }
   },
-  "nodes": [
-    {
-      "url": "https://dashnode1.adamant.im",
-      "alt_ip": "http://45.85.147.224:44099"
-    },
-    {
-      "url": "https://dashnode2.adamant.im",
-      "alt_ip": "http://207.180.210.95:44099"
-    }
-  ],
   "links": [
     {
       "name": "github",

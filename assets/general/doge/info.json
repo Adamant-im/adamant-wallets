@@ -28,22 +28,24 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 900000,
-  "nodeAdditionalInfo": {
-      "normalUpdateInterval": 390000,
-      "crucialUpdateInterval": 30000,
-      "onScreenUpdateInterval": 10000,
-      "threshold": 3
+  "nodes": {
+      "list": [
+          {
+              "url": "https://dogenode1.adamant.im",
+              "alt_ip": "http://5.9.99.62:44099"
+          },
+          {
+              "url": "https://dogenode2.adamant.im",
+              "alt_ip": "http://176.9.32.126:44098"
+          }
+      ],
+      "additionalInfo": {
+          "normalUpdateInterval": 390000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000,
+          "threshold": 3
+      }
   },
-  "nodes": [
-    {
-      "url": "https://dogenode1.adamant.im",
-      "alt_ip": "http://5.9.99.62:44099"
-    },
-    {
-      "url": "https://dogenode2.adamant.im",
-      "alt_ip": "http://176.9.32.126:44098"
-    }
-  ],
   "links": [
     {
       "name": "github",

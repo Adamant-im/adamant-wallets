@@ -24,36 +24,38 @@
     "oldPendingInterval": 4000,
     "registeredInterval": 4000
   },
-  "nodeAdditionalInfo": {
-      "normalUpdateInterval": 300000,
-      "crucialUpdateInterval": 30000,
-      "onScreenUpdateInterval": 10000,
-      "threshold": 10,
-      "minVersion": "0.8.0"
+  "nodes": {
+      "list": [
+          { "url": "https://clown.adamant.im" },
+          { "url": "https://lake.adamant.im" },
+          {
+              "url": "https://endless.adamant.im",
+              "alt_ip": "http://149.102.157.15:36666"
+          },
+          { "url": "https://bid.adamant.im" },
+          { "url": "https://unusual.adamant.im" },
+          {
+              "url": "https://debate.adamant.im",
+              "alt_ip": "http://95.216.161.113:36666"
+          },
+          { "url": "http://78.47.205.206:36666" },
+          { "url": "http://5.161.53.74:36666" },
+          { "url": "http://184.94.215.92:45555" },
+          {
+              "url": "https://node1.adamant.business",
+              "alt_ip": "http://194.233.75.29:45555"
+          },
+          { "url": "https://node2.blockchain2fa.io" },
+          { "url": "https://sunshine.adamant.im" }
+      ],
+      "additionalInfo": {
+          "normalUpdateInterval": 300000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000,
+          "threshold": 10,
+          "minVersion": "0.8.0"
+      }
   },
-  "nodes": [
-    { "url": "https://clown.adamant.im" },
-    { "url": "https://lake.adamant.im" },
-    {
-      "url": "https://endless.adamant.im",
-      "alt_ip": "http://149.102.157.15:36666"
-    },
-    { "url": "https://bid.adamant.im" },
-    { "url": "https://unusual.adamant.im" },
-    {
-      "url": "https://debate.adamant.im",
-      "alt_ip": "http://95.216.161.113:36666"
-    },
-    { "url": "http://78.47.205.206:36666" },
-    { "url": "http://5.161.53.74:36666" },
-    { "url": "http://184.94.215.92:45555" },
-    {
-      "url": "https://node1.adamant.business",
-      "alt_ip": "http://194.233.75.29:45555"
-    },
-    { "url": "https://node2.blockchain2fa.io" },
-    { "url": "https://sunshine.adamant.im" }
-  ],
   "services": {
     "infoService": [
       {
