@@ -79,7 +79,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
         "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored
       }
     ],
-    // Node additional information 
+    // Node health сheck information 
     "healthCheck": {
       "normalUpdateInterval": 210000, // Regular node status update interval in ms
       "crucialUpdateInterval": 30000, // Node status update interval when there are no active nodes, in ms
@@ -100,7 +100,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
         }
       ]
     },
-    // Optional: Service additional information (If not filled here, information is retrieved from nodes.additionalInfo)
+    // Optional: Service health сheck information (If not filled here, information is retrieved from nodes.healthCheck)
     "healthCheck": {
       "normalUpdateInterval": 210000, // Regular service status update interval in ms
       "crucialUpdateInterval": 30000, // Service status update interval when there are no active services, in ms
