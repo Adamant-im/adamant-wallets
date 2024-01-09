@@ -197,6 +197,7 @@
           },
           "nodes": {
             "type": "object",
+            "required": ["list", "healthCheck"],
             "properties": {
                 "list": {
                     "type": "array",
