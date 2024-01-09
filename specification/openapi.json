@@ -248,6 +248,7 @@
                   },
                   "healthCheck": {
                       "type": "object",
+                      "required": ["normalUpdateInterval", "crucialUpdateInterval", "onScreenUpdateInterval"],
                       "properties": {
                           "normalUpdateInterval": {
                               "type": "integer",
