@@ -237,6 +237,7 @@
           },
           "services": {
               "type": "object",
+              "required": ["list"],
               "properties": {
                   "list": {
                       "type": "object",
