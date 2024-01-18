@@ -42,6 +42,11 @@
         "url": "https://ethnode2.adamant.im",
         "alt_ip": "http://95.216.114.252:44099",
         "hasIndex": true
+      },
+      {
+        "url": "https://ethnode3.adamant.im",
+        "alt_ip": "http://46.4.37.157:44099",
+        "hasIndex": true
       }
     ],
     "healthCheck": {
@@ -77,6 +82,10 @@
       },
       {
         "url": "http://jpbrp6xapsyfnvyosrpu5wmoi62fqotazkicjeiob32yz77rt7axobqd.onion",
+        "hasIndex": true
+      },
+      {
+        "url": "http://rekynxikhumzsme7phumocz3mquy7y3onkw33skmvk2akjkin2iopqqd.onion",
         "hasIndex": true
       }
     ]
