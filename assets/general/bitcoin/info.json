@@ -29,22 +29,22 @@
   },
   "txConsistencyMaxTime": 10800000,
   "nodes": {
-      "list": [
-          {
-              "url": "https://btcnode1.adamant.im",
-              "alt_ip": "http://176.9.38.204:44099"
-          },
-          {
-              "url": "https://btcnode2.adamant.im",
-              "alt_ip": "http://176.9.32.126:44099"
-          }
-      ],
-      "healthCheck": {
-          "normalUpdateInterval": 360000,
-          "crucialUpdateInterval": 30000,
-          "onScreenUpdateInterval": 10000,
-          "threshold": 2
+    "list": [
+      {
+        "url": "https://btcnode1.adamant.im",
+        "alt_ip": "http://176.9.38.204:44099"
+      },
+      {
+        "url": "https://btcnode2.adamant.im",
+        "alt_ip": "http://176.9.32.126:44099"
       }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 360000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 2
+    }
   },
   "links": [
     {

@@ -28,33 +28,33 @@
   },
   "txConsistencyMaxTime": 60000,
   "nodes": {
-      "list": [
-          {
-              "url": "https://lisknode5.adamant.im",
-              "alt_ip": "http://38.242.243.29:44099"
-          }
-      ],
-      "healthCheck": {
-          "normalUpdateInterval": 270000,
-          "crucialUpdateInterval": 30000,
-          "onScreenUpdateInterval": 10000,
-          "threshold": 5
+    "list": [
+      {
+        "url": "https://lisknode5.adamant.im",
+        "alt_ip": "http://38.242.243.29:44099"
       }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 270000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 5
+    }
   },
   "services": {
-      "list": {
-          "lskService": [
-              {
-                  "url": "https://liskservice5.adamant.im",
-                  "alt_ip": "http://38.242.243.29:44098"
-              }
-          ]
-      },
-      "healthCheck": {
-          "normalUpdateInterval": 330000,
-          "crucialUpdateInterval": 30000,
-          "onScreenUpdateInterval": 10000
-      }
+    "list": {
+      "lskService": [
+        {
+          "url": "https://liskservice5.adamant.im",
+          "alt_ip": "http://38.242.243.29:44098"
+        }
+      ]
+    },
+    "healthCheck": {
+      "normalUpdateInterval": 330000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000
+    }
   },
   "links": [
     {

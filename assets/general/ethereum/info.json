@@ -32,24 +32,24 @@
   "defaultGasLimit": 22000,
   "warningGasPriceGwei": 70,
   "nodes": {
-      "list": [
-          {
-              "url": "https://ethnode1.adamant.im",
-              "alt_ip": "http://95.216.41.106:44099",
-              "hasIndex": true
-          },
-          {
-              "url": "https://ethnode2.adamant.im",
-              "alt_ip": "http://95.216.114.252:44099",
-              "hasIndex": true
-          }
-      ],
-      "healthCheck": {
-          "normalUpdateInterval": 300000,
-          "crucialUpdateInterval": 30000,
-          "onScreenUpdateInterval": 10000,
-          "threshold": 5
+    "list": [
+      {
+        "url": "https://ethnode1.adamant.im",
+        "alt_ip": "http://95.216.41.106:44099",
+        "hasIndex": true
+      },
+      {
+        "url": "https://ethnode2.adamant.im",
+        "alt_ip": "http://95.216.114.252:44099",
+        "hasIndex": true
       }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 300000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 5
+    }
   },
   "links": [
     {

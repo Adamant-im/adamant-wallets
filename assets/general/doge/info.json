@@ -29,22 +29,22 @@
   },
   "txConsistencyMaxTime": 900000,
   "nodes": {
-      "list": [
-          {
-              "url": "https://dogenode1.adamant.im",
-              "alt_ip": "http://5.9.99.62:44099"
-          },
-          {
-              "url": "https://dogenode2.adamant.im",
-              "alt_ip": "http://176.9.32.126:44098"
-          }
-      ],
-      "healthCheck": {
-          "normalUpdateInterval": 390000,
-          "crucialUpdateInterval": 30000,
-          "onScreenUpdateInterval": 10000,
-          "threshold": 3
+    "list": [
+      {
+        "url": "https://dogenode1.adamant.im",
+        "alt_ip": "http://5.9.99.62:44099"
+      },
+      {
+        "url": "https://dogenode2.adamant.im",
+        "alt_ip": "http://176.9.32.126:44098"
       }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 390000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 3
+    }
   },
   "links": [
     {
