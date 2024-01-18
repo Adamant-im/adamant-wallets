@@ -75,19 +75,27 @@
     }
   ],
   "tor": {
-    "nodes": [
-      {
-        "url": "http://vj3qid4h2d4cj2gexivjuuybah3mjzenpdyr5bj6z4hctp52jn6qsgid.onion",
-        "hasIndex": true
-      },
-      {
-        "url": "http://jpbrp6xapsyfnvyosrpu5wmoi62fqotazkicjeiob32yz77rt7axobqd.onion",
-        "hasIndex": true
-      },
-      {
-        "url": "http://rekynxikhumzsme7phumocz3mquy7y3onkw33skmvk2akjkin2iopqqd.onion",
-        "hasIndex": true
+    "nodes": {
+      "list": [
+        {
+          "url": "http://vj3qid4h2d4cj2gexivjuuybah3mjzenpdyr5bj6z4hctp52jn6qsgid.onion",
+          "hasIndex": true
+        },
+        {
+          "url": "http://jpbrp6xapsyfnvyosrpu5wmoi62fqotazkicjeiob32yz77rt7axobqd.onion",
+          "hasIndex": true
+        },
+        {
+          "url": "http://rekynxikhumzsme7phumocz3mquy7y3onkw33skmvk2akjkin2iopqqd.onion",
+          "hasIndex": true
+        }
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 300000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000,
+        "threshold": 5
       }
-    ]
+    }
   }
 }
