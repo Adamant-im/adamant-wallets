@@ -30,11 +30,11 @@
   "nodes": [
     {
       "url": "https://lisknode3.adamant.im",
-      "alt_ip": "http://157.90.229.236:8002"
+      "alt_ip": "http://157.90.229.236:44099"
     },
     {
       "url": "https://lisknode4.adamant.im",
-      "alt_ip": "http://78.47.205.206:8002"
+      "alt_ip": "http://78.47.205.206:44099"
     },
     {
       "url": "https://lisknode5.adamant.im",
@@ -45,11 +45,11 @@
     "lskService": [
       {
         "url": "https://liskservice3.adamant.im",
-        "alt_ip": "http://157.90.229.236:9904"
+        "alt_ip": "http://157.90.229.236:44098"
       },
       {
         "url": "https://liskservice4.adamant.im",
-        "alt_ip": "http://78.47.205.206:9904"
+        "alt_ip": "http://78.47.205.206:44098"
       },
       {
         "url": "https://liskservice5.adamant.im",
