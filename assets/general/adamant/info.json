@@ -24,37 +24,47 @@
     "oldPendingInterval": 4000,
     "registeredInterval": 4000
   },
-  "minNodeVersion": "0.8.0",
-  "nodes": [
-    { "url": "https://clown.adamant.im" },
-    { "url": "https://lake.adamant.im" },
-    {
-      "url": "https://endless.adamant.im",
-      "alt_ip": "http://149.102.157.15:36666"
-    },
-    { "url": "https://bid.adamant.im" },
-    { "url": "https://unusual.adamant.im" },
-    {
-      "url": "https://debate.adamant.im",
-      "alt_ip": "http://95.216.161.113:36666"
-    },
-    { "url": "http://78.47.205.206:36666" },
-    { "url": "http://5.161.53.74:36666" },
-    { "url": "http://184.94.215.92:45555" },
-    {
-      "url": "https://node1.adamant.business",
-      "alt_ip": "http://194.233.75.29:45555"
-    },
-    { "url": "https://node2.blockchain2fa.io" },
-    { "url": "https://sunshine.adamant.im" }
-  ],
-  "services": {
-    "infoService": [
+  "nodes": {
+    "list": [
+      { "url": "https://clown.adamant.im" },
+      { "url": "https://lake.adamant.im" },
       {
-        "url": "https://info.adamant.im",
-        "alt_ip": "http://88.198.156.44:44099"
-      }
-    ]
+        "url": "https://endless.adamant.im",
+        "alt_ip": "http://149.102.157.15:36666"
+      },
+      { "url": "https://bid.adamant.im" },
+      { "url": "https://unusual.adamant.im" },
+      {
+        "url": "https://debate.adamant.im",
+        "alt_ip": "http://95.216.161.113:36666"
+      },
+      { "url": "http://78.47.205.206:36666" },
+      { "url": "http://5.161.53.74:36666" },
+      { "url": "http://184.94.215.92:45555" },
+      {
+        "url": "https://node1.adamant.business",
+        "alt_ip": "http://194.233.75.29:45555"
+      },
+      { "url": "https://node2.blockchain2fa.io" },
+      { "url": "https://sunshine.adamant.im" }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 300000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 10
+    },
+    "minVersion": "0.8.0"
+  },
+  "services": {
+    "list": {
+      "infoService": [
+        {
+          "url": "https://info.adamant.im",
+          "alt_ip": "http://88.198.156.44:44099"
+        }
+      ]
+    }
   },
   "links": [
     {
@@ -75,29 +85,40 @@
     "explorer": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion",
     "explorerTx": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion/tx/${ID}",
     "explorerAddress": "http://srovpmanmrbmbqe63vp5nycsa3j3g6be3bz46ksmo35u5pw7jjtjamid.onion/address/${ID}",
-    "nodes": [
-      {
-        "url": "http://37g5to2z6bdoeegun4hms2hvkfbdxh4rcon4e3p267wtfkh4ji2ns6id.onion"
-      },
-      {
-        "url": "http://fqjcvsibnbwhlwxndzqzziapiwoidgn24avfiauu4wo2fc3yyiy2qcid.onion"
-      },
-      {
-        "url": "http://omhrhpc45njpgzp4fggtndazaodwuwvb5in6hsn3k7tvaqennmfaa2qd.onion"
-      },
-      {
-        "url": "http://uxu6vnnrrnl7tmo7i657yvs4jbgdz734xvufryoi326az5dzufuwboad.onion"
-      },
-      {
-        "url": "http://rukehjd2yalzgny7mdjqtzown2mazsaeh4zr7zjdg4l5afkgc3z2kgqd.onion"
-      }
-    ],
-    "services": {
-      "infoService": [
+    "nodes": {
+      "list": [
         {
-          "url": "http://czjsawp2crjmnkliw2h2kpk7wwd3a36zvvnvqgvzmi4t4vc2yzm7j2qd.onion"
+          "url": "http://37g5to2z6bdoeegun4hms2hvkfbdxh4rcon4e3p267wtfkh4ji2ns6id.onion"
+        },
+        {
+          "url": "http://fqjcvsibnbwhlwxndzqzziapiwoidgn24avfiauu4wo2fc3yyiy2qcid.onion"
+        },
+        {
+          "url": "http://omhrhpc45njpgzp4fggtndazaodwuwvb5in6hsn3k7tvaqennmfaa2qd.onion"
+        },
+        {
+          "url": "http://uxu6vnnrrnl7tmo7i657yvs4jbgdz734xvufryoi326az5dzufuwboad.onion"
+        },
+        {
+          "url": "http://rukehjd2yalzgny7mdjqtzown2mazsaeh4zr7zjdg4l5afkgc3z2kgqd.onion"
         }
-      ]
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 300000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000,
+        "threshold": 10
+      },
+      "minVersion": "0.8.0"
+    },
+    "services": {
+      "list": {
+        "infoService": [
+          {
+            "url": "http://czjsawp2crjmnkliw2h2kpk7wwd3a36zvvnvqgvzmi4t4vc2yzm7j2qd.onion"
+          }
+        ]
+      }
     }
   }
 }
