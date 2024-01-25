@@ -64,6 +64,11 @@
           "alt_ip": "http://88.198.156.44:44099"
         }
       ]
+    },
+    "healthCheck": {
+      "normalUpdateInterval": 300000,
+      "crucialUpdateInterval": 300000,
+      "onScreenUpdateInterval": 300000
     }
   },
   "links": [
@@ -118,6 +123,11 @@
             "url": "http://czjsawp2crjmnkliw2h2kpk7wwd3a36zvvnvqgvzmi4t4vc2yzm7j2qd.onion"
           }
         ]
+      },
+      "healthCheck": {
+        "normalUpdateInterval": 300000,
+        "crucialUpdateInterval": 300000,
+        "onScreenUpdateInterval": 300000
       }
     }
   }
