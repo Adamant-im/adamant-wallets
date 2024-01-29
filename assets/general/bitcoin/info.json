@@ -31,12 +31,12 @@
   "nodes": {
     "list": [
       {
-        "url": "https://btcnode1.adamant.im",
-        "alt_ip": "http://176.9.38.204:44099"
+        "url": "https://btcnode1.adamant.im/bitcoind",
+        "alt_ip": "http://176.9.38.204:44099/bitcoind"
       },
       {
-        "url": "https://btcnode2.adamant.im",
-        "alt_ip": "http://176.9.32.126:44099"
+        "url": "https://btcnode2.adamant.im/bitcoind",
+        "alt_ip": "http://176.9.32.126:44099/bitcoind"
       }
     ],
     "healthCheck": {
@@ -44,6 +44,25 @@
       "crucialUpdateInterval": 30000,
       "onScreenUpdateInterval": 10000,
       "threshold": 2
+    }
+  },
+  "services": {
+    "list": {
+      "btcExplorer": [
+        {
+          "url": "https://btcnode1.adamant.im",
+          "alt_ip": "http://176.9.38.204:44099"
+        },
+        {
+          "url": "https://btcnode2.adamant.im",
+          "alt_ip": "http://176.9.32.126:44099"
+        }
+      ]
+    },
+    "healthCheck": {
+      "normalUpdateInterval": 330000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000
     }
   },
   "links": [
@@ -68,10 +87,10 @@
     "nodes": {
       "list": [
         {
-          "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
+          "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion/bitcoind"
         },
         {
-          "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion"
+          "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion/bitcoind"
         }
       ],
       "healthCheck": {
@@ -79,6 +98,23 @@
         "crucialUpdateInterval": 30000,
         "onScreenUpdateInterval": 10000,
         "threshold": 2
+      }
+    },
+    "services": {
+      "list": {
+        "btcExplorer": [
+          {
+            "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
+          },
+          {
+            "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion"
+          }
+        ]
+      },
+      "healthCheck": {
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
       }
     }
   }
