@@ -48,7 +48,7 @@
   },
   "services": {
     "list": {
-      "btcExplorer": [
+      "btcIndexer": [
         {
           "url": "https://btcnode1.adamant.im",
           "alt_ip": "http://176.9.38.204:44099"
@@ -102,7 +102,7 @@
     },
     "services": {
       "list": {
-        "btcExplorer": [
+        "btcIndexer": [
           {
             "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
           },
