@@ -4,7 +4,7 @@
   "description": "Public blockchain which facilitates digital asset transfers",
   "symbol": "GT",
   "type": "token",
-  "decimals": 8,
+  "decimals": 18,
   "cryptoTransferDecimals": 6,
   "status": "active",
   "createCoin": false,
