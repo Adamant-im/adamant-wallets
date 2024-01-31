@@ -92,6 +92,11 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   // Optional. Services related to a project
   "services": {
     "list": {
+      "description": {
+        "software": "example-service",
+        "github": "https://github.com/--example",
+        "docs": "https://docs.example.com" // API docs
+      },
       "infoService": [
         { "url": "https://info.example.com" },
         {
