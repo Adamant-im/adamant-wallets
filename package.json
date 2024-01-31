@@ -1,5 +1,5 @@
 {
-  "version": "2.3.0",
+  "version": "2.3.1",
   "devDependencies": {
     "@prettier/plugin-xml": "^2.2.0",
     "husky": "^8.0.3",
