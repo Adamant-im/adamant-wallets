@@ -47,6 +47,11 @@
     }
   },
   "services": {
+    "description": {
+      "software": "Esplora/Electrs",
+      "github": "https://github.com/blockstream/electrs",
+      "docs": "https://github.com/blockstream/esplora/blob/master/API.md"
+    },
     "list": {
       "btcIndexer": [
         {
@@ -101,6 +106,11 @@
       }
     },
     "services": {
+      "description": {
+        "software": "Esplora/Electrs",
+        "github": "https://github.com/blockstream/electrs",
+        "docs": "https://github.com/blockstream/esplora/blob/master/API.md"
+      },
       "list": {
         "btcIndexer": [
           {
