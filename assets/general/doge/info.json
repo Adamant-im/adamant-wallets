@@ -28,16 +28,24 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 900000,
-  "nodes": [
-    {
-      "url": "https://dogenode1.adamant.im",
-      "alt_ip": "http://5.9.99.62:44099"
-    },
-    {
-      "url": "https://dogenode2.adamant.im",
-      "alt_ip": "http://176.9.32.126:44098"
+  "nodes": {
+    "list": [
+      {
+        "url": "https://dogenode1.adamant.im",
+        "alt_ip": "http://5.9.99.62:44099"
+      },
+      {
+        "url": "https://dogenode2.adamant.im",
+        "alt_ip": "http://176.9.32.126:44098"
+      }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 390000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 3
     }
-  ],
+  },
   "links": [
     {
       "name": "github",
@@ -57,13 +65,21 @@
     }
   ],
   "tor": {
-    "nodes": [
-      {
-        "url": "http://mtg4mq43p67cbj6qwcqgppjv7uzm7ximjlzapsbnbh5ls6zqkjsq26ad.onion"
-      },
-      {
-        "url": "http://bfu3iiofsagyhi22zijfilbkzlzbalpylhhfcluqmezx2avdwcxut7yd.onion"
+    "nodes": {
+      "list": [
+        {
+          "url": "http://mtg4mq43p67cbj6qwcqgppjv7uzm7ximjlzapsbnbh5ls6zqkjsq26ad.onion"
+        },
+        {
+          "url": "http://bfu3iiofsagyhi22zijfilbkzlzbalpylhhfcluqmezx2avdwcxut7yd.onion"
+        }
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 390000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000,
+        "threshold": 3
       }
-    ]
+    }
   }
 }

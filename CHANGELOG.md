@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.0] - 2024-01-25
+
+- Rollback full list of LSK nodes
+- Added healtcheck constants
+- Added `ethnode3.adamant.im`
+- Listed new tokens: STORJ, GT
+
 ## [2.2.0] - 2023-12-19
 
 - Updated ADM node version to `v0.8.0`

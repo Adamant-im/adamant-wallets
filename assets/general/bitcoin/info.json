@@ -28,16 +28,24 @@
     "oldPendingAttempts": 4
   },
   "txConsistencyMaxTime": 10800000,
-  "nodes": [
-    {
-      "url": "https://btcnode1.adamant.im",
-      "alt_ip": "http://176.9.38.204:44099"
-    },
-    {
-      "url": "https://btcnode2.adamant.im",
-      "alt_ip": "http://176.9.32.126:44099"
+  "nodes": {
+    "list": [
+      {
+        "url": "https://btcnode1.adamant.im",
+        "alt_ip": "http://176.9.38.204:44099"
+      },
+      {
+        "url": "https://btcnode2.adamant.im",
+        "alt_ip": "http://176.9.32.126:44099"
+      }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 360000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 2
     }
-  ],
+  },
   "links": [
     {
       "name": "github",
@@ -57,13 +65,21 @@
     }
   ],
   "tor": {
-    "nodes": [
-      {
-        "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
-      },
-      {
-        "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion"
+    "nodes": {
+      "list": [
+        {
+          "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
+        },
+        {
+          "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion"
+        }
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 360000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000,
+        "threshold": 2
       }
-    ]
+    }
   }
 }
