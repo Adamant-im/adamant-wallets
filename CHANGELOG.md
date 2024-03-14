@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.4.0] - 2024-03-13
+
+- Listed new token: FLOKI
+- Fix defaultOrdinal level for GT, STORJ and XCN
+
 ## [2.3.0] - 2024-01-25
 
 - Rollback full list of LSK nodes
