@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.5.0] - 2024-04-29
+
+- Added new ADM nodes: `phecda.adm.im`, `tegmine.adm.im`, `tauri.adm.im`, `dschubba.adm.im`
+- Removed `ethnode1.adamant.im`
+- Updated FLOKI icon
+
 ## [2.4.0] - 2024-03-13
 
 - Listed new token: FLOKI
