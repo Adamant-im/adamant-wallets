@@ -51,16 +51,14 @@
         "alt_ip": "http://46.250.234.248:36666"
       },
       {
-        "url": "https://tegmine.adm.im",
-        "alt_ip": "http://5.104.87.219:36666"
+        "url": "https://tegmine.adm.im"
       },
       {
         "url": "https://tauri.adm.im",
         "alt_ip": "http://154.26.159.245:36666"
       },
       {
-        "url": "https://dschubba.adm.im",
-        "alt_ip": "http://85.239.234.17:36666"
+        "url": "https://dschubba.adm.im"
       }
     ],
     "healthCheck": {
