@@ -37,6 +37,10 @@
       {
         "url": "https://btcnode2.adamant.im",
         "alt_ip": "http://176.9.32.126:44099"
+      },
+      {
+        "url": "https://btcnode3.adamant.im",
+        "alt_ip": "http://195.201.242.108:44099"
       }
     ],
     "healthCheck": {
@@ -72,6 +76,9 @@
         },
         {
           "url": "http://mgplh7en3d6ywsec5h6q3tc6mirsleb5cmlyn6nmp25qrb6gy35nypad.onion"
+        },
+        {
+          "url": "http://grnpvgtlrfws3424l726td5lctsod3hq2at4lhiasmedpxygbo5u2bqd.onion"
         }
       ],
       "healthCheck": {
