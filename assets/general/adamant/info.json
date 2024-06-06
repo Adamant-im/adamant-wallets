@@ -51,16 +51,14 @@
         "alt_ip": "http://46.250.234.248:36666"
       },
       {
-        "url": "https://tegmine.adm.im",
-        "alt_ip": "http://5.104.87.219:36666"
+        "url": "https://tegmine.adm.im"
       },
       {
         "url": "https://tauri.adm.im",
         "alt_ip": "http://154.26.159.245:36666"
       },
       {
-        "url": "https://dschubba.adm.im",
-        "alt_ip": "http://85.239.234.17:36666"
+        "url": "https://dschubba.adm.im"
       }
     ],
     "healthCheck": {
@@ -121,6 +119,12 @@
         },
         {
           "url": "http://rukehjd2yalzgny7mdjqtzown2mazsaeh4zr7zjdg4l5afkgc3z2kgqd.onion"
+        },
+        {
+          "url": "http://osd7qoluu6akud6b2brxxi3bhidrbx54yqm5swr3rjwjz2cvposigiqd.onion"
+        },
+        {
+          "url": "http://nkacjpsif6wpc6x7qvavyr2vnvqolwnxxl5qciolhqdkzmgy5mgoajyd.onion"
         }
       ],
       "healthCheck": {
