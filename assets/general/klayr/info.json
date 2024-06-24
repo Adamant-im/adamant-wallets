@@ -1,0 +1,92 @@
+{
+  "name": "Klayr",
+  "website": "https://klayr.xyz",
+  "description": "Blockchain application platform",
+  "explorer": "https://testnet-explorer.klayr.xyz",
+  "explorerTx": "https://testnet-explorer.klayr.xyz/transaction/${ID}",
+  "explorerAddress": "https://testnet-explorer.klayr.xyz/account/${ID}",
+  "regexAddress": "^kly[a-z2-9]{38}$",
+  "symbol": "KLY",
+  "type": "coin",
+  "decimals": 8,
+  "minBalance": 0.05,
+  "cryptoTransferDecimals": 8,
+  "defaultFee": 0.00164,
+  "qqPrefix": "klayr",
+  "status": "active",
+  "createCoin": true,
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 60,
+  "consensus": "dPoS",
+  "blockTimeFixed": 10000,
+  "txFetchInfo": {
+    "newPendingInterval": 3000,
+    "oldPendingInterval": 3000,
+    "registeredInterval": 5000,
+    "newPendingAttempts": 15,
+    "oldPendingAttempts": 4
+  },
+  "txConsistencyMaxTime": 60000,
+  "nodes": {
+    "list": [
+      {
+        "url": "http://localhost:7000"
+      }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 270000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 5
+    }
+  },
+  "services": {
+    "list": {
+      "lskService": [
+        {
+          "url": "https://testnet-service.klayr.xyz"
+        }
+      ]
+    },
+    "healthCheck": {
+      "normalUpdateInterval": 330000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000
+    }
+  },
+  "links": [
+    {
+      "name": "github",
+      "url": "https://github.com/klayrHQ"
+    },
+    {
+      "name": "twitter",
+      "url": "https://x.com/KlayrHQ"
+    },
+    {
+      "name": "reddit",
+      "url": "https://reddit.com/r/klayr"
+    }
+  ],
+  "tor": {
+    "nodes": {
+      "list": [],
+      "healthCheck": {
+        "normalUpdateInterval": 270000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000,
+        "threshold": 5
+      }
+    },
+    "services": {
+      "list": {
+        "lskService": []
+      },
+      "healthCheck": {
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
+      }
+    }
+  }
+}
