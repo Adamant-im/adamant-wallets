@@ -67,26 +67,5 @@
       "name": "reddit",
       "url": "https://reddit.com/r/klayr"
     }
-  ],
-  "tor": {
-    "nodes": {
-      "list": [],
-      "healthCheck": {
-        "normalUpdateInterval": 270000,
-        "crucialUpdateInterval": 30000,
-        "onScreenUpdateInterval": 10000,
-        "threshold": 5
-      }
-    },
-    "services": {
-      "list": {
-        "lskService": []
-      },
-      "healthCheck": {
-        "normalUpdateInterval": 330000,
-        "crucialUpdateInterval": 30000,
-        "onScreenUpdateInterval": 10000
-      }
-    }
-  }
+  ]
 }
