@@ -30,7 +30,7 @@
   "nodes": {
     "list": [
       {
-        "url": "http://localhost:7000"
+        "url": "https://testklynode1.adamant.im"
       }
     ],
     "healthCheck": {
@@ -43,6 +43,9 @@
   "services": {
     "list": {
       "klyService": [
+        {
+          "url": "https://testklyservice1.adamant.im"
+        },
         {
           "url": "https://service.klayr.xyz"
         }
