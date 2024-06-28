@@ -18,7 +18,7 @@
   "status": "active",
   "createCoin": true,
   "defaultVisibility": true,
-  "defaultOrdinalLevel": 80,
+  "defaultOrdinalLevel": 70,
   "consensus": "PoW",
   "blockTimeAvg": 160000,
   "txFetchInfo": {

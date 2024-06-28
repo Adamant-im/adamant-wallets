@@ -6,8 +6,6 @@
   "type": "token",
   "decimals": 6,
   "cryptoTransferDecimals": 6,
-  "defaultVisibility": true,
-  "defaultOrdinalLevel": 45,
   "status": "active",
   "createCoin": false,
   "links": [
