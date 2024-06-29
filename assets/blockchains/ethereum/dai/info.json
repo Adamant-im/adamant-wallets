@@ -2,8 +2,8 @@
   "name": "Dai",
   "symbol": "DAI",
   "status": "active",
-  "defaultVisibility": true,
-  "defaultOrdinalLevel": 50,
+  "defaultVisibility": false,
+  "defaultOrdinalLevel": 80,
   "contractId": "0x6b175474e89094c44da98b954eedeac495271d0f",
   "decimals": 18
 }

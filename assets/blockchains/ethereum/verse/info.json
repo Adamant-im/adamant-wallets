@@ -2,7 +2,7 @@
   "name": "Verse",
   "symbol": "VERSE",
   "status": "active",
-  "defaultVisibility": true,
+  "defaultVisibility": false,
   "defaultOrdinalLevel": 95,
   "contractId": "0x249cA82617eC3DfB2589c4c17ab7EC9765350a18",
   "decimals": 18
