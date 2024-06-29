@@ -30,7 +30,12 @@
   "nodes": {
     "list": [
       {
-        "url": "https://testklynode1.adamant.im"
+        "url": "https://klynode1.adamant.im",
+        "alt_ip": "http://195.26.255.137:44099"
+      },
+      {
+        "url": "https://klynode2.adamant.im",
+        "alt_ip": "http://109.176.199.130:44099"
       }
     ],
     "healthCheck": {
@@ -44,7 +49,12 @@
     "list": {
       "klyService": [
         {
-          "url": "https://testklyservice1.adamant.im"
+          "url": "https://klyservice1.adamant.im",
+          "alt_ip": "http://195.26.255.137:44098"
+        },
+        {
+          "url": "https://klyservice2.adamant.im",
+          "alt_ip": "http://109.176.199.130:44098"
         },
         {
           "url": "https://service.klayr.xyz"
@@ -70,5 +80,40 @@
       "name": "reddit",
       "url": "https://reddit.com/r/klayr"
     }
-  ]
+  ],
+  "tor": {
+    "nodes": {
+      "list": [
+        {
+          "url": "http://7kmdhr3x3hpy7kg3gojxznypgzcya7yxpte4zz42wtljhulg5mrzkpad.onion"
+        },
+        {
+          "url": "http://5fr7uybpxecid5gikrm65hstsfhve2772keyqdvxirsiywlyo6zap6yd.onion"
+        }
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 270000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000,
+        "threshold": 5
+      }
+    },
+    "services": {
+      "list": {
+        "klyService": [
+          {
+            "url": "http://673swmi7y4cdsqw7rhl52mypuixfh5tryxjt4vzhaoy7my572ldidfad.onion"
+          },
+          {
+            "url": "http://3om4mobnbppxuexwufprp4cle4fivstooqqap6yoll5qk3kikesmqgad.onion"
+          }
+        ]
+      },
+      "healthCheck": {
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
+      }
+    }
+  }
 }
