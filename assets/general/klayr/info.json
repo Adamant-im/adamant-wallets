@@ -92,7 +92,7 @@
         }
       ],
       "healthCheck": {
-        "normalUpdateInterval": 300000,
+        "normalUpdateInterval": 270000,
         "crucialUpdateInterval": 30000,
         "onScreenUpdateInterval": 10000,
         "threshold": 5
@@ -110,9 +110,9 @@
         ]
       },
       "healthCheck": {
-        "normalUpdateInterval": 300000,
-        "crucialUpdateInterval": 300000,
-        "onScreenUpdateInterval": 300000
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
       }
     }
   }
