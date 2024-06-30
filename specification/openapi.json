@@ -356,6 +356,9 @@
                 "type": "object",
                 "required": ["list"],
                 "properties": {
+                  "description": {
+                    "$ref": "#/components/schemas/ServiceDescription"
+                  },
                   "list": {
                     "type": "object",
                     "additionalProperties": {
