@@ -22,6 +22,55 @@
           }
         }
       },
+      "NodeHealthcheck": {
+        "type": "object",
+        "required": [
+          "normalUpdateInterval",
+          "crucialUpdateInterval",
+          "onScreenUpdateInterval",
+          "threshold"
+        ],
+        "properties": {
+          "normalUpdateInterval": {
+            "type": "integer",
+            "description": "Regular node status update interval in ms"
+          },
+          "crucialUpdateInterval": {
+            "type": "integer",
+            "description": "Node status update interval when there are no active nodes, in ms"
+          },
+          "onScreenUpdateInterval": {
+            "type": "integer",
+            "description": "On the node screen, the status update interval in ms"
+          },
+          "threshold": {
+            "type": "integer",
+            "description": "Permissible height difference between nodes"
+          }
+        }
+      },
+      "ServiceHealthcheck": {
+        "type": "object",
+        "required": [
+          "normalUpdateInterval",
+          "crucialUpdateInterval",
+          "onScreenUpdateInterval"
+        ],
+        "properties": {
+          "normalUpdateInterval": {
+            "type": "integer",
+            "description": "Regular node status update interval in ms"
+          },
+          "crucialUpdateInterval": {
+            "type": "integer",
+            "description": "Node status update interval when there are no active nodes, in ms"
+          },
+          "onScreenUpdateInterval": {
+            "type": "integer",
+            "description": "On the node screen, the status update interval in ms"
+          }
+        }
+      },
       "ProjectLink": {
         "type": "object",
         "required": ["name", "url"],
@@ -207,31 +256,7 @@
                 "description": "Node links for API"
               },
               "healthCheck": {
-                "type": "object",
-                "required": [
-                  "normalUpdateInterval",
-                  "crucialUpdateInterval",
-                  "onScreenUpdateInterval",
-                  "threshold"
-                ],
-                "properties": {
-                  "normalUpdateInterval": {
-                    "type": "integer",
-                    "description": "Regular node status update interval in ms"
-                  },
-                  "crucialUpdateInterval": {
-                    "type": "integer",
-                    "description": "Node status update interval when there are no active nodes, in ms"
-                  },
-                  "onScreenUpdateInterval": {
-                    "type": "integer",
-                    "description": "On the node screen, the status update interval in ms"
-                  },
-                  "threshold": {
-                    "type": "integer",
-                    "description": "Permissible height difference between nodes"
-                  }
-                }
+                "$ref": "#/components/schemas/NodeHealthcheck"
               },
               "minVersion": {
                 "type": "string",
@@ -252,26 +277,7 @@
                 "description": "Service node links for API"
               },
               "healthCheck": {
-                "type": "object",
-                "required": [
-                  "normalUpdateInterval",
-                  "crucialUpdateInterval",
-                  "onScreenUpdateInterval"
-                ],
-                "properties": {
-                  "normalUpdateInterval": {
-                    "type": "integer",
-                    "description": "Regular service status update interval in ms"
-                  },
-                  "crucialUpdateInterval": {
-                    "type": "integer",
-                    "description": "Service status update interval when there are no active services, in ms"
-                  },
-                  "onScreenUpdateInterval": {
-                    "type": "integer",
-                    "description": "On the node screen, the status update interval in ms"
-                  }
-                }
+                "$ref": "#/components/schemas/ServiceHealthcheck"
               },
               "minVersion": {
                 "type": "string",
@@ -318,31 +324,7 @@
                     "description": "Node links for API"
                   },
                   "healthCheck": {
-                    "type": "object",
-                    "required": [
-                      "normalUpdateInterval",
-                      "crucialUpdateInterval",
-                      "onScreenUpdateInterval",
-                      "threshold"
-                    ],
-                    "properties": {
-                      "normalUpdateInterval": {
-                        "type": "integer",
-                        "description": "Regular node status update interval in ms"
-                      },
-                      "crucialUpdateInterval": {
-                        "type": "integer",
-                        "description": "Node status update interval when there are no active nodes, in ms"
-                      },
-                      "onScreenUpdateInterval": {
-                        "type": "integer",
-                        "description": "On the node screen, the status update interval in ms"
-                      },
-                      "threshold": {
-                        "type": "integer",
-                        "description": "Permissible height difference between nodes"
-                      }
-                    }
+                    "$ref": "#/components/schemas/NodeHealthcheck"
                   },
                   "minVersion": {
                     "type": "string",
@@ -363,26 +345,7 @@
                     "description": "Service node links for API"
                   },
                   "healthCheck": {
-                    "type": "object",
-                    "required": [
-                      "normalUpdateInterval",
-                      "crucialUpdateInterval",
-                      "onScreenUpdateInterval"
-                    ],
-                    "properties": {
-                      "normalUpdateInterval": {
-                        "type": "integer",
-                        "description": "Regular service status update interval in ms"
-                      },
-                      "crucialUpdateInterval": {
-                        "type": "integer",
-                        "description": "Service status update interval when there are no active services, in ms"
-                      },
-                      "onScreenUpdateInterval": {
-                        "type": "integer",
-                        "description": "On the node screen, the status update interval in ms"
-                      }
-                    }
+                    "$ref": "#/components/schemas/ServiceHealthcheck"
                   },
                   "minVersion": {
                     "type": "string",

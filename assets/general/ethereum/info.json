@@ -34,10 +34,6 @@
   "nodes": {
     "list": [
       {
-        "url": "https://ethnode1.adamant.im",
-        "alt_ip": "http://95.216.41.106:44099"
-      },
-      {
         "url": "https://ethnode2.adamant.im",
         "alt_ip": "http://95.216.114.252:44099"
       },
@@ -103,10 +99,8 @@
     "nodes": {
       "list": [
         {
-          "url": "http://vj3qid4h2d4cj2gexivjuuybah3mjzenpdyr5bj6z4hctp52jn6qsgid.onion"
-        },
-        {
-          "url": "http://jpbrp6xapsyfnvyosrpu5wmoi62fqotazkicjeiob32yz77rt7axobqd.onion"
+          "url": "http://jpbrp6xapsyfnvyosrpu5wmoi62fqotazkicjeiob32yz77rt7axobqd.onion",
+          "hasIndex": true
         },
         {
           "url": "http://rekynxikhumzsme7phumocz3mquy7y3onkw33skmvk2akjkin2iopqqd.onion"
