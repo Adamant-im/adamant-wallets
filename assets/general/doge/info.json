@@ -37,6 +37,10 @@
       {
         "url": "https://dogenode2.adamant.im",
         "alt_ip": "http://176.9.32.126:44098"
+      },
+      {
+        "url": "https://dogenode3.adm.im",
+        "alt_ip": "http://95.216.45.88:44098"
       }
     ],
     "healthCheck": {
@@ -72,6 +76,9 @@
         },
         {
           "url": "http://bfu3iiofsagyhi22zijfilbkzlzbalpylhhfcluqmezx2avdwcxut7yd.onion"
+        },
+        {
+          "url": "http://tdl25bmpwystxnm6hxzqdrkaxxdicknbigs5umob2nlgcbbqgidd64qd.onion"
         }
       ],
       "healthCheck": {
