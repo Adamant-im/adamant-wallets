@@ -80,8 +80,8 @@
     },
     "healthCheck": {
       "normalUpdateInterval": 300000,
-      "crucialUpdateInterval": 300000,
-      "onScreenUpdateInterval": 300000
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000
     }
   },
   "links": [
@@ -145,8 +145,8 @@
       },
       "healthCheck": {
         "normalUpdateInterval": 300000,
-        "crucialUpdateInterval": 300000,
-        "onScreenUpdateInterval": 300000
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
       }
     }
   }
