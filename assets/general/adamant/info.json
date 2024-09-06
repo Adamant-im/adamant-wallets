@@ -75,6 +75,10 @@
         {
           "url": "https://info.adamant.im",
           "alt_ip": "http://88.198.156.44:44099"
+        },
+        {
+          "url": "https://info2.adm.im",
+          "alt_ip": "http://207.180.210.95:33088"
         }
       ]
     },
