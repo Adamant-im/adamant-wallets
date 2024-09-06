@@ -36,13 +36,11 @@
     "list": [
       {
         "url": "https://ethnode2.adamant.im",
-        "alt_ip": "http://95.216.114.252:44099",
-        "hasIndex": true
+        "alt_ip": "http://95.216.114.252:44099"
       },
       {
         "url": "https://ethnode3.adamant.im",
-        "alt_ip": "http://46.4.37.157:44099",
-        "hasIndex": true
+        "alt_ip": "http://46.4.37.157:44099"
       }
     ],
     "healthCheck": {
@@ -50,6 +48,30 @@
       "crucialUpdateInterval": 30000,
       "onScreenUpdateInterval": 10000,
       "threshold": 5
+    }
+  },
+  "services": {
+    "description": {
+      "software": "ETH-transactions-storage",
+      "github": "https://github.com/Adamant-im/ETH-transactions-storage",
+      "docs": "https://github.com/Adamant-im/ETH-transactions-storage?tab=readme-ov-file#api-request-examples"
+    },
+    "list": {
+      "ethIndexer": [
+        {
+          "url": "https://ethnode2.adamant.im",
+          "alt_ip": "http://95.216.114.252:44099"
+        },
+        {
+          "url": "https://ethnode3.adamant.im",
+          "alt_ip": "http://46.4.37.157:44099"
+        }
+      ]
+    },
+    "healthCheck": {
+      "normalUpdateInterval": 330000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000
     }
   },
   "links": [
@@ -78,8 +100,7 @@
           "hasIndex": true
         },
         {
-          "url": "http://rekynxikhumzsme7phumocz3mquy7y3onkw33skmvk2akjkin2iopqqd.onion",
-          "hasIndex": true
+          "url": "http://rekynxikhumzsme7phumocz3mquy7y3onkw33skmvk2akjkin2iopqqd.onion"
         }
       ],
       "healthCheck": {
@@ -87,6 +108,28 @@
         "crucialUpdateInterval": 30000,
         "onScreenUpdateInterval": 10000,
         "threshold": 5
+      }
+    },
+    "services": {
+      "description": {
+        "software": "ETH-transactions-storage",
+        "github": "https://github.com/Adamant-im/ETH-transactions-storage",
+        "docs": "https://github.com/Adamant-im/ETH-transactions-storage?tab=readme-ov-file#api-request-examples"
+      },
+      "list": {
+        "ethIndexer": [
+          {
+            "url": "http://jpbrp6xapsyfnvyosrpu5wmoi62fqotazkicjeiob32yz77rt7axobqd.onion"
+          },
+          {
+            "url": "http://rekynxikhumzsme7phumocz3mquy7y3onkw33skmvk2akjkin2iopqqd.onion"
+          }
+        ]
+      },
+      "healthCheck": {
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
       }
     }
   }

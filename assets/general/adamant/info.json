@@ -70,6 +70,11 @@
     "minVersion": "0.8.0"
   },
   "services": {
+    "description": {
+      "software": "adamant-currencyinfo-services",
+      "github": "https://github.com/Adamant-im/adamant-currencyinfo-services",
+      "docs": "https://github.com/Adamant-im/adamant-currencyinfo-services/wiki/InfoServices-API-documentation"
+    },
     "list": {
       "infoService": [
         {
@@ -140,6 +145,11 @@
       "minVersion": "0.8.0"
     },
     "services": {
+      "description": {
+        "software": "adamant-currencyinfo-services",
+        "github": "https://github.com/Adamant-im/adamant-currencyinfo-services",
+        "docs": "https://github.com/Adamant-im/adamant-currencyinfo-services/wiki/InfoServices-API-documentation"
+      },
       "list": {
         "infoService": [
           {

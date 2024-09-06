@@ -46,6 +46,11 @@
     }
   },
   "services": {
+    "description": {
+      "software": "klayr-service",
+      "github": "https://github.com/KlayrHQ/klayr-service",
+      "docs": "https://klayr.xyz/documentation/klayr-service"
+    },
     "list": {
       "klyService": [
         {
@@ -96,6 +101,11 @@
       }
     },
     "services": {
+      "description": {
+        "software": "klayr-service",
+        "github": "https://github.com/KlayrHQ/klayr-service",
+        "docs": "https://klayr.xyz/documentation/klayr-service"
+      },
       "list": {
         "klyService": [
           {
