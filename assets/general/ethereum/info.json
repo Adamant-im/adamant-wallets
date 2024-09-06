@@ -28,9 +28,10 @@
   "txConsistencyMaxTime": 1200000,
   "reliabilityGasPricePercent": 10,
   "reliabilityGasLimitPercent": 10,
-  "defaultGasPriceGwei": 30,
+  "increasedGasPricePercent": 30,
+  "defaultGasPriceGwei": 10,
   "defaultGasLimit": 22000,
-  "warningGasPriceGwei": 70,
+  "warningGasPriceGwei": 25,
   "nodes": {
     "list": [
       {
