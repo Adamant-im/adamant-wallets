@@ -31,12 +31,12 @@
   "nodes": {
     "list": [
       {
-        "url": "https://btcnode1.adamant.im",
-        "alt_ip": "http://176.9.38.204:44099"
+        "url": "https://btcnode1.adamant.im/bitcoind",
+        "alt_ip": "http://176.9.38.204:44099/bitcoind"
       },
       {
-        "url": "https://btcnode3.adamant.im",
-        "alt_ip": "http://195.201.242.108:44099"
+        "url": "https://btcnode3.adamant.im/bitcoind",
+        "alt_ip": "http://195.201.242.108:44099/bitcoind"
       }
     ],
     "healthCheck": {
@@ -44,6 +44,30 @@
       "crucialUpdateInterval": 30000,
       "onScreenUpdateInterval": 10000,
       "threshold": 2
+    }
+  },
+  "services": {
+    "description": {
+      "software": "Esplora/Electrs",
+      "github": "https://github.com/blockstream/electrs",
+      "docs": "https://github.com/blockstream/esplora/blob/master/API.md"
+    },
+    "list": {
+      "btcIndexer": [
+        {
+          "url": "https://btcnode1.adamant.im",
+          "alt_ip": "http://176.9.38.204:44099"
+        },
+        {
+          "url": "https://btcnode3.adamant.im",
+          "alt_ip": "http://195.201.242.108:44099"
+        }
+      ]
+    },
+    "healthCheck": {
+      "normalUpdateInterval": 330000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000
     }
   },
   "links": [
@@ -68,7 +92,7 @@
     "nodes": {
       "list": [
         {
-          "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
+          "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion/bitcoind"
         },
         {
           "url": "http://grnpvgtlrfws3424l726td5lctsod3hq2at4lhiasmedpxygbo5u2bqd.onion"
@@ -79,6 +103,28 @@
         "crucialUpdateInterval": 30000,
         "onScreenUpdateInterval": 10000,
         "threshold": 2
+      }
+    },
+    "services": {
+      "description": {
+        "software": "Esplora/Electrs",
+        "github": "https://github.com/blockstream/electrs",
+        "docs": "https://github.com/blockstream/esplora/blob/master/API.md"
+      },
+      "list": {
+        "btcIndexer": [
+          {
+            "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion"
+          },
+          {
+            "url": "http://grnpvgtlrfws3424l726td5lctsod3hq2at4lhiasmedpxygbo5u2bqd.onion"
+          }
+        ]
+      },
+      "healthCheck": {
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
       }
     }
   }

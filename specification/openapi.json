@@ -95,6 +95,22 @@
           }
         }
       },
+      "ServiceDescription": {
+        "type": "object",
+        "required": ["software"],
+        "description": "Service node description",
+        "properties": {
+          "software": {
+            "type": "string"
+          },
+          "github": {
+            "type": "string"
+          },
+          "docs": {
+            "type": "string"
+          }
+        }
+      },
       "TokenGeneral": {
         "type": "object",
         "required": [
@@ -269,6 +285,9 @@
             "type": "object",
             "required": ["list", "healthCheck"],
             "properties": {
+              "description": {
+                "$ref": "#/components/schemas/ServiceDescription"
+              },
               "list": {
                 "type": "object",
                 "additionalProperties": {
@@ -337,6 +356,9 @@
                 "type": "object",
                 "required": ["list"],
                 "properties": {
+                  "description": {
+                    "$ref": "#/components/schemas/ServiceDescription"
+                  },
                   "list": {
                     "type": "object",
                     "additionalProperties": {

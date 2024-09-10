@@ -46,6 +46,11 @@
     }
   },
   "services": {
+    "description": {
+      "software": "klayr-service",
+      "github": "https://github.com/KlayrHQ/klayr-service",
+      "docs": "https://klayr.xyz/documentation/klayr-service"
+    },
     "list": {
       "klyService": [
         {
@@ -55,9 +60,6 @@
         {
           "url": "https://klyservice2.adamant.im",
           "alt_ip": "http://109.176.199.130:44098"
-        },
-        {
-          "url": "https://service.klayr.xyz"
         }
       ]
     },
@@ -99,6 +101,11 @@
       }
     },
     "services": {
+      "description": {
+        "software": "klayr-service",
+        "github": "https://github.com/KlayrHQ/klayr-service",
+        "docs": "https://klayr.xyz/documentation/klayr-service"
+      },
       "list": {
         "klyService": [
           {
