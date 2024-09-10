@@ -36,6 +36,10 @@
       {
         "url": "https://klynode2.adamant.im",
         "alt_ip": "http://109.176.199.130:44099"
+      },
+      {
+        "url": "https://klynode3.adm.im",
+        "alt_ip": "http://37.27.205.78:44099"
       }
     ],
     "healthCheck": {
@@ -60,6 +64,10 @@
         {
           "url": "https://klyservice2.adamant.im",
           "alt_ip": "http://109.176.199.130:44098"
+        },
+        {
+          "url": "https://klyservice3.adm.im",
+          "alt_ip": "http://37.27.205.78:44098"
         }
       ]
     },
@@ -91,6 +99,9 @@
         },
         {
           "url": "http://5fr7uybpxecid5gikrm65hstsfhve2772keyqdvxirsiywlyo6zap6yd.onion"
+        },
+        {
+          "url": "http://5rmyjfvazkg5gcyo3gwvdinykvycsleeebumdm6zlj6dhf6gshpelfid.onion"
         }
       ],
       "healthCheck": {
@@ -113,6 +124,9 @@
           },
           {
             "url": "http://3om4mobnbppxuexwufprp4cle4fivstooqqap6yoll5qk3kikesmqgad.onion"
+          },
+          {
+            "url": "http://xif2b7cchtn27aq2qypjc6p3phamrt4fdc3gbl5e6kk2fw3ypovre5id.onion"
           }
         ]
       },
