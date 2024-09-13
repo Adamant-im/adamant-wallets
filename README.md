@@ -79,7 +79,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
         "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored
       }
     ],
-    // Node health сheck information 
+    // Node health check information 
     "healthCheck": {
       "normalUpdateInterval": 210000, // Regular node status update interval in ms
       "crucialUpdateInterval": 30000, // Node status update interval when there are no active nodes, in ms
@@ -105,7 +105,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
         }
       ]
     },
-    // Optional: Service health сheck information (If not filled here, information is retrieved from nodes.healthCheck)
+    // Optional: Service health check information (If not filled here, information is retrieved from nodes.healthCheck)
     "healthCheck": {
       "normalUpdateInterval": 210000, // Regular service status update interval in ms
       "crucialUpdateInterval": 30000, // Service status update interval when there are no active services, in ms
@@ -191,6 +191,24 @@ Transaction considered as new or old depending on how much time passed from in-c
 const isNew = (admTransferTimestamp) =>
   Date.now() - admTransferTimestamp <
   newPendingTxFetchAttempts * newPendingTxFetchInterval;
+```
+
+### Message sending
+
+Users can request to send messages even when they are offline. An app will attempt to send a message for a specific timeout period, allowing time for the Internet connection to restore. If the message still cannot be sent, the status will change from “Pending” to “Failed”. Users can then manually retry sending the message or choose to cancel it.
+
+For in-chat coin transfers, there is no timeout. An app will continuously retry sending these messages until successful. However, before sending cryptocurrency in chats, the app checks the availability of all nodes, ensuring both the nodes and the UI process the transaction correctly.
+
+To assist apps in setting message sending parameters, additional fields are introduced:
+
+```jsonc
+{
+  // ...
+  "messages": {
+    "messageTimeout": 300000, // Timeout for regular messages (in milliseconds)
+    "filesTimeout": 100000,   // Timeout for file transfers (in milliseconds)
+  },
+}
 ```
 
 ## Icons
