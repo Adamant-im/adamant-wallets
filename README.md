@@ -129,7 +129,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
       "name": "whitepaper",
       "url": "https://example.com/whitepaper.pdf"
     }
-  ]
+  ],
 
   // Optional. Tor configuration if a project uses Tor
   // It follows the same structure as the root properties
