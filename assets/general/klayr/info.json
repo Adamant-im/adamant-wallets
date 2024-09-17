@@ -46,13 +46,13 @@
     }
   },
   "services": {
-    "description": {
-      "software": "klayr-service",
-      "github": "https://github.com/KlayrHQ/klayr-service",
-      "docs": "https://klayr.xyz/documentation/klayr-service"
-    },
-    "list": {
-      "klyService": [
+    "klyService": {
+      "description": {
+        "software": "klayr-service",
+        "github": "https://github.com/KlayrHQ/klayr-service",
+        "docs": "https://klayr.xyz/documentation/klayr-service"
+      },
+      "list": [
         {
           "url": "https://klyservice1.adamant.im",
           "alt_ip": "http://195.26.255.137:44098"
@@ -61,12 +61,12 @@
           "url": "https://klyservice2.adamant.im",
           "alt_ip": "http://109.176.199.130:44098"
         }
-      ]
-    },
-    "healthCheck": {
-      "normalUpdateInterval": 330000,
-      "crucialUpdateInterval": 30000,
-      "onScreenUpdateInterval": 10000
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
+      }
     }
   },
   "links": [

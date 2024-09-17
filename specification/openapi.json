@@ -49,6 +49,52 @@
           }
         }
       },
+      "ProjectLink": {
+        "type": "object",
+        "required": ["name", "url"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "Service": {
+        "type": "object",
+        "required": ["description", "list", "healthCheck"],
+        "properties": {
+          "description": {
+            "$ref": "#/components/schemas/ServiceDescription"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NodeInfo"
+            }
+          },
+          "healthCheck": {
+            "$ref": "#/components/schemas/ServiceHealthcheck"
+          }
+        }
+      },
+      "ServiceDescription": {
+        "type": "object",
+        "required": ["software"],
+        "description": "Service node description",
+        "properties": {
+          "software": {
+            "type": "string"
+          },
+          "github": {
+            "type": "string"
+          },
+          "docs": {
+            "type": "string"
+          }
+        }
+      },
       "ServiceHealthcheck": {
         "type": "object",
         "required": [
@@ -68,46 +114,6 @@
           "onScreenUpdateInterval": {
             "type": "integer",
             "description": "On the node screen, the status update interval in ms"
-          }
-        }
-      },
-      "ProjectLink": {
-        "type": "object",
-        "required": ["name", "url"],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          }
-        }
-      },
-      "Service": {
-        "type": "object",
-        "required": ["url"],
-        "properties": {
-          "url": {
-            "type": "string"
-          },
-          "alt_ip": {
-            "type": "string"
-          }
-        }
-      },
-      "ServiceDescription": {
-        "type": "object",
-        "required": ["software"],
-        "description": "Service node description",
-        "properties": {
-          "software": {
-            "type": "string"
-          },
-          "github": {
-            "type": "string"
-          },
-          "docs": {
-            "type": "string"
           }
         }
       },
@@ -283,26 +289,8 @@
           },
           "services": {
             "type": "object",
-            "required": ["list", "healthCheck"],
-            "properties": {
-              "description": {
-                "$ref": "#/components/schemas/ServiceDescription"
-              },
-              "list": {
-                "type": "object",
-                "additionalProperties": {
-                  "$ref": "#/components/schemas/Service"
-                },
-                "description": "Service node links for API"
-              },
-              "healthCheck": {
-                "$ref": "#/components/schemas/ServiceHealthcheck"
-              },
-              "minVersion": {
-                "type": "string",
-                "description": "Minimal service node API version",
-                "example": "1.0.0"
-              }
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Service"
             }
           },
           "links": {
@@ -354,26 +342,8 @@
               },
               "services": {
                 "type": "object",
-                "required": ["list"],
-                "properties": {
-                  "description": {
-                    "$ref": "#/components/schemas/ServiceDescription"
-                  },
-                  "list": {
-                    "type": "object",
-                    "additionalProperties": {
-                      "$ref": "#/components/schemas/Service"
-                    },
-                    "description": "Service node links for API"
-                  },
-                  "healthCheck": {
-                    "$ref": "#/components/schemas/ServiceHealthcheck"
-                  },
-                  "minVersion": {
-                    "type": "string",
-                    "description": "Minimal service node API version",
-                    "example": "1.0.0"
-                  }
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/Service"
                 }
               },
               "links": {
