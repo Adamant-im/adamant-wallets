@@ -9,9 +9,7 @@
     "schemas": {
       "NodeInfo": {
         "type": "object",
-        "required": [
-          "url"
-        ],
+        "required": ["url"],
         "properties": {
           "url": {
             "type": "string"
@@ -53,10 +51,7 @@
       },
       "ProjectLink": {
         "type": "object",
-        "required": [
-          "name",
-          "url"
-        ],
+        "required": ["name", "url"],
         "properties": {
           "name": {
             "type": "string"
@@ -68,11 +63,7 @@
       },
       "Service": {
         "type": "object",
-        "required": [
-          "description",
-          "list",
-          "healthCheck"
-        ],
+        "required": ["description", "list", "healthCheck"],
         "properties": {
           "description": {
             "$ref": "#/components/schemas/ServiceDescription"
@@ -80,7 +71,7 @@
           "list": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ServiceAddress"
+              "$ref": "#/components/schemas/NodeInfo"
             }
           },
           "healthCheck": {
@@ -88,23 +79,9 @@
           }
         }
       },
-      "ServiceAddress": {
-        "type": "object",
-        "description": "Service node address",
-        "properties": {
-          "url": {
-            "type": "string"
-          },
-          "alt_ip": {
-            "type": "string"
-          }
-        }
-      },
       "ServiceDescription": {
         "type": "object",
-        "required": [
-          "software"
-        ],
+        "required": ["software"],
         "description": "Service node description",
         "properties": {
           "software": {
@@ -200,10 +177,7 @@
           },
           "type": {
             "type": "string",
-            "enum": [
-              "coin",
-              "ERC20"
-            ],
+            "enum": ["coin", "ERC20"],
             "description": "Coin or token mainly"
           },
           "decimals": {
@@ -236,10 +210,7 @@
           },
           "status": {
             "type": "string",
-            "enum": [
-              "active",
-              "disabled"
-            ],
+            "enum": ["active", "disabled"],
             "description": "Should the coin be processed"
           },
           "createCoin": {
@@ -297,10 +268,7 @@
           },
           "nodes": {
             "type": "object",
-            "required": [
-              "list",
-              "healthCheck"
-            ],
+            "required": ["list", "healthCheck"],
             "properties": {
               "list": {
                 "type": "array",
@@ -355,10 +323,7 @@
               },
               "nodes": {
                 "type": "object",
-                "required": [
-                  "list",
-                  "healthCheck"
-                ],
+                "required": ["list", "healthCheck"],
                 "properties": {
                   "list": {
                     "type": "array",
@@ -398,13 +363,7 @@
       },
       "TokenAsset": {
         "type": "object",
-        "required": [
-          "name",
-          "symbol",
-          "status",
-          "contractId",
-          "decimals"
-        ],
+        "required": ["name", "symbol", "status", "contractId", "decimals"],
         "properties": {
           "name": {
             "type": "string",
@@ -416,10 +375,7 @@
           },
           "status": {
             "type": "string",
-            "enum": [
-              "active",
-              "disabled"
-            ],
+            "enum": ["active", "disabled"],
             "description": "Should the coin be processed"
           },
           "contractId": {
@@ -442,12 +398,7 @@
       },
       "Blockchain": {
         "type": "object",
-        "required": [
-          "blockchain",
-          "type",
-          "mainCoin",
-          "fees"
-        ],
+        "required": ["blockchain", "type", "mainCoin", "fees"],
         "properties": {
           "blockchain": {
             "type": "string",
