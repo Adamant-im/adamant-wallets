@@ -289,10 +289,8 @@
           },
           "services": {
             "type": "object",
-            "properties": {
-              "service": {
-                "$ref": "#/components/schemas/Service"
-              }
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Service"
             }
           },
           "links": {
@@ -344,10 +342,8 @@
               },
               "services": {
                 "type": "object",
-                "properties": {
-                  "service": {
-                    "$ref": "#/components/schemas/Service"
-                  }
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/Service"
                 }
               },
               "links": {
