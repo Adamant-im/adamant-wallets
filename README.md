@@ -91,27 +91,32 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 
   // Optional. Services related to a project
   "services": {
-    "list": {
+    "service1": {
       "description": {
         "software": "example-service",
         "github": "https://github.com/--example",
         "docs": "https://docs.example.com" // API docs
       },
-      "infoService": [
-        { "url": "https://info.example.com" },
+      "list": [
+        {
+          "url": "https://info.example.com",
+        },
         {
           "url": "https://second-service.example.com",
           "alt_ip": "0.0.0.1:80" // Alternative way to connect if the domain of a service is censored
         }
-      ]
+      ],
+      // Optional: Service health сheck information (If not filled here, information is retrieved from nodes.healthCheck)
+      "healthCheck": {
+        "normalUpdateInterval": 210000, // Regular service status update interval in ms
+        "crucialUpdateInterval": 30000, // Service status update interval when there are no active services, in ms
+        "onScreenUpdateInterval": 10000 // On the node screen, the status update interval in ms
+      },
+      "minVersion": "1.0.0", // Optional. Minimal supported service API version 
     },
-    // Optional: Service health сheck information (If not filled here, information is retrieved from nodes.healthCheck)
-    "healthCheck": {
-      "normalUpdateInterval": 210000, // Regular service status update interval in ms
-      "crucialUpdateInterval": 30000, // Service status update interval when there are no active services, in ms
-      "onScreenUpdateInterval": 10000 // On the node screen, the status update interval in ms
-    },
-    "minVersion": "1.0.0", // Optional. Minimal supported service API version    
+    "service2": {
+      /*...*/
+    }
   },
 
   // Optional. Additional project links
@@ -124,7 +129,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
       "name": "whitepaper",
       "url": "https://example.com/whitepaper.pdf"
     }
-  ]
+  ],
 
   // Optional. Tor configuration if a project uses Tor
   // It follows the same structure as the root properties
