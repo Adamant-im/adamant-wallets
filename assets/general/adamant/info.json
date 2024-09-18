@@ -24,9 +24,9 @@
     "oldPendingInterval": 4000,
     "registeredInterval": 4000
   },
-  "messages": {
-    "messageTimeout": 300000,
-    "filesTimeout": 300000
+  "timeout": {
+    "message": 300000,
+    "attachment": 300000
   },
   "nodes": {
     "list": [

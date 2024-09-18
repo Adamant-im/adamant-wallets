@@ -204,9 +204,9 @@ To assist apps in setting message sending parameters, additional fields are intr
 ```jsonc
 {
   // ...
-  "messages": {
-    "messageTimeout": 300000, // Timeout for regular messages (in milliseconds)
-    "filesTimeout": 100000,   // Timeout for file transfers (in milliseconds)
+  "timeout": {
+    "message": 300000, // Timeout for regular messages (in milliseconds)
+    "attachment": 100000,   // Timeout for file transfers (in milliseconds)
   },
 }
 ```
