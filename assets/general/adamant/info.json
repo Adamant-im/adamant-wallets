@@ -24,6 +24,10 @@
     "oldPendingInterval": 4000,
     "registeredInterval": 4000
   },
+  "timeout": {
+    "message": 300000,
+    "attachment": 300000
+  },
   "nodes": {
     "list": [
       { "url": "https://clown.adamant.im" },

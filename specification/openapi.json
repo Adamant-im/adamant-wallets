@@ -117,6 +117,21 @@
           }
         }
       },
+      "MessageTimeout": {
+        "type": "object",
+        "description": "Timeouts when sending messages in chat. See [README.md](https://github.com/Adamant-im/adamant-wallets/blob/master/README.md#message-sending) for details.",
+        "required": ["message", "attachment"],
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "Timeout for regular messages (in milliseconds)"
+          },
+          "attachment": {
+            "type": "integer",
+            "description": "Timeout for file transfers (in milliseconds)"
+          }
+        }
+      },
       "TokenGeneral": {
         "type": "object",
         "required": [
@@ -261,6 +276,9 @@
                 "description": "Attempts to fetch Tx when its current status is \"Pending\" for old transactions"
               }
             }
+          },
+          "timeout": {
+            "$ref": "#/components/schemas/MessageTimeout"
           },
           "txConsistencyMaxTime": {
             "type": "integer",
