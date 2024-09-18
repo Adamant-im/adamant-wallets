@@ -30,12 +30,12 @@
   "nodes": {
     "list": [
       {
-        "url": "https://klynode1.adamant.im",
-        "alt_ip": "http://195.26.255.137:44099"
-      },
-      {
         "url": "https://klynode2.adamant.im",
         "alt_ip": "http://109.176.199.130:44099"
+      },
+      {
+        "url": "https://klynode3.adm.im",
+        "alt_ip": "http://37.27.205.78:44099"
       }
     ],
     "healthCheck": {
@@ -46,27 +46,27 @@
     }
   },
   "services": {
-    "description": {
-      "software": "klayr-service",
-      "github": "https://github.com/KlayrHQ/klayr-service",
-      "docs": "https://klayr.xyz/documentation/klayr-service"
-    },
-    "list": {
-      "klyService": [
-        {
-          "url": "https://klyservice1.adamant.im",
-          "alt_ip": "http://195.26.255.137:44098"
-        },
+    "klyService": {
+      "description": {
+        "software": "klayr-service",
+        "github": "https://github.com/KlayrHQ/klayr-service",
+        "docs": "https://klayr.xyz/documentation/klayr-service"
+      },
+      "list": [
         {
           "url": "https://klyservice2.adamant.im",
           "alt_ip": "http://109.176.199.130:44098"
+        },
+        {
+          "url": "https://klyservice3.adm.im",
+          "alt_ip": "http://37.27.205.78:44098"
         }
-      ]
-    },
-    "healthCheck": {
-      "normalUpdateInterval": 330000,
-      "crucialUpdateInterval": 30000,
-      "onScreenUpdateInterval": 10000
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 330000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
+      }
     }
   },
   "links": [
@@ -87,10 +87,10 @@
     "nodes": {
       "list": [
         {
-          "url": "http://7kmdhr3x3hpy7kg3gojxznypgzcya7yxpte4zz42wtljhulg5mrzkpad.onion"
+          "url": "http://5fr7uybpxecid5gikrm65hstsfhve2772keyqdvxirsiywlyo6zap6yd.onion"
         },
         {
-          "url": "http://5fr7uybpxecid5gikrm65hstsfhve2772keyqdvxirsiywlyo6zap6yd.onion"
+          "url": "http://5rmyjfvazkg5gcyo3gwvdinykvycsleeebumdm6zlj6dhf6gshpelfid.onion"
         }
       ],
       "healthCheck": {
@@ -101,25 +101,25 @@
       }
     },
     "services": {
-      "description": {
-        "software": "klayr-service",
-        "github": "https://github.com/KlayrHQ/klayr-service",
-        "docs": "https://klayr.xyz/documentation/klayr-service"
-      },
-      "list": {
-        "klyService": [
-          {
-            "url": "http://673swmi7y4cdsqw7rhl52mypuixfh5tryxjt4vzhaoy7my572ldidfad.onion"
-          },
+      "klyService": {
+        "description": {
+          "software": "klayr-service",
+          "github": "https://github.com/KlayrHQ/klayr-service",
+          "docs": "https://klayr.xyz/documentation/klayr-service"
+        },
+        "list": [
           {
             "url": "http://3om4mobnbppxuexwufprp4cle4fivstooqqap6yoll5qk3kikesmqgad.onion"
+          },
+          {
+            "url": "http://xif2b7cchtn27aq2qypjc6p3phamrt4fdc3gbl5e6kk2fw3ypovre5id.onion"
           }
-        ]
-      },
-      "healthCheck": {
-        "normalUpdateInterval": 330000,
-        "crucialUpdateInterval": 30000,
-        "onScreenUpdateInterval": 10000
+        ],
+        "healthCheck": {
+          "normalUpdateInterval": 330000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000
+        }
       }
     }
   }

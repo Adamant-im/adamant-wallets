@@ -74,13 +74,13 @@
     "minVersion": "0.8.0"
   },
   "services": {
-    "description": {
-      "software": "adamant-currencyinfo-services",
-      "github": "https://github.com/Adamant-im/adamant-currencyinfo-services",
-      "docs": "https://github.com/Adamant-im/adamant-currencyinfo-services/wiki/InfoServices-API-documentation"
-    },
-    "list": {
-      "infoService": [
+    "infoService": {
+      "description": {
+        "software": "adamant-currencyinfo-services",
+        "github": "https://github.com/Adamant-im/adamant-currencyinfo-services",
+        "docs": "https://github.com/Adamant-im/adamant-currencyinfo-services/wiki/InfoServices-API-documentation"
+      },
+      "list": [
         {
           "url": "https://info.adamant.im",
           "alt_ip": "http://88.198.156.44:44099"
@@ -89,12 +89,38 @@
           "url": "https://info2.adm.im",
           "alt_ip": "http://207.180.210.95:33088"
         }
-      ]
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 300000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
+      }
     },
-    "healthCheck": {
-      "normalUpdateInterval": 300000,
-      "crucialUpdateInterval": 30000,
-      "onScreenUpdateInterval": 10000
+    "ipfsNode": {
+      "description": {
+        "software": "ipfs-node",
+        "github": "https://github.com/Adamant-im/ipfs-node",
+        "docs": "https://github.com/Adamant-im/ipfs-node/blob/master/README.md"
+      },
+      "list": [
+        {
+          "url": "https://ipfs4.adm.im",
+          "alt_ip": "http://95.216.45.88:44099"
+        },
+        {
+          "url": "https://ipfs5.adamant.im",
+          "alt_ip": "http://62.72.43.99:44099"
+        },
+        {
+          "url": "https://ipfs6.adamant.business",
+          "alt_ip": "http://75.119.138.235:44099"
+        }
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 300000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000
+      }
     }
   },
   "links": [
@@ -149,22 +175,45 @@
       "minVersion": "0.8.0"
     },
     "services": {
-      "description": {
-        "software": "adamant-currencyinfo-services",
-        "github": "https://github.com/Adamant-im/adamant-currencyinfo-services",
-        "docs": "https://github.com/Adamant-im/adamant-currencyinfo-services/wiki/InfoServices-API-documentation"
-      },
-      "list": {
-        "infoService": [
+      "infoService": {
+        "description": {
+          "software": "adamant-currencyinfo-services",
+          "github": "https://github.com/Adamant-im/adamant-currencyinfo-services",
+          "docs": "https://github.com/Adamant-im/adamant-currencyinfo-services/wiki/InfoServices-API-documentation"
+        },
+        "list": [
           {
             "url": "http://czjsawp2crjmnkliw2h2kpk7wwd3a36zvvnvqgvzmi4t4vc2yzm7j2qd.onion"
           }
-        ]
+        ],
+        "healthCheck": {
+          "normalUpdateInterval": 300000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000
+        }
       },
-      "healthCheck": {
-        "normalUpdateInterval": 300000,
-        "crucialUpdateInterval": 30000,
-        "onScreenUpdateInterval": 10000
+      "ipfsNode": {
+        "description": {
+          "software": "ipfs-node",
+          "github": "https://github.com/Adamant-im/ipfs-node",
+          "docs": "https://github.com/Adamant-im/ipfs-node/blob/master/README.md"
+        },
+        "list": [
+          {
+            "url": "http://z455rax4mwcseyc7efog7czrbwdvphwocatl5sjcc6htcoj2k2vz7dad.onion"
+          },
+          {
+            "url": "http://cds45bjd7ynxkffxpzfifnm55r6vmhgocvpvonjmry3mrskuhda6z7qd.onion"
+          },
+          {
+            "url": "http://3ytwoe62bqw264v4rkaqpn5iovdg3oxly5tx2uc5qijkrdqixm6tmdyd.onion"
+          }
+        ],
+        "healthCheck": {
+          "normalUpdateInterval": 300000,
+          "crucialUpdateInterval": 30000,
+          "onScreenUpdateInterval": 10000
+        }
       }
     }
   }
