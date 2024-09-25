@@ -79,7 +79,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
         "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored
       }
     ],
-    // Node health сheck information 
+    // Node health check information 
     "healthCheck": {
       "normalUpdateInterval": 210000, // Regular node status update interval in ms
       "crucialUpdateInterval": 30000, // Node status update interval when there are no active nodes, in ms
@@ -91,22 +91,32 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 
   // Optional. Services related to a project
   "services": {
-    "list": {
-      "infoService": [
-        { "url": "https://info.example.com" },
+    "service1": {
+      "description": {
+        "software": "example-service",
+        "github": "https://github.com/--example",
+        "docs": "https://docs.example.com" // API docs
+      },
+      "list": [
+        {
+          "url": "https://info.example.com",
+        },
         {
           "url": "https://second-service.example.com",
           "alt_ip": "0.0.0.1:80" // Alternative way to connect if the domain of a service is censored
         }
-      ]
+      ],
+      // Optional: Service health check information (If not filled here, information is retrieved from nodes.healthCheck)
+      "healthCheck": {
+        "normalUpdateInterval": 210000, // Regular service status update interval in ms
+        "crucialUpdateInterval": 30000, // Service status update interval when there are no active services, in ms
+        "onScreenUpdateInterval": 10000 // On the node screen, the status update interval in ms
+      },
+      "minVersion": "1.0.0", // Optional. Minimal supported service API version 
     },
-    // Optional: Service health сheck information (If not filled here, information is retrieved from nodes.healthCheck)
-    "healthCheck": {
-      "normalUpdateInterval": 210000, // Regular service status update interval in ms
-      "crucialUpdateInterval": 30000, // Service status update interval when there are no active services, in ms
-      "onScreenUpdateInterval": 10000 // On the node screen, the status update interval in ms
-    },
-    "minVersion": "1.0.0", // Optional. Minimal supported service API version    
+    "service2": {
+      /*...*/
+    }
   },
 
   // Optional. Additional project links
@@ -119,7 +129,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
       "name": "whitepaper",
       "url": "https://example.com/whitepaper.pdf"
     }
-  ]
+  ],
 
   // Optional. Tor configuration if a project uses Tor
   // It follows the same structure as the root properties
@@ -144,9 +154,9 @@ The total cost of a transaction is the product of the gas limit and gas price:
 Tx \, fee = gas \, limit \times gas \, price
 ```
 
-ADAMANT apps estimate gas limit and gas price using [web3](https://github.com/web3/web3.js) library. To make sure the Ethereum blockchain will include the tx, these estimates must be multiplied by `reliabilityGasLimitPercent` and `reliabilityGasPricePercent`.
+ADAMANT apps estimate gas limit and gas price using [web3](https://github.com/web3/web3.js) library. To ensure the Ethereum blockchain will accept the tx, apps multiply these estimates by `reliabilityGasLimitPercent` and `reliabilityGasPricePercent`. Additionally, an app may offer the "Increase fee" option to use the `increasedGasPricePercent` koef.
 
-If it’s not possible to get estimates, apps will use `defaultGasLimit` and `defaultGasPriceGwei`. When gas price is higher than `warningGasPriceGwei`, apps will show a note/warning.
+If it’s not possible to get estimates, apps will use `defaultGasLimit` and `defaultGasPriceGwei`. When the gas price exceeds `warningGasPriceGwei`, apps show a note/warning.
 
 These parameters are set inside `general\ethereum\info.json` and may be overridden by `blockchains\ethereum\info.json` and specific tokens.
 
@@ -186,6 +196,24 @@ Transaction considered as new or old depending on how much time passed from in-c
 const isNew = (admTransferTimestamp) =>
   Date.now() - admTransferTimestamp <
   newPendingTxFetchAttempts * newPendingTxFetchInterval;
+```
+
+### Message sending
+
+Users can request to send messages even when they are offline. An app will attempt to send a message for a specific timeout period, allowing time for the Internet connection to restore. If the message still cannot be sent, the status will change from “Pending” to “Failed”. Users can then manually retry sending the message or choose to cancel it.
+
+For in-chat coin transfers, there is no timeout. An app will continuously retry sending these messages until successful. However, before sending cryptocurrency in chats, the app checks the availability of all nodes, ensuring both the nodes and the UI process the transaction correctly.
+
+To assist apps in setting message sending parameters, additional fields are introduced:
+
+```jsonc
+{
+  // ...
+  "timeout": {
+    "message": 300000, // Timeout for regular messages (in milliseconds)
+    "attachment": 100000,   // Timeout for file transfers (in milliseconds)
+  },
+}
 ```
 
 ## Icons
