@@ -29,6 +29,7 @@
   },
   "txConsistencyMaxTime": 900000,
   "nodes": {
+    "displayName": "doge-node",
     "list": [
       {
         "url": "https://dogenode1.adamant.im",
@@ -70,6 +71,7 @@
   ],
   "tor": {
     "nodes": {
+      "displayName": "doge-node",
       "list": [
         {
           "url": "http://mtg4mq43p67cbj6qwcqgppjv7uzm7ximjlzapsbnbh5ls6zqkjsq26ad.onion"
