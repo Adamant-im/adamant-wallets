@@ -71,6 +71,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
 
   // Optional. Node links for API
   "nodes": {
+    "displayName": "some-node", // Name of the group of the nodes
     "list": [
       { "url": "https://node.example.com" },
       { "url": "http://0.0.0.0:36666" }, // It's possible to use IP:port URI
@@ -92,6 +93,7 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   // Optional. Services related to a project
   "services": {
     "service1": {
+      "displayName": "some-service", // Name of the group of the services
       "description": {
         "software": "example-service",
         "github": "https://github.com/--example",

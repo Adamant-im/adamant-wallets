@@ -29,6 +29,7 @@
   },
   "txConsistencyMaxTime": 10800000,
   "nodes": {
+    "displayName": "btc-node",
     "list": [
       {
         "url": "https://btcnode1.adamant.im/bitcoind",
@@ -48,6 +49,7 @@
   },
   "services": {
     "btcIndexer": {
+      "displayName": "btc-indexer",
       "description": {
         "software": "Esplora/Electrs",
         "github": "https://github.com/blockstream/electrs",
@@ -90,6 +92,7 @@
   ],
   "tor": {
     "nodes": {
+      "displayName": "btc-node",
       "list": [
         {
           "url": "http://cc6ibzkfeseuwnmtjc6hlsd44bzg2sr3shbv7n35nj2rk2vm6dmtlnqd.onion/bitcoind"
@@ -107,6 +110,7 @@
     },
     "services": {
       "btcIndexer": {
+        "displayName": "btc-indexer",
         "description": {
           "software": "Esplora/Electrs",
           "github": "https://github.com/blockstream/electrs",
