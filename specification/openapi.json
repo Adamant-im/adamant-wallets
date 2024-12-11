@@ -63,7 +63,7 @@
       },
       "Service": {
         "type": "object",
-        "required": ["description", "list", "healthCheck"],
+        "required": ["description", "list", "healthCheck", "displayName"],
         "properties": {
           "description": {
             "$ref": "#/components/schemas/ServiceDescription"
@@ -76,6 +76,9 @@
           },
           "healthCheck": {
             "$ref": "#/components/schemas/ServiceHealthcheck"
+          },
+          "displayName": {
+            "type": "string"
           }
         }
       },
@@ -286,7 +289,7 @@
           },
           "nodes": {
             "type": "object",
-            "required": ["list", "healthCheck"],
+            "required": ["list", "healthCheck", "displayName"],
             "properties": {
               "list": {
                 "type": "array",
@@ -297,6 +300,9 @@
               },
               "healthCheck": {
                 "$ref": "#/components/schemas/NodeHealthcheck"
+              },
+              "displayName": {
+                "type": "string"
               },
               "minVersion": {
                 "type": "string",
@@ -339,7 +345,7 @@
               },
               "nodes": {
                 "type": "object",
-                "required": ["list", "healthCheck"],
+                "required": ["list", "healthCheck", "displayName"],
                 "properties": {
                   "list": {
                     "type": "array",
@@ -350,6 +356,9 @@
                   },
                   "healthCheck": {
                     "$ref": "#/components/schemas/NodeHealthcheck"
+                  },
+                  "displayName": {
+                    "type": "string"
                   },
                   "minVersion": {
                     "type": "string",
