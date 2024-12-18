@@ -64,6 +64,18 @@
       },
       {
         "url": "https://dschubba.adm.im"
+      },
+      {
+        "url": "https://tauri.bbry.org",
+        "alt_ip": "http://54.197.36.175:36666"
+      },
+      {
+        "url": "https://endless.bbry.org",
+        "alt_ip": "http://54.197.36.175:46666"
+      },
+      {
+        "url": "https://debate.bbry.org",
+        "alt_ip": "http://54.197.36.175:56666"
       }
     ],
     "healthCheck": {
