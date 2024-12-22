@@ -1,0 +1,79 @@
+{
+  "name": "Litecoin",
+  "website": "https://litecoin.org",
+  "description": "Litecoin is a peer-to-peer Internet currency that enables instant, near-zero cost payments to anyone in the world",
+  "explorer": "https://litecoinspace.org",
+  "explorerTx": "https://litecoinspace.org/tx/${ID}",
+  "explorerAddress": "https://litecoinspace.org/address/${ID}",
+  "regexAddress": "^[LM3][A-Za-z0-9]{26,33}$",
+  "symbol": "LTC",
+  "type": "coin",
+  "decimals": 8,
+  "minBalance": 0.00000001,
+  "cryptoTransferDecimals": 8,
+  "minTransferAmount": 0.00000001,
+  "qqPrefix": "litecoin",
+  "status": "active",
+  "createCoin": true,
+  "defaultVisibility": true,
+  "defaultOrdinalLevel": 70,
+  "consensus": "PoW",
+  "blockTimeAvg": 150000,
+  "txFetchInfo": {
+    "newPendingInterval": 10000,
+    "oldPendingInterval": 3000,
+    "registeredInterval": 40000,
+    "newPendingAttempts": 20,
+    "oldPendingAttempts": 4
+  },
+  "txConsistencyMaxTime": 10800000,
+  "nodes": {
+    "displayName": "ltc-node",
+    "list": [
+      {
+        "url": "https://ltcnode1.adm.im",
+        "alt_ip": "http://195.26.255.137:44099"
+      }
+    ],
+    "healthCheck": {
+      "normalUpdateInterval": 360000,
+      "crucialUpdateInterval": 30000,
+      "onScreenUpdateInterval": 10000,
+      "threshold": 2
+    }
+  },
+  "links": [
+    {
+      "name": "github",
+      "url": "https://github.com/litecoin-project/litecoin"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/litecoin"
+    },
+    {
+      "name": "reddit",
+      "url": "https://www.reddit.com/r/litecoin"
+    },
+    {
+      "name": "whitepaper",
+      "url": "https://bitcoin.org/bitcoin.pdf"
+    }
+  ],
+  "tor": {
+    "nodes": {
+      "displayName": "ltc-node",
+      "list": [
+        {
+          "url": "http://iby5h3n3fbwajtkkziyybxyxmvclkqnt6gpl6oedw63hxouvlc2oqaad.onion"
+        }
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 360000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000,
+        "threshold": 2
+      }
+    }
+  }
+}
