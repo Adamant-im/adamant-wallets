@@ -9,7 +9,7 @@
   "symbol": "LTC",
   "type": "coin",
   "decimals": 8,
-  "minBalance": 0.00000001,
+  "minBalance": 0.001,
   "cryptoTransferDecimals": 8,
   "minTransferAmount": 0.00000001,
   "qqPrefix": "litecoin",
