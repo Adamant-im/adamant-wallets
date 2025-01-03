@@ -7,34 +7,31 @@
 import Foundation
 
 public struct AssetManager {
-    public static func loadInfoFiles() -> [String: Any] {
-        var infoFiles = [String: Any]()
+    public static func loadInfoFiles() -> [Any] {
+        var jsonFiles = [Any]()
         
         guard let resourceURL = Bundle.module.url(forResource: "general", withExtension: nil) else {
             print("Failed to find 'general' folder.")
-            return [:]
+            return []
         }
         
         do {
-            let subdirectories = try FileManager.default.contentsOfDirectory(at: resourceURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            let enumerator = FileManager.default.enumerator(at: resourceURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
             
-            for subdirectory in subdirectories {
-                let infoFileURL = subdirectory.appendingPathComponent("info")
-                
-                if FileManager.default.fileExists(atPath: infoFileURL.path) {
+            while let fileURL = enumerator?.nextObject() as? URL {
+                if fileURL.lastPathComponent == "info" {
                     do {
-                        let data = try Data(contentsOf: infoFileURL)
+                        let data = try Data(contentsOf: fileURL)
                         let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-                        infoFiles[subdirectory.lastPathComponent] = jsonObject
+                        
+                        // Добавляем JSON-объект в массив
+                        jsonFiles.append(jsonObject)
                     } catch {
-                        print("Failed to parse JSON from file at \(infoFileURL.path): \(error)")
+                        print("Failed to parse JSON from file at \(fileURL.path): \(error)")
                     }
                 }
             }
-        } catch {
-            print("Error loading info files: \(error)")
         }
-        
-        return infoFiles
+        return jsonFiles
     }
 }
