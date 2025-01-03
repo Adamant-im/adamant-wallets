@@ -19,12 +19,10 @@ public struct AssetManager {
             let enumerator = FileManager.default.enumerator(at: resourceURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
             
             while let fileURL = enumerator?.nextObject() as? URL {
-                if fileURL.lastPathComponent == "info" {
+                if fileURL.lastPathComponent == "info.json" {
                     do {
                         let data = try Data(contentsOf: fileURL)
                         let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
-                        
-                        // Добавляем JSON-объект в массив
                         jsonFiles.append(jsonObject)
                     } catch {
                         print("Failed to parse JSON from file at \(fileURL.path): \(error)")
