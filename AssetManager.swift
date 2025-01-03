@@ -1,16 +1,14 @@
 //
 //  AssetManager.swift
-//  adamant-wallets
+//  AdamantWalletsAssets
 //
 //  Created by Владимир Клевцов on 3.1.25..
 //
-
-
 import Foundation
 
 public struct AssetManager {
-    public static func loadInfoFiles() -> [String: Data] {
-        var infoFiles = [String: Data]()
+    public static func loadInfoFiles() -> [String: Any] {
+        var infoFiles = [String: Any]()
         
         guard let resourceURL = Bundle.module.url(forResource: "general", withExtension: nil) else {
             print("Failed to find 'general' folder.")
@@ -22,9 +20,15 @@ public struct AssetManager {
             
             for subdirectory in subdirectories {
                 let infoFileURL = subdirectory.appendingPathComponent("info")
+                
                 if FileManager.default.fileExists(atPath: infoFileURL.path) {
-                    let data = try Data(contentsOf: infoFileURL)
-                    infoFiles[subdirectory.lastPathComponent] = data
+                    do {
+                        let data = try Data(contentsOf: infoFileURL)
+                        let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+                        infoFiles[subdirectory.lastPathComponent] = jsonObject
+                    } catch {
+                        print("Failed to parse JSON from file at \(infoFileURL.path): \(error)")
+                    }
                 }
             }
         } catch {

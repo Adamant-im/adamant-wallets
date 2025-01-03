@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "AdamantWalletsAssets",
     platforms: [
-      .iOS(.v15), .macOS(.v10_15)
+        .iOS(.v15), .macOS(.v10_15)
     ],
     products: [
         .library(
@@ -15,6 +15,8 @@ let package = Package(
     targets: [
         .target(
             name: "AdamantWalletsAssets",
+            path: ".",
+            exclude: ["README"],
             resources: [
                 .copy("assets/general")
             ]
