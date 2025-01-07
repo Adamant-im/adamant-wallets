@@ -18,7 +18,8 @@ let package = Package(
             path: ".",
             exclude: ["README"],
             resources: [
-                .copy("assets/general")
+                .copy("assets/general"),
+                .process("WalletAssets.xcassets")
             ]
         )
     ]
