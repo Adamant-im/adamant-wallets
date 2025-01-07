@@ -7,7 +7,7 @@
 import Foundation
 
 extension Foundation.Bundle {
-    static let adamantWalletsAssets: Bundle = {
+    public static let adamantWalletsAssets: Bundle = {
         let bundleName = "AdamantWalletsAssets"
 
         let candidates = [
