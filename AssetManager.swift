@@ -15,8 +15,8 @@ public struct AssetManager {
     return loadInfoFiles(resourceURL: generalResourceURL)
   }
   
-  public static func loadFilesFromBlockchains() -> [Data] {
-    guard let blockchainsResourceURL = Bundle.module.url(forResource: "blockchains", withExtension: nil) else {
+  public static func loadFilesFromBlockchainsEthereum() -> [Data] {
+    guard let blockchainsResourceURL = Bundle.module.url(forResource: "blockchains/ethereum", withExtension: nil) else {
       print("Failed to find 'blockchains' folder.")
       return []
     }
