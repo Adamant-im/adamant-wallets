@@ -15,7 +15,7 @@ let package = Package(
     targets: [
         .target(
             name: "AdamantWalletsAssets",
-            path: "Sources/AdamantWalletsAssets"
+            path: "."
         )
     ]
 )
