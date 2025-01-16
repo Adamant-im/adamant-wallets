@@ -16,10 +16,7 @@ let package = Package(
     .target(
       name: "AdamantWalletsAssets",
       path: ".",
-      exclude: ["README"],
-      resources: [
-        .copy("assets/general")
-      ]
+      exclude: ["README"]
     )
   ]
 )
