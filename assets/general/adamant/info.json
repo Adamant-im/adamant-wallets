@@ -1,7 +1,6 @@
 {
   "name": "ADAMANT Messenger",
   "nameShort": "ADAMANT",
-  "nodeTimeCorrection": 0.5,
   "website": "https://adamant.im",
   "description": "Decentralized Messenger",
   "explorer": "https://explorer.adamant.im",
@@ -237,5 +236,8 @@
         }
       }
     }
+  },
+  "specialValues": {
+    "nodeTimeCorrection": 500
   }
 }
