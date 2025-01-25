@@ -87,7 +87,8 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
       "onScreenUpdateInterval": 10000, // On the node screen, the status update interval in ms
       "threshold": 3  // Permissible height difference between nodes
     },
-    "minVersion": "1.0.0" // Optional. Minimal supported service API version      
+    "minVersion": "1.0.0", // Optional. Minimal supported service API version
+    "nodeTimeCorrection": 500 // Optional. A time correction for the message transactions on ADM
   },
 
   // Optional. Services related to a project
