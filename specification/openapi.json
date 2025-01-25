@@ -373,7 +373,7 @@
                   "nodeTimeCorrection": {
                     "type": "integer",
                     "description": "A time correction for the message transactions on ADM",
-                    "example": "500"
+                    "example": 500
                   }
                 }
               },
