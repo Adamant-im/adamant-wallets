@@ -308,6 +308,11 @@
                 "type": "string",
                 "description": "Minimal node API version",
                 "example": "0.8.0"
+              },
+              "nodeTimeCorrection": {
+                "type": "integer",
+                "description": "A time correction for the message transactions on ADM",
+                "example": 500
               }
             }
           },
@@ -364,6 +369,11 @@
                     "type": "string",
                     "description": "Minimal node API version",
                     "example": "0.8.0"
+                  },
+                  "nodeTimeCorrection": {
+                    "type": "integer",
+                    "description": "A time correction for the message transactions on ADM",
+                    "example": 500
                   }
                 }
               },
