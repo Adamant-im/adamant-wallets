@@ -85,7 +85,25 @@
       "threshold": 10
     },
     "minVersion": "0.8.0",
-    "nodeTimeCorrection": 500
+    "nodeTimeCorrection": 500,
+    "testnetNodes": [
+      {
+        "url": "https://testnode1.adamant.im",
+        "alt_ip": "http://162.55.32.80:36667",
+        "socket": "ws://162.55.32.80:36665"
+      },
+      {
+        "alt_ip": "http://81.0.247.181:36667"
+      },
+      {
+        "alt_ip": "http://95.217.19.144:36667",
+        "socket": "ws://162.55.32.80:36665"
+      },
+      {
+        "alt_ip": "http://157.90.229.236:36667",
+        "socket": "ws://157.90.229.236:36665"
+      }
+    ]
   },
   "services": {
     "infoService": {
