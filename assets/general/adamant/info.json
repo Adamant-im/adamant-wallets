@@ -157,9 +157,9 @@
   ],
   "testnet": {
     "website": "https://adamant.im",
-    "explorer": "https://explorer.adamant.im",
-    "explorerTx": "https://explorer.adamant.im/tx/${ID}",
-    "explorerAddress": "https://explorer.adamant.im/address/${ID}",
+    "explorer": "https://testnet.adamant.im",
+    "explorerTx": "https://testnet.adamant.im/tx/${ID}",
+    "explorerAddress": "https://testnet.adamant.im/address/${ID}",
     "nodes": {
       "displayName": "adm-node",
       "list": [
