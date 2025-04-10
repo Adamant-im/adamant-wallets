@@ -161,6 +161,7 @@
     "explorerTx": "https://explorer.adamant.im/tx/${ID}",
     "explorerAddress": "https://explorer.adamant.im/address/${ID}",
     "nodes": {
+      "displayName": "adm-node",
       "list": [
         {
           "url": "https://testnode1.adamant.im",
@@ -179,7 +180,15 @@
         {
           "url": "http://157.90.229.236:36667"
         }
-      ]
+      ],
+      "healthCheck": {
+        "normalUpdateInterval": 300000,
+        "crucialUpdateInterval": 30000,
+        "onScreenUpdateInterval": 10000,
+        "threshold": 10
+      },
+      "minVersion": "0.8.0",
+      "nodeTimeCorrection": 500
     },
     "services": {
       "infoService": {
