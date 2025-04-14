@@ -15,7 +15,7 @@
   "qqPrefix": "klayr",
   "status": "active",
   "createCoin": true,
-  "defaultVisibility": true,
+  "defaultVisibility": false,
   "defaultOrdinalLevel": 50,
   "consensus": "dPoS",
   "blockTimeFixed": 10000,
