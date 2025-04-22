@@ -22,6 +22,7 @@
   "consensus": "PoW",
   "blockTimeAvg": 160000,
   "balanceCheckInterval": 25000,
+  "balanceValidInterval": 300000,
   "txFetchInfo": {
     "newPendingInterval": 5000,
     "oldPendingInterval": 3000,
