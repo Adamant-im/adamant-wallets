@@ -19,6 +19,8 @@
   "defaultOrdinalLevel": 0,
   "consensus": "dPoS",
   "blockTimeFixed": 5000,
+  "balanceCheckInterval": 5000,
+  "balanceCheckIntervalNewAccount": 2000,
   "txFetchInfo": {
     "newPendingInterval": 4000,
     "oldPendingInterval": 4000,
