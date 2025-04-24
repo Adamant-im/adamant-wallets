@@ -255,6 +255,14 @@
             "type": "integer",
             "description": "Average block time in ms"
           },
+          "balanceCheckInterval": {
+            "type": "integer",
+            "description": "Balance checking interval in ms"
+          },
+          "balanceValidInterval": {
+            "type": "integer",
+            "description": "Balance validation interval in ms"
+          },
           "txFetchInfo": {
             "type": "object",
             "properties": {
