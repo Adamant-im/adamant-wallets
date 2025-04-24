@@ -69,6 +69,9 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms
   "blockTimeAvg": 600000, // Optional. Average block time in ms
 
+  "balanceCheckInterval": 30000, // How often to check the wallet balance (in milliseconds)
+  "balanceValidInterval": 300000 // How long a balance is considered valid before requiring refresh (in milliseconds)
+
   // Optional. Node links for API
   "nodes": {
     "displayName": "some-node", // Name of the group of the nodes
