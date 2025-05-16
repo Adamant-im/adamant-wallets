@@ -79,6 +79,25 @@
       {
         "url": "https://debate.bbry.org",
         "alt_ip": "http://54.197.36.175:56666"
+      },
+      {
+        "url": "https://lake.bbry.org",
+        "alt_ip": "http://100.42.184.57:27579"
+      },
+      {
+        "url": "https://sunshine.bbry.org",
+        "alt_ip": "http://23.105.226.67:28785"
+      },
+      {
+        "url": "https://unusual.bbry.org",
+        "alt_ip": "http://51.15.238.199:13682"
+      },
+      {
+        "url": "https://clown.bbry.org",
+        "alt_ip": "http://65.108.52.254:6687"
+      },
+      {
+        "url": "http://100.42.184.57:27579"
       }
     ],
     "healthCheck": {
