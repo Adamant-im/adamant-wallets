@@ -153,6 +153,18 @@
         {
           "url": "https://ipfs6.adamant.business",
           "alt_ip": "http://75.119.138.235:44099"
+        },
+        {
+          "url": "https://ipfs4.bbry.org",
+          "alt_ip": "http://65.108.52.254:61399"
+        },
+        {
+          "url": "https://ipfs5.bbry.org",
+          "alt_ip": "http://23.105.226.67:41511"
+        },
+        {
+          "url": "https://ipfs6.bbry.org",
+          "alt_ip": "http://100.42.184.57:56777"
         }
       ],
       "healthCheck": {
@@ -225,6 +237,14 @@
           {
             "url": "https://info2.adm.im",
             "alt_ip": "http://207.180.210.95:33088"
+          },
+          {
+            "url": "https://currencyinfo1.bbry.org",
+            "alt_ip": "http://147.93.132.93:1948"
+          },
+          {
+            "url": "https://currencyinfo2.bbry.org",
+            "alt_ip": "http://51.15.238.199:18958"
           }
         ],
         "healthCheck": {
@@ -253,6 +273,18 @@
           {
             "url": "https://ipfs6.adamant.business",
             "alt_ip": "http://75.119.138.235:44099"
+          },
+          {
+            "url": "https://ipfs4.bbry.org",
+            "alt_ip": "http://65.108.52.254:61399"
+          },
+          {
+            "url": "https://ipfs5.bbry.org",
+            "alt_ip": "http://23.105.226.67:41511"
+          },
+          {
+            "url": "https://ipfs6.bbry.org",
+            "alt_ip": "http://100.42.184.57:56777"
           }
         ],
         "healthCheck": {
