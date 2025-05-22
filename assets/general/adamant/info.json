@@ -125,6 +125,14 @@
         {
           "url": "https://info2.adm.im",
           "alt_ip": "http://207.180.210.95:33088"
+        },
+        {
+          "url": "https://currencyinfo1.bbry.org",
+          "alt_ip": "http://147.93.132.93:1948"
+        },
+        {
+          "url": "https://currencyinfo2.bbry.org",
+          "alt_ip": "http://51.15.238.199:18958"
         }
       ],
       "healthCheck": {
