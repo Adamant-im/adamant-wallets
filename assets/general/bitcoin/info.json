@@ -20,6 +20,8 @@
   "defaultOrdinalLevel": 10,
   "consensus": "PoW",
   "blockTimeAvg": 600000,
+  "balanceCheckInterval": 50000,
+  "balanceValidInterval": 300000,
   "txFetchInfo": {
     "newPendingInterval": 10000,
     "oldPendingInterval": 3000,
@@ -63,6 +65,14 @@
         {
           "url": "https://btcnode3.adamant.im",
           "alt_ip": "http://195.201.242.108:44099"
+        },
+        {
+          "url": "https://btcnode1.bbry.org",
+          "alt_ip": "http://100.42.184.57:8617"
+        },
+        {
+          "url": "https://btcnode3.bbry.org",
+          "alt_ip": "http://23.105.226.67:39914"
         }
       ],
       "healthCheck": {
