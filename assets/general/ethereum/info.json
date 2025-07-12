@@ -10,7 +10,7 @@
   "symbol": "ETH",
   "type": "coin",
   "decimals": 18,
-  "cryptoTransferDecimals": 6,
+  "cryptoTransferDecimals": 8,
   "status": "active",
   "qqPrefix": "ethereum",
   "createCoin": true,
