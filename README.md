@@ -160,7 +160,7 @@ The total cost of a transaction is the product of the gas limit and gas price:
 Tx \, fee = gas \, limit \times gas \, price
 ```
 
-ADAMANT apps estimate gas limit and gas price using [web3](https://github.com/web3/web3.js) library. To ensure the Ethereum blockchain will accept the tx, apps multiply these estimates by `reliabilityGasLimitPercent` and `reliabilityGasPricePercent`. Additionally, an app may offer the "Increase fee" option to use the `increasedGasPricePercent` koef.
+ADAMANT apps estimate gas limit and gas price using [web3](https://github.com/web3/web3.js) library. To ensure the Ethereum blockchain will accept the tx, apps multiply these estimates by `reliabilityGasLimitPercent` and `reliabilityGasPricePercent`. Additionally, an app may offer the "Increase fee" option, which uses the `increasedGasPricePercent` coefficient (also used for Bitcoin).
 
 If it’s not possible to get estimates, apps will use `defaultGasLimit` and `defaultGasPriceGwei`. When the gas price exceeds `warningGasPriceGwei`, apps show a note/warning.
 
