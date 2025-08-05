@@ -41,7 +41,6 @@
         "alt_ip": "http://149.102.157.15:36666"
       },
       { "url": "https://bid.adamant.im" },
-      { "url": "https://unusual.adamant.im" },
       {
         "url": "https://debate.adamant.im",
         "alt_ip": "http://95.216.161.113:36666"
@@ -87,10 +86,6 @@
       {
         "url": "https://sunshine.bbry.org",
         "alt_ip": "http://23.105.226.67:28785"
-      },
-      {
-        "url": "https://unusual.bbry.org",
-        "alt_ip": "http://51.15.238.199:13682"
       },
       {
         "url": "https://clown.bbry.org",
