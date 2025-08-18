@@ -254,9 +254,6 @@
           },
           {
             "url": "https://ipfs2test.adamant.im"
-          },
-          {
-            "url": "https://ipfs3test.adamant.im"
           }
         ],
         "healthCheck": {
