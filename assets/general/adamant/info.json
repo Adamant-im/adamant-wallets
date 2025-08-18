@@ -195,11 +195,8 @@
           "url": "http://81.0.247.181:36667"
         },
         {
-          "url": "http://95.217.19.144:36667"
-        },
-        {
-          "url": "https://testnode4.adm.im",
-          "alt_ip": "http://157.90.229.236:36667"
+          "url": "https://testnode3.adm.im",
+          "alt_ip": "http://95.217.19.144:36667"
         }
       ],
       "healthCheck": {
