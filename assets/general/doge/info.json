@@ -35,7 +35,7 @@
     "list": [
       {
         "url": "https://dogenode2.adamant.im",
-        "alt_ip": "http://176.9.32.126:44098"
+        "alt_ip": "http://84.247.142.184:44098"
       },
       {
         "url": "https://dogenode3.adm.im",
@@ -68,11 +68,19 @@
       "list": [
         {
           "url": "https://dogenode2.adamant.im/api",
-          "alt_ip": "http://176.9.32.126:44098/api"
+          "alt_ip": "http://84.247.142.184:44098/api"
         },
         {
           "url": "https://dogenode3.adm.im/api",
           "alt_ip": "http://95.216.45.88:44098/api"
+        },
+        {
+          "url": "https://dogenode2.bbry.org/api",
+          "alt_ip": "http://51.15.238.199:7954/api"
+        },
+        {
+          "url": "https://dogenode3.bbry.org/api",
+          "alt_ip": "http://65.108.52.254:25556/api"
         }
       ],
       "healthCheck": {
