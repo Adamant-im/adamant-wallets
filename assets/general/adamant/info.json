@@ -75,7 +75,7 @@
       },
       {
         "url": "https://lake.bbry.org",
-        "alt_ip": "http://100.42.184.57:27579"
+        "alt_ip": "http://147.93.132.93:31009"
       },
       {
         "url": "https://sunshine.bbry.org",
@@ -84,9 +84,6 @@
       {
         "url": "https://clown.bbry.org",
         "alt_ip": "http://65.108.52.254:6687"
-      },
-      {
-        "url": "http://100.42.184.57:27579"
       }
     ],
     "healthCheck": {
