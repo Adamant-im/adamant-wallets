@@ -39,7 +39,7 @@
       },
       {
         "url": "https://dogenode3.adm.im",
-        "alt_ip": "http://95.216.45.88:44098"
+        "alt_ip": "http://195.201.242.108:44098"
       },
       {
         "url": "https://dogenode3.bbry.org",
@@ -68,7 +68,7 @@
         },
         {
           "url": "https://dogenode3.adm.im/api",
-          "alt_ip": "http://95.216.45.88:44098/api"
+          "alt_ip": "http://195.201.242.108:44098/api"
         },
         {
           "url": "https://dogenode2.bbry.org/api",
