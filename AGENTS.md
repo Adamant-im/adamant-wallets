@@ -117,6 +117,7 @@ Label policy:
 PR policy:
 
 - Target `dev`, not `master`
+- Use org PR template from `Adamant-im/.github/blob/master/PULL_REQUEST_TEMPLATE.md`
 - Use `Type: Short summary` titles such as `Docs: Add AGENTS.md`
 - Do not use issue-style square-bracket prefixes in PR titles
 - Link issues in the PR body with closing keywords when applicable, for example `Closes #131`
