@@ -48,10 +48,6 @@
       { "url": "http://184.94.215.92:45555" },
       { "url": "https://node2.blockchain2fa.io" },
       {
-        "url": "https://phecda.adm.im",
-        "alt_ip": "http://46.250.234.248:36666"
-      },
-      {
         "url": "https://tegmine.adm.im"
       },
       {
@@ -106,7 +102,7 @@
       "list": [
         {
           "url": "https://info.adamant.im",
-          "alt_ip": "http://5.161.98.136:33088"
+          "alt_ip": "http://46.4.37.157:33088"
         },
         {
           "url": "https://info2.adm.im",
@@ -138,7 +134,7 @@
       "list": [
         {
           "url": "https://ipfs4.adm.im",
-          "alt_ip": "http://95.216.45.88:44099"
+          "alt_ip": "http://209.188.7.216:44099"
         },
         {
           "url": "https://ipfs6.adamant.business",
@@ -215,7 +211,7 @@
         "list": [
           {
             "url": "https://info.adamant.im",
-            "alt_ip": "http://5.161.98.136:33088"
+            "alt_ip": "http://46.4.37.157:33088"
           },
           {
             "url": "https://info2.adm.im",
@@ -333,9 +329,6 @@
         "list": [
           {
             "url": "http://z455rax4mwcseyc7efog7czrbwdvphwocatl5sjcc6htcoj2k2vz7dad.onion"
-          },
-          {
-            "url": "http://cds45bjd7ynxkffxpzfifnm55r6vmhgocvpvonjmry3mrskuhda6z7qd.onion"
           },
           {
             "url": "http://3ytwoe62bqw264v4rkaqpn5iovdg3oxly5tx2uc5qijkrdqixm6tmdyd.onion"
