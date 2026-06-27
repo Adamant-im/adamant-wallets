@@ -117,6 +117,10 @@
           "onScreenUpdateInterval": {
             "type": "integer",
             "description": "On the node screen, the status update interval in ms"
+          },
+          "threshold": {
+            "type": "integer",
+            "description": "Permissible height difference between nodes or indexed services"
           }
         }
       },
@@ -126,7 +130,7 @@
         "required": ["message", "attachment"],
         "properties": {
           "message": {
-            "type": "string",
+            "type": "integer",
             "description": "Timeout for regular messages (in milliseconds)"
           },
           "attachment": {
@@ -195,8 +199,8 @@
           },
           "type": {
             "type": "string",
-            "enum": ["coin", "ERC20"],
-            "description": "Coin or token mainly"
+            "enum": ["coin", "token"],
+            "description": "Asset type"
           },
           "decimals": {
             "type": "integer",
@@ -259,9 +263,37 @@
             "type": "integer",
             "description": "Balance checking interval in ms"
           },
+          "balanceCheckIntervalNewAccount": {
+            "type": "integer",
+            "description": "Balance checking interval in ms for newly created accounts"
+          },
           "balanceValidInterval": {
             "type": "integer",
             "description": "Balance validation interval in ms"
+          },
+          "defaultGasLimit": {
+            "type": "number",
+            "description": "Fallback gas limit for Ethereum-like transfers"
+          },
+          "defaultGasPriceGwei": {
+            "type": "number",
+            "description": "Fallback gas price in Gwei for Ethereum-like transfers"
+          },
+          "warningGasPriceGwei": {
+            "type": "number",
+            "description": "Gas price in Gwei above which apps may show a warning"
+          },
+          "reliabilityGasLimitPercent": {
+            "type": "number",
+            "description": "Gas limit multiplier percent used to improve transfer reliability"
+          },
+          "reliabilityGasPricePercent": {
+            "type": "number",
+            "description": "Gas price multiplier percent used to improve transfer reliability"
+          },
+          "increasedGasPricePercent": {
+            "type": "number",
+            "description": "Gas price or network fee multiplier percent for the Increase fee option"
           },
           "txFetchInfo": {
             "type": "object",
@@ -487,6 +519,10 @@
             "type": "integer",
             "description": "Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically"
           },
+          "cryptoTransferDecimals": {
+            "type": "integer",
+            "description": "Max precision for tx"
+          },
           "decimals": {
             "type": "integer",
             "description": "Decimal places"
@@ -514,7 +550,24 @@
             "description": "Coin to pay fees in"
           },
           "defaultGasLimit": {
-            "type": "number"
+            "type": "number",
+            "description": "Fallback gas limit for Ethereum-like transfers"
+          },
+          "defaultGasPriceGwei": {
+            "type": "number",
+            "description": "Fallback gas price in Gwei for Ethereum-like transfers"
+          },
+          "reliabilityGasLimitPercent": {
+            "type": "number",
+            "description": "Gas limit multiplier percent used to improve transfer reliability"
+          },
+          "reliabilityGasPricePercent": {
+            "type": "number",
+            "description": "Gas price multiplier percent used to improve transfer reliability"
+          },
+          "increasedGasPricePercent": {
+            "type": "number",
+            "description": "Gas price or network fee multiplier percent for the Increase fee option"
           }
         }
       }
