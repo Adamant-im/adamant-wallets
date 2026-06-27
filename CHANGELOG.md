@@ -43,6 +43,7 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 - Removed deprecated Stably USD (`USDS`) metadata and icon assets
+- Removed unavailable `tauri.bbry.org`, `endless.bbry.org`, and `debate.bbry.org` ADM proxy nodes
 - Removed Lisk metadata and support during the transition to Klayr
 - Removed Klayr support later in the dev branch history
 - Removed unavailable or deprecated ADAMANT, Bitcoin, Dogecoin, Ethereum, IPFS, Klayr, and proxy endpoints
