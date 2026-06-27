@@ -2,3 +2,6 @@
 .idea/
 .DS_Store
 node_modules
+
+# AI
+.ai-ignored/

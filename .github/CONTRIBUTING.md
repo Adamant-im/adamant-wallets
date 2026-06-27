@@ -1,42 +1,85 @@
 # Contributing Guide
 
-Hi! We are really excited that you are interested in contributing to ADAMANT. Before submitting your contribution, please make sure to take a moment and read through the following guidelines:
+Thank you for contributing to ADAMANT wallet metadata. This repository is used by ADAMANT apps, so metadata changes should be small, reviewed carefully, and validated before submission.
 
 - [Pull Request Guidelines](#pull-request-guidelines)
+- [Metadata Guidelines](#metadata-guidelines)
 - [Development Setup](#development-setup)
+- [Validation](#validation)
 - [Project Structure](#project-structure)
 
 ## Pull Request Guidelines
 
-- The `master` branch is just a snapshot of the latest stable release. All development should be done in dedicated branches. **Do not submit PRs against the `master` branch.**
+- Target the `dev` branch. The `master` branch is a snapshot of the latest stable release.
+- Create a focused topic branch from `dev`
+- Keep unrelated metadata, documentation, and dependency changes in separate PRs when possible
+- Use clear PR titles such as `Docs: Update metadata guidelines` or `Chore: Update ADM node endpoints`
+- Link related issues in the PR body. Use closing keywords only when the PR fully resolves the issue
+- Use the organization PR template from [Adamant-im/.github](https://github.com/Adamant-im/.github/blob/master/PULL_REQUEST_TEMPLATE.md)
+- Multiple small commits are acceptable while the PR is in progress; GitHub can squash them before merging
 
-- Checkout a topic branch from the relevant branch, e.g. `dev`, and merge back against that branch.
+If you add a feature or new metadata field:
 
-- It's OK to have multiple small commits as you work on the PR - GitHub will automatically squash it before merging.
+- Explain why downstream apps need it
+- Update `README.md` and `specification/openapi.json` when the metadata shape changes
+- Add or update examples where they help reviewers understand the intended behavior
 
-- If adding a new feature:
+If you fix a bug:
 
-  - Add accompanying test case.
-  - Provide a convincing reason to add this feature. Ideally, you should open a suggestion issue first and have it approved before working on it.
+- Describe the bug and its wallet-facing effect
+- Link the issue or discussion when available
+- Add validation evidence to the PR description
 
-- If fixing bug:
+## Metadata Guidelines
 
-  - If you are resolving a special issue, add `(fix #xxxx[,#xxxx])` (#xxxx is the issue id) in your PR title for a better release log, e.g. `update entities encoding/decoding (fix #3899)`.
-  - Provide a detailed description of the bug in the PR. Live demo preferred.
-  - Add appropriate test coverage if applicable.
+- Treat `assets/general/*` as shared metadata and `assets/blockchains/*` as blockchain defaults or token-specific overrides
+- Preserve endpoint diversity for nodes and services
+- Keep valid `alt_ip` fallbacks when editing availability-sensitive endpoints
+- Do not introduce placeholder URLs, guessed contract IDs, or unverified blockchain values
+- Be careful with wallet-visible precision and fees: `decimals`, `cryptoTransferDecimals`, `minBalance`, `minTransferAmount`, `fixedFee`, `defaultFee`, gas defaults, and reliability percentages
+- Be careful with downstream behavior fields: `regexAddress`, explorer URL placeholders, `txFetchInfo`, `txConsistencyMaxTime`, `timeout`, `status`, `createCoin`, `defaultVisibility`, and `defaultOrdinalLevel`
+- Keep icon filenames and required variants aligned with `README.md`
 
 ## Development Setup
 
-You will need [NodeJS](http://nodejs.org/) and [pnpm](https://pnpm.io/).
+Use Node.js `>=22.22.1` and [pnpm](https://pnpm.io/).
 
-After cloning the repo, run:
+After cloning the repository, install dependencies:
 
 ```bash
-$ pnpm install
+pnpm install
 ```
 
-This command will install the dependencies of the project and pre-commit hook.
+When doing dependency security work, install without lifecycle scripts first:
+
+```bash
+pnpm install --ignore-scripts
+```
+
+Only run trusted lifecycle scripts after reviewing the package metadata and the reason the script is needed.
+
+## Validation
+
+Run the checks that match your change:
+
+```bash
+pnpm run validate
+```
+
+For targeted formatting checks:
+
+```bash
+pnpm exec prettier --check <changed-files>
+```
+
+For JSON-only validation:
+
+```bash
+pnpm run validate:json
+```
+
+If the change affects schemas or field semantics, verify that `README.md`, `specification/openapi.json`, and the edited assets stay aligned.
 
 ## Project Structure
 
-See [README](../README.md) to learn project structure.
+See [README.md](../README.md) for the repository structure, metadata model, and field descriptions.

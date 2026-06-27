@@ -1,15 +1,51 @@
 {
-  "version": "2.5.0",
+  "name": "adamant-wallets",
+  "version": "2.6.0",
+  "description": "Canonical wallet metadata and specifications for ADAMANT apps",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=22.22.1"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{json,md}\"",
+    "format:check": "prettier --check \"**/*.{json,md}\"",
+    "lint": "pnpm run format:check",
+    "validate:json": "find assets specification -name '*.json' -print0 | xargs -0 -n 1 jq empty",
+    "validate": "pnpm run validate:json && pnpm run format:check",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "adamant",
+    "adm",
+    "wallets",
+    "wallet-metadata",
+    "blockchain",
+    "cryptocurrency",
+    "crypto",
+    "tokens",
+    "assets",
+    "metadata",
+    "openapi",
+    "pwa",
+    "ios"
+  ],
+  "author": "ADAMANT community developers <devs@adamant.im>, ADAMANT Foundation <devs@adamant.im>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adamant-im/adamant-wallets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adamant-im/adamant-wallets/issues"
+  },
+  "homepage": "https://github.com/Adamant-im/adamant-wallets#readme",
   "devDependencies": {
-    "@prettier/plugin-xml": "^2.2.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3"
+    "@prettier/plugin-xml": "^3.4.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.8.5"
   },
   "lint-staged": {
     "*.{json,svg,vue}": "prettier --write"
-  },
-  "scripts": {
-    "prepare": "husky install"
   }
 }

@@ -43,15 +43,10 @@
       { "url": "https://bid.adamant.im" },
       {
         "url": "https://debate.adamant.im",
-        "alt_ip": "http://147.93.10.209:36666"
+        "alt_ip": "http://62.72.43.66:36666"
       },
-      { "url": "http://78.47.205.206:36666" },
       { "url": "http://184.94.215.92:45555" },
       { "url": "https://node2.blockchain2fa.io" },
-      {
-        "url": "https://phecda.adm.im",
-        "alt_ip": "http://46.250.234.248:36666"
-      },
       {
         "url": "https://tegmine.adm.im"
       },
@@ -63,31 +58,16 @@
         "url": "https://dschubba.adm.im"
       },
       {
-        "url": "https://tauri.bbry.org",
-        "alt_ip": "http://54.197.36.175:36666"
-      },
-      {
-        "url": "https://endless.bbry.org",
-        "alt_ip": "http://54.197.36.175:46666"
-      },
-      {
-        "url": "https://debate.bbry.org",
-        "alt_ip": "http://54.197.36.175:56666"
-      },
-      {
         "url": "https://lake.bbry.org",
-        "alt_ip": "http://100.42.184.57:27579"
+        "alt_ip": "http://147.93.132.93:31009"
       },
       {
         "url": "https://sunshine.bbry.org",
-        "alt_ip": "http://23.105.226.67:28785"
+        "alt_ip": "http://147.93.131.80:28785"
       },
       {
         "url": "https://clown.bbry.org",
         "alt_ip": "http://65.108.52.254:6687"
-      },
-      {
-        "url": "http://100.42.184.57:27579"
       }
     ],
     "healthCheck": {
@@ -110,7 +90,7 @@
       "list": [
         {
           "url": "https://info.adamant.im",
-          "alt_ip": "http://5.161.98.136:33088"
+          "alt_ip": "http://46.4.37.157:33088"
         },
         {
           "url": "https://info2.adm.im",
@@ -142,7 +122,7 @@
       "list": [
         {
           "url": "https://ipfs4.adm.im",
-          "alt_ip": "http://95.216.45.88:44099"
+          "alt_ip": "http://209.188.7.216:44099"
         },
         {
           "url": "https://ipfs6.adamant.business",
@@ -219,7 +199,7 @@
         "list": [
           {
             "url": "https://info.adamant.im",
-            "alt_ip": "http://5.161.98.136:33088"
+            "alt_ip": "http://46.4.37.157:33088"
           },
           {
             "url": "https://info2.adm.im",
@@ -337,9 +317,6 @@
         "list": [
           {
             "url": "http://z455rax4mwcseyc7efog7czrbwdvphwocatl5sjcc6htcoj2k2vz7dad.onion"
-          },
-          {
-            "url": "http://cds45bjd7ynxkffxpzfifnm55r6vmhgocvpvonjmry3mrskuhda6z7qd.onion"
           },
           {
             "url": "http://3ytwoe62bqw264v4rkaqpn5iovdg3oxly5tx2uc5qijkrdqixm6tmdyd.onion"

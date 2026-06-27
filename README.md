@@ -1,47 +1,65 @@
-# Crypto wallets for ADAMANT apps
+# ADAMANT wallet metadata
 
-Coin/token info and specification for usage in ADAMANT apps.
+This repository contains canonical coin, token, blockchain, node, service, icon, and schema metadata used by ADAMANT apps.
+
+The data is optimized for wallet behavior, display, node/service reliability, and downstream compatibility.
 
 ## Structure
 
-Root directory includes:
+- `assets/general/<coin-or-token>/info.json` - shared coin or token metadata
+- `assets/general/<coin-or-token>/images/` - icon assets for PWA and iOS apps
+- `assets/blockchains/<blockchain>/info.json` - blockchain-level metadata and defaults
+- `assets/blockchains/<blockchain>/<token>/info.json` - token overrides for a specific blockchain
+- `specification/openapi.json` - OpenAPI schema for the metadata objects
 
-- `\general\` — Includes directories for each coin/token, in which `info.json` stores their general descriptions and specifications.
-- `\blockchains\` — Contains specific to blockchains information, which can override general specs. Tokens inside are grouped by blockchain as a separate folder.
+## Override model
 
-## Blockchain info
+Consumers should read metadata in this order:
 
-Each blockchain in `\blockchains\` includes `info.json`, which links to main coin in `\general\`:
+1. Load shared metadata from `assets/general/<coin-or-token>/info.json`
+2. Apply blockchain defaults from `assets/blockchains/<blockchain>/info.json` when the asset belongs to a blockchain family
+3. Apply token-specific blockchain overrides from `assets/blockchains/<blockchain>/<token>/info.json`
+
+The JSON assets are the implementation source of truth for current wallet metadata. If this README or `specification/openapi.json` disagrees with assets, fix the documentation or schema drift without changing wallet behavior silently.
+
+## Blockchain metadata
+
+Each blockchain directory includes an `info.json` file that points to the main coin and the coin used for fees:
 
 ```jsonc
 {
   "blockchain": "Ethereum", // Blockchain readable name
   "type": "ERC20", // How an app should mark token blockchain
   "mainCoin": "ethereum", // A coin containing parameters common to the blockchain
-  "fees": "ethereum" // Coin to pay fees in
+  "fees": "ethereum", // Coin to pay fees in
+  "defaultGasLimit": 60000, // Optional. Fallback gas limit for Ethereum-like transfers
+  "defaultGasPriceGwei": 40, // Optional. Fallback gas price in Gwei
+  "reliabilityGasLimitPercent": 110, // Optional. Gas limit multiplier percent for safer tx acceptance
+  "reliabilityGasPricePercent": 110, // Optional. Gas price multiplier percent for safer tx acceptance
+  "increasedGasPricePercent": 120, // Optional. Multiplier percent for the "Increase fee" option
 }
 ```
 
-Navigate to `\general\${mainCoin}` to get explorer links, address regex and other shared for blockchain parameters.
+Navigate to `assets/general/${mainCoin}` to get explorer links, address validation, services, nodes, icons, and other shared blockchain parameters.
 
-## Coin/token info
+## Coin and token metadata
 
-Coin/token info stored in `\general\${token_name}` folders. Specific blockchain info in `\blockchains\${blockchain_name}` overrides it. For example:
+Coin and token metadata is stored in `assets/general/${token_name}/info.json`. Blockchain-specific files may override fields for assets issued on a specific chain.
 
 ```jsonc
 {
   "name": "Example Coin", // Readable coin name
   "nameShort": "Example", // Optional. Readable coin short name
   "website": "https://example.com", // Project website URL
-  "description": "Non existing coin", // Short description
+  "description": "Example coin metadata.", // Short description
 
   "explorer": "https://explorer.example.com", // Optional. Explorer URL
   "explorerTx": "https://explorer.example.com/tx/${ID}", // Optional. URL to get tx info
   "explorerAddress": "https://explorer.example.com/address/${ID}", // Optional. URL to get address info
   "explorerContract": "https://explorer.example.com/contract/${ID}", // Optional. URL to get contract info
 
-  "regexAddress": "^EC([0-9]{8,})$", // Optional. RegEx to validate coin address
-  "research": "https://research.binance.com/en/projects/${project}", // Optional. Research URL
+  "regexAddress": "^EC([0-9]{8,})$", // Optional. RegExp to validate coin address
+  "research": "https://research.example.com/projects/example", // Optional. Research URL
   "symbol": "SYM", // Coin ticker
   "type": "coin", // "coin" or "token"
 
@@ -62,117 +80,144 @@ Coin/token info stored in `\general\${token_name}` folders. Specific blockchain 
   // Should an app itself create the coin or only use the info for the blockchain
   "createCoin": true,
 
-  "defaultVisibility": true, // Optional. To show a coin by default, or hide it
+  "defaultVisibility": true, // Optional. Show a coin by default, or hide it
   "defaultOrdinalLevel": 0, // Optional. Default ordinal number in a wallet list. Coins with the same ordinal number are sorted alphabetically. Coins without an order are shown last, alphabetically
 
   "consensus": "dPoS", // Optional. Blockchain consensus type
   "blockTimeFixed": 5000, // Optional. Fixed block time in ms
   "blockTimeAvg": 600000, // Optional. Average block time in ms
 
-  "balanceCheckInterval": 30000, // How often to check the wallet balance (in milliseconds)
-  "balanceValidInterval": 300000, // How long a balance is considered valid before requiring refresh (in milliseconds)
+  "balanceCheckInterval": 30000, // How often to check the wallet balance in ms
+  "balanceCheckIntervalNewAccount": 5000, // Optional. How often to check the balance for newly created accounts in ms
+  "balanceValidInterval": 300000, // How long a balance is considered valid before requiring refresh in ms
 
   // Optional. Node links for API
   "nodes": {
-    "displayName": "some-node", // Name of the group of the nodes
+    "displayName": "Example nodes", // Name of the node group
     "list": [
       { "url": "https://node.example.com" },
-      { "url": "http://0.0.0.0:36666" }, // It's possible to use IP:port URI
+      { "url": "http://0.0.0.0:36666" }, // IP:port URI is allowed
       {
         "url": "https://second-node.example.com",
-        "alt_ip": "0.0.0.1:36666" // Alternative way to connect if the domain of a node is censored
-      }
+        "alt_ip": "0.0.0.1:36666", // Alternative connection if the node domain is censored
+        "hasIndex": true, // Optional. Whether the node has transaction indexing support
+      },
     ],
-    // Node health check information 
+    // Node health check information
     "healthCheck": {
       "normalUpdateInterval": 210000, // Regular node status update interval in ms
       "crucialUpdateInterval": 30000, // Node status update interval when there are no active nodes, in ms
-      "onScreenUpdateInterval": 10000, // On the node screen, the status update interval in ms
-      "threshold": 3  // Permissible height difference between nodes
+      "onScreenUpdateInterval": 10000, // Node status update interval on the node screen, in ms
+      "threshold": 3, // Permissible height difference between nodes
     },
-    "minVersion": "1.0.0", // Optional. Minimal supported service API version
-    "nodeTimeCorrection": 500 // Optional. A time correction for the message transactions on ADM
+    "minVersion": "1.0.0", // Optional. Minimal supported node API version
+    "nodeTimeCorrection": 500, // Optional. Time correction for ADM message transactions
   },
 
   // Optional. Services related to a project
   "services": {
-    "service1": {
-      "displayName": "some-service", // Name of the group of the services
+    "infoService": {
+      "displayName": "Example info service", // Name of the service group
       "description": {
-        "software": "example-service",
-        "github": "https://github.com/--example",
-        "docs": "https://docs.example.com" // API docs
+        "software": "example-service", // Service software name
+        "github": "https://github.com/example/service", // Optional. Source repository
+        "docs": "https://docs.example.com", // Optional. API docs
       },
       "list": [
-        {
-          "url": "https://info.example.com",
-        },
+        { "url": "https://info.example.com" },
         {
           "url": "https://second-service.example.com",
-          "alt_ip": "0.0.0.1:80" // Alternative way to connect if the domain of a service is censored
-        }
+          "alt_ip": "0.0.0.1:80", // Alternative connection if the service domain is censored
+        },
       ],
-      // Optional: Service health check information (If not filled here, information is retrieved from nodes.healthCheck)
+      // Optional. Service health check information.
+      // If omitted, consumers may fall back to nodes.healthCheck where supported.
       "healthCheck": {
         "normalUpdateInterval": 210000, // Regular service status update interval in ms
         "crucialUpdateInterval": 30000, // Service status update interval when there are no active services, in ms
-        "onScreenUpdateInterval": 10000 // On the node screen, the status update interval in ms
+        "onScreenUpdateInterval": 10000, // Service status update interval on the node screen, in ms
+        "threshold": 3, // Optional. Permissible height difference between indexed services
       },
-      "minVersion": "1.0.0", // Optional. Minimal supported service API version 
+      "minVersion": "1.0.0", // Optional. Minimal supported service API version
     },
     "service2": {
       /*...*/
-    }
+    },
   },
 
   // Optional. Additional project links
   "links": [
     {
-      "name": "github",
-      "url": "https://github.com/--example"
+      "name": "github", // Link label
+      "url": "https://github.com/example", // Link URL
     },
     {
       "name": "whitepaper",
-      "url": "https://example.com/whitepaper.pdf"
-    }
+      "url": "https://example.com/whitepaper.pdf",
+    },
   ],
-
-  // Optional. Tor configuration if a project uses Tor
-  // It follows the same structure as the root properties
-  // Currently supported props are described below:
-  "tor": {
-    "website": "http://abc.onion",
-    "explorer": "http://xyz.onion",
-    "explorerTx": "http://xyz.onion/tx/${ID}",
-    "explorerAddress": "http://xyz.onion/address/${ID}",
-    "nodes": [/*...*/],
-    "services": {/*...*/},
-    "links": [/*...*/]
-  }
 }
 ```
 
-### Ethereum & ERC20 tx fee calculation
+### Token overrides
 
-The total cost of a transaction is the product of the gas limit and gas price:
+Token overrides in `assets/blockchains/<blockchain>/<token>/info.json` usually contain only fields that differ from shared metadata:
 
-```math
-Tx \, fee = gas \, limit \times gas \, price
+```jsonc
+{
+  "name": "Tether USD", // Readable token name on this blockchain
+  "symbol": "USDT", // Token ticker
+  "status": "active", // "active" or "disabled". Should the token be processed
+  "contractId": "0xdac17f958d2ee523a2206206994597c13d831ec7", // Blockchain contract address or ID
+  "decimals": 6, // Decimal places on this blockchain
+  "cryptoTransferDecimals": 6, // Optional. Max precision for tx on this blockchain
+  "defaultVisibility": true, // Optional. Show a token by default, or hide it
+  "defaultOrdinalLevel": 10, // Optional. Default ordinal number in a wallet list
+}
 ```
 
-ADAMANT apps estimate gas limit and gas price using [web3](https://github.com/web3/web3.js) library. To ensure the Ethereum blockchain will accept the tx, apps multiply these estimates by `reliabilityGasLimitPercent` and `reliabilityGasPricePercent`. Additionally, an app may offer the "Increase fee" option, which uses the `increasedGasPricePercent` coefficient (also used for Bitcoin).
+Do not duplicate general fields in token override files unless the blockchain-specific value is intentionally different.
 
-If it’s not possible to get estimates, apps will use `defaultGasLimit` and `defaultGasPriceGwei`. When the gas price exceeds `warningGasPriceGwei`, apps show a note/warning.
+## Nodes and services
 
-These parameters are set inside `general\ethereum\info.json` and may be overridden by `blockchains\ethereum\info.json` and specific tokens.
+`nodes` describe blockchain API endpoints. `services` describe project-specific service groups such as info services, indexers, and IPFS nodes.
 
-### Info for updating in-chat coin transfer tx statuses
+Keep endpoint lists diverse. Do not replace a list with a single endpoint unless there is an explicit reliability reason. When editing endpoints that may be affected by DNS censorship or availability issues, keep valid `alt_ip` fallbacks where they already exist.
 
-> Read [AIP-12: Non-ADM crypto transfer messages](https://aips.adamant.im/AIPS/aip-12) to learn more about Tx statuses.
+Health checks use millisecond intervals:
 
-Statuses workflow: `Pending` (new or old tx) ⟶ `Registered` ⟶ `Confirmed`, `Cancelled` or `Inconsistent`.
+- `normalUpdateInterval` - regular update interval.
+- `crucialUpdateInterval` - update interval when there are no active nodes or services.
+- `onScreenUpdateInterval` - update interval while the node screen is visible.
+- `threshold` - allowed height difference between nodes or indexed services.
 
-To help apps with updating statuses, additional fields are introduced:
+`minVersion` defines the minimal supported service or node API version. `nodeTimeCorrection` is used for ADM message transaction timestamps.
+
+## Ethereum and ERC20 fees
+
+The total cost of an Ethereum-like transaction is:
+
+```math
+Tx fee = gas limit * gas price
+```
+
+ADAMANT apps estimate gas limit and gas price with the `web3` library. To improve acceptance reliability, apps multiply those estimates by `reliabilityGasLimitPercent` and `reliabilityGasPricePercent`.
+
+If estimates are unavailable, apps use `defaultGasLimit` and `defaultGasPriceGwei`. When the gas price exceeds `warningGasPriceGwei`, apps may show a warning. The "Increase fee" option uses `increasedGasPricePercent`; Bitcoin metadata may also use this field for higher-priority transfers.
+
+These parameters are set in `assets/general/ethereum/info.json`, `assets/blockchains/ethereum/info.json`, or specific token override files.
+
+## In-chat transfer statuses
+
+Read [AIP-12: Non-ADM crypto transfer messages](https://aips.adamant.im/AIPS/aip-12) for the transfer status model.
+
+Status workflow:
+
+```text
+Pending -> Registered -> Confirmed, Cancelled, or Inconsistent
+```
+
+Apps use `txFetchInfo` to refresh transaction statuses:
 
 ```jsonc
 {
@@ -183,71 +228,113 @@ To help apps with updating statuses, additional fields are introduced:
     "oldPendingInterval": 3000, // "Pending" for old transactions
     "registeredInterval": 40000, // "Registered"
 
-    // Attempts to fetch Tx when its current status is `Pending`
+    // Attempts to fetch Tx when its current status is "Pending"
     "newPendingAttempts": 20, // for new transactions
-    "oldPendingAttempts": 3 // for old transactions
+    "oldPendingAttempts": 3, // for old transactions
   },
 
   /**
-   * Time in ms when difference between in-chat transfer and Tx timestamp considered
-   * as acceptable. Otherwise, an app should mark Tx as `Inconsistent`.
+   * Time in ms when the difference between in-chat transfer and Tx timestamp
+   * is considered acceptable. Otherwise, an app should mark Tx as `Inconsistent`.
    */
-  "txConsistencyMaxTime": 60000
+  "txConsistencyMaxTime": 60000,
 }
 ```
 
-Transaction considered as new or old depending on how much time passed from in-chat transfer.
+A transaction is considered new or old based on the time passed since the in-chat transfer:
 
 ```js
 const isNew = (admTransferTimestamp) =>
   Date.now() - admTransferTimestamp <
-  newPendingTxFetchAttempts * newPendingTxFetchInterval;
+  txFetchInfo.newPendingAttempts * txFetchInfo.newPendingInterval;
 ```
 
-### Message sending
+If the difference between the in-chat transfer timestamp and the blockchain transaction timestamp is greater than `txConsistencyMaxTime`, apps should mark the transfer as `Inconsistent`.
 
-Users can request to send messages even when they are offline. An app will attempt to send a message for a specific timeout period, allowing time for the Internet connection to restore. If the message still cannot be sent, the status will change from “Pending” to “Failed”. Users can then manually retry sending the message or choose to cancel it.
+## Message sending timeouts
 
-For in-chat coin transfers, there is no timeout. An app will continuously retry sending these messages until successful. However, before sending cryptocurrency in chats, the app checks the availability of all nodes, ensuring both the nodes and the UI process the transaction correctly.
+Users may request message sending while offline. Apps keep retrying regular messages for a configured timeout. If the message still cannot be sent, it becomes `Failed` and can be retried or cancelled manually.
 
-To assist apps in setting message sending parameters, additional fields are introduced:
+In-chat coin transfer messages have no timeout; apps retry them until successful. Before sending cryptocurrency in chats, apps check node availability so both the node layer and UI can process the transaction correctly.
 
 ```jsonc
 {
   // ...
   "timeout": {
-    "message": 300000, // Timeout for regular messages (in milliseconds)
-    "attachment": 100000,   // Timeout for file transfers (in milliseconds)
+    "message": 300000, // Timeout for regular messages in ms
+    "attachment": 100000, // Timeout for file transfers in ms
+  },
+}
+```
+
+## Tor and testnet metadata
+
+`tor` and `testnet` follow the same nested shape as the root metadata where applicable:
+
+```jsonc
+{
+  // Optional. Testnet configuration if a project has a test network.
+  // It follows the same structure as the root properties where applicable.
+  "testnet": {
+    "website": "https://testnet.example.com", // Testnet website URL
+    "explorer": "https://testnet-explorer.example.com", // Testnet explorer URL
+    "nodes": {
+      "displayName": "Example testnet nodes", // Name of the testnet node group
+      "list": [{ "url": "https://testnet-node.example.com" }],
+      "healthCheck": {
+        "normalUpdateInterval": 210000, // Regular node status update interval in ms
+        "crucialUpdateInterval": 30000, // Node status update interval when there are no active nodes, in ms
+        "onScreenUpdateInterval": 10000, // Node status update interval on the node screen, in ms
+        "threshold": 3, // Permissible height difference between nodes
+      },
+    },
+  },
+
+  // Optional. Tor configuration if a project uses Tor.
+  // It follows the same structure as the root properties.
+  "tor": {
+    "website": "http://abc.onion", // Tor website URL
+    "explorer": "http://xyz.onion", // Tor explorer URL
+    "explorerTx": "http://xyz.onion/tx/${ID}", // Tor URL to get tx info
+    "explorerAddress": "http://xyz.onion/address/${ID}", // Tor URL to get address info
+    "nodes": {}, // Tor node links for API
+    "services": {}, // Tor services related to a project
+    "links": [], // Additional Tor project links
   },
 }
 ```
 
 ## Icons
 
-Coin icons/images files are stored `\general\${token_name}\images` folders.
+Coin icons are stored in `assets/general/${token_name}/images`.
 
-Required:
+Required files:
 
-- `icon.svg` — Vector image file
-- `icon.vue` — Vector image vue template for PWA
-- `${token_name}_wallet.png` — @x1 (55px) resolution for iOS app
-- `${token_name}_wallet@2x.png` — same, @x2 resolution
-- `${token_name}_wallet@3x.png` — same, @x3 resolution
+- `icon.svg` - vector icon
+- `icon.vue` - Vue icon template for PWA
+- `${token_name}_wallet.png` - iOS wallet icon at 1x, 55 px
+- `${token_name}_wallet@2x.png` - iOS wallet icon at 2x
+- `${token_name}_wallet@3x.png` - iOS wallet icon at 3x
 
-Optional:
+Optional files:
 
-- `${token_name}_wallet_dark.png` — @x1 (55px) resolution for iOS app, dark icon
-- `${token_name}_wallet_dark@2x.png` — same, @x2 resolution
-- `${token_name}_wallet_dark@3x.png` — same, @x3 resolution
-- `${token_name}_notification.png` — @x1 (55px) resolution for iOS push notifications
-- `${token_name}_notification@2x.png` — same, @x2 resolution
-- `${token_name}_notification@3x.png` — same, @x3 resolution
-- `${token_name}_wallet_row.png` — @x1 (21px) resolution for iOS app for private key screen
-- `${token_name}_wallet_row@2x.png` — same, @x2 resolution
-- `${token_name}_wallet_row@3x.png` — same, @x3 resolution
+- `${token_name}_wallet_dark.png`, `${token_name}_wallet_dark@2x.png`, `${token_name}_wallet_dark@3x.png` - dark wallet icons
+- `${token_name}_notification.png`, `${token_name}_notification@2x.png`, `${token_name}_notification@3x.png` - iOS push notification icons
+- `${token_name}_wallet_row.png`, `${token_name}_wallet_row@2x.png`, `${token_name}_wallet_row@3x.png` - iOS private key screen row icons at 1x, 2x, and 3x
 
-If there will be no optional icons, apps will take regular `_wallet` icons.
+If optional icons are absent, apps use the regular `_wallet` icons.
 
-## Contribution
+## Development & Contribution
 
-Please have a look at the [CONTRIBUTING.md](./.github/CONTRIBUTING.md).
+See [CONTRIBUTING.md](./.github/CONTRIBUTING.md).
+
+## Links
+
+- [ADAMANT website](https://adamant.im)
+- [ADAMANT AIPs](https://aips.adamant.im)
+- [ADAMANT PWA](https://github.com/Adamant-im/adamant-im)
+- [ADAMANT iOS](https://github.com/Adamant-im/adamant-iOS)
+- [ADAMANT API JS client](https://github.com/Adamant-im/adamant-api-jsclient)
+- [ADAMANT Schema](https://github.com/Adamant-im/adamant-schema)
+- [ADAMANT Node](https://github.com/Adamant-im/adamant)
+- [ADAMANT Console](https://github.com/Adamant-im/adamant-console)
