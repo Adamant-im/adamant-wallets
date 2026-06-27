@@ -142,7 +142,7 @@ Coin and token metadata is stored in `assets/general/${token_name}/info.json`. B
     },
     "service2": {
       /*...*/
-    }
+    },
   },
 
   // Optional. Additional project links
