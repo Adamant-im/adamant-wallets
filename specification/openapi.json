@@ -120,7 +120,7 @@
           },
           "threshold": {
             "type": "integer",
-            "description": "Permissible height difference between services"
+            "description": "Permissible height difference between nodes or indexed services"
           }
         }
       },
