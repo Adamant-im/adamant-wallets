@@ -29,6 +29,9 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
+- Fixed DOGE address regex so it no longer accepts `|` as a valid first character
+- Fixed the DAI GitHub link
+- Fixed the Ethereum GT token override name
 - Fixed Bitcoin explorer links and Tor Bitcoin node path metadata
 - Fixed DOGE icon assets, including light mode and restored face variants
 - Fixed MANA and Klayr icon assets
@@ -39,6 +42,7 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
+- Removed deprecated Stably USD (`USDS`) metadata and icon assets
 - Removed Lisk metadata and support during the transition to Klayr
 - Removed Klayr support later in the dev branch history
 - Removed unavailable or deprecated ADAMANT, Bitcoin, Dogecoin, Ethereum, IPFS, Klayr, and proxy endpoints
