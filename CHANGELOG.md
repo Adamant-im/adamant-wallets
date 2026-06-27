@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased 2.6.0] - dev branch
+## [2.6.0] - 2026-06-27
 
 ### Added
 
