@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.0] - 2026-08-01
+
+### Changed
+
+- Updated Bitcoin node and indexer IP fallbacks for the new `btcnode1` host
+- Updated Dogecoin node and indexer IP fallbacks for the migrated `dogenode2` host
+- Added deterministic node and service endpoint validation to the repository validation suite
+- Updated Prettier and lint-staged to their latest compatible releases
+- Updated the pinned pnpm version from 10.11.0 to 11.18.0
+
+### Removed
+
+- Removed retired `btcnode1.bbry.org`, `dogenode2.bbry.org`, `ethnode3.bbry.org`, and `ipfs6.bbry.org` proxy endpoints
+
 ## [2.6.0] - 2026-06-27
 
 ### Added
@@ -112,15 +126,9 @@ All notable changes to this project will be documented in this file.
       "explorer": "http://xyz.onion",
       "explorerTx": "http://xyz.onion/tx/${ID}",
       "explorerAddress": "http://xyz.onion/address/${ID}",
-      "nodes": [
-        /*...*/
-      ],
-      "services": {
-        /*...*/
-      },
-      "links": [
-        /*...*/
-      ],
+      "nodes": [/*...*/],
+      "services": {/*...*/},
+      "links": [/*...*/],
     },
   }
   ```
