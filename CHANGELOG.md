@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- Updated Bitcoin node and indexer IP fallbacks for the new `btcnode1` host
+- Updated Dogecoin node and indexer IP fallbacks for the migrated `dogenode2` host
+- Added deterministic node and service endpoint validation to the repository validation suite
+- Updated Prettier and lint-staged to their latest compatible releases
+
+### Removed
+
+- Removed retired `btcnode1.bbry.org`, `dogenode2.bbry.org`, `ethnode3.bbry.org`, and `ipfs6.bbry.org` proxy endpoints
+- Removed unavailable `ipfs1test.adamant.im` metadata after its TLS endpoint stopped serving
+
 ## [2.6.0] - 2026-06-27
 
 ### Added
@@ -112,15 +126,9 @@ All notable changes to this project will be documented in this file.
       "explorer": "http://xyz.onion",
       "explorerTx": "http://xyz.onion/tx/${ID}",
       "explorerAddress": "http://xyz.onion/address/${ID}",
-      "nodes": [
-        /*...*/
-      ],
-      "services": {
-        /*...*/
-      },
-      "links": [
-        /*...*/
-      ],
+      "nodes": [/*...*/],
+      "services": {/*...*/},
+      "links": [/*...*/],
     },
   }
   ```

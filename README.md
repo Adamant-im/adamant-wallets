@@ -140,9 +140,7 @@ Coin and token metadata is stored in `assets/general/${token_name}/info.json`. B
       },
       "minVersion": "1.0.0", // Optional. Minimal supported service API version
     },
-    "service2": {
-      /*...*/
-    },
+    "service2": {/*...*/},
   },
 
   // Optional. Additional project links
@@ -183,6 +181,8 @@ Do not duplicate general fields in token override files unless the blockchain-sp
 `nodes` describe blockchain API endpoints. `services` describe project-specific service groups such as info services, indexers, and IPFS nodes.
 
 Keep endpoint lists diverse. Do not replace a list with a single endpoint unless there is an explicit reliability reason. When editing endpoints that may be affected by DNS censorship or availability issues, keep valid `alt_ip` fallbacks where they already exist.
+
+`pnpm run validate:endpoints` checks every node and service list for absolute HTTP(S) URLs, literal-IP `alt_ip` fallbacks, and duplicate URLs. It is also included in the complete `pnpm run validate` command. Live availability still requires an explicit network check because CI validation is intentionally deterministic.
 
 Health checks use millisecond intervals:
 

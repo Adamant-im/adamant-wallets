@@ -12,7 +12,8 @@
     "format:check": "prettier --check \"**/*.{json,md}\"",
     "lint": "pnpm run format:check",
     "validate:json": "find assets specification -name '*.json' -print0 | xargs -0 -n 1 jq empty",
-    "validate": "pnpm run validate:json && pnpm run format:check",
+    "validate:endpoints": "node scripts/validate-endpoints.mjs",
+    "validate": "pnpm run validate:json && pnpm run validate:endpoints && pnpm run format:check",
     "prepare": "husky"
   },
   "keywords": [
@@ -42,8 +43,8 @@
   "devDependencies": {
     "@prettier/plugin-xml": "^3.4.2",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.8",
-    "prettier": "^3.8.5"
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6"
   },
   "lint-staged": {
     "*.{json,svg,vue}": "prettier --write"
