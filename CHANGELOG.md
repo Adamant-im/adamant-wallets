@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [2.7.0] - 2026-08-01
 
 ### Changed
 
@@ -14,7 +14,6 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 - Removed retired `btcnode1.bbry.org`, `dogenode2.bbry.org`, `ethnode3.bbry.org`, and `ipfs6.bbry.org` proxy endpoints
-- Removed unavailable `ipfs1test.adamant.im` metadata after its TLS endpoint stopped serving
 
 ## [2.6.0] - 2026-06-27
 
