@@ -5,15 +5,19 @@ import { join, relative } from "node:path";
 const errors = [];
 
 function jsonFiles(directory) {
-  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-    const entryPath = join(directory, entry.name);
+  return readdirSync(directory, { withFileTypes: true })
+    .sort((left, right) =>
+      left.name < right.name ? -1 : left.name > right.name ? 1 : 0,
+    )
+    .flatMap((entry) => {
+      const entryPath = join(directory, entry.name);
 
-    if (entry.isDirectory()) {
-      return jsonFiles(entryPath);
-    }
+      if (entry.isDirectory()) {
+        return jsonFiles(entryPath);
+      }
 
-    return entry.isFile() && entry.name.endsWith(".json") ? [entryPath] : [];
-  });
+      return entry.isFile() && entry.name.endsWith(".json") ? [entryPath] : [];
+    });
 }
 
 function validateUrl(value, location, requireIp = false) {
@@ -44,14 +48,27 @@ function walk(value, location) {
 
   if (
     Array.isArray(value.list) &&
-    value.list.every(
-      (item) => item && typeof item === "object" && "url" in item,
+    value.list.some(
+      (item) =>
+        item &&
+        typeof item === "object" &&
+        !Array.isArray(item) &&
+        "url" in item,
     )
   ) {
     const seenUrls = new Set();
 
     value.list.forEach((endpoint, index) => {
       const endpointLocation = `${location}.list[${index}]`;
+
+      if (
+        !endpoint ||
+        typeof endpoint !== "object" ||
+        Array.isArray(endpoint)
+      ) {
+        errors.push(`${endpointLocation}: expected an endpoint object`);
+        return;
+      }
 
       if (typeof endpoint.url !== "string" || !endpoint.url) {
         errors.push(`${endpointLocation}.url: expected a non-empty string`);

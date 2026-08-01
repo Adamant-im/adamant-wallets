@@ -11,6 +11,7 @@
     "format": "prettier --write \"**/*.{json,md}\"",
     "format:check": "prettier --check \"**/*.{json,md}\"",
     "lint": "pnpm run format:check",
+    "test": "node --test scripts/*.test.mjs",
     "validate:json": "find assets specification -name '*.json' -print0 | xargs -0 -n 1 jq empty",
     "validate:endpoints": "node scripts/validate-endpoints.mjs",
     "validate": "pnpm run validate:json && pnpm run validate:endpoints && pnpm run format:check",
