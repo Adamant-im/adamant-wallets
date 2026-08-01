@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Updated Dogecoin node and indexer IP fallbacks for the migrated `dogenode2` host
 - Added deterministic node and service endpoint validation to the repository validation suite
 - Updated Prettier and lint-staged to their latest compatible releases
+- Updated the pinned pnpm version from 10.11.0 to 11.18.0
 
 ### Removed
 
