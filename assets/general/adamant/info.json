@@ -99,10 +99,6 @@
         {
           "url": "https://currencyinfo1.bbry.org",
           "alt_ip": "http://147.93.132.93:1948"
-        },
-        {
-          "url": "https://currencyinfo2.bbry.org",
-          "alt_ip": "http://51.15.238.199:18958"
         }
       ],
       "healthCheck": {
@@ -204,10 +200,6 @@
           {
             "url": "https://currencyinfo1.bbry.org",
             "alt_ip": "http://147.93.132.93:1948"
-          },
-          {
-            "url": "https://currencyinfo2.bbry.org",
-            "alt_ip": "http://51.15.238.199:18958"
           }
         ],
         "healthCheck": {
