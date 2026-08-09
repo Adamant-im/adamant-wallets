@@ -36,15 +36,11 @@
     "list": [
       {
         "url": "https://btcnode1.adamant.im/bitcoind",
-        "alt_ip": "http://176.9.38.204:44099/bitcoind"
+        "alt_ip": "http://75.119.138.235:44100/bitcoind"
       },
       {
         "url": "https://btcnode3.adamant.im/bitcoind",
         "alt_ip": "http://195.201.242.108:44099/bitcoind"
-      },
-      {
-        "url": "https://btcnode1.bbry.org/bitcoind",
-        "alt_ip": "http://100.42.184.57:8617/bitcoind"
       },
       {
         "url": "https://btcnode3.bbry.org/bitcoind",
@@ -69,15 +65,11 @@
       "list": [
         {
           "url": "https://btcnode1.adamant.im",
-          "alt_ip": "http://176.9.38.204:44099"
+          "alt_ip": "http://75.119.138.235:44100"
         },
         {
           "url": "https://btcnode3.adamant.im",
           "alt_ip": "http://195.201.242.108:44099"
-        },
-        {
-          "url": "https://btcnode1.bbry.org",
-          "alt_ip": "http://100.42.184.57:8617"
         },
         {
           "url": "https://btcnode3.bbry.org",

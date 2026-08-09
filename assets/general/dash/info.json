@@ -45,10 +45,6 @@
       {
         "url": "https://dashnode1.bbry.org",
         "alt_ip": "http://147.93.131.80:45272"
-      },
-      {
-        "url": "https://dashnode2.bbry.org",
-        "alt_ip": "http://51.15.238.199:50353"
       }
     ],
     "healthCheck": {
