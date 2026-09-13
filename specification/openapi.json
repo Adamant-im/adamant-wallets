@@ -347,7 +347,7 @@
               "minVersion": {
                 "type": "string",
                 "description": "Minimal node API version",
-                "example": "0.8.0"
+                "example": "0.10.0"
               },
               "nodeTimeCorrection": {
                 "type": "integer",
@@ -408,7 +408,7 @@
                   "minVersion": {
                     "type": "string",
                     "description": "Minimal node API version",
-                    "example": "0.8.0"
+                    "example": "0.10.0"
                   },
                   "nodeTimeCorrection": {
                     "type": "integer",
@@ -464,7 +464,7 @@
                   "minVersion": {
                     "type": "string",
                     "description": "Minimal node API version",
-                    "example": "0.8.0"
+                    "example": "0.10.0"
                   },
                   "nodeTimeCorrection": {
                     "type": "integer",
