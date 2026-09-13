@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- Raised the minimum ADAMANT Node API version to `0.10.0` for mainnet, testnet, and Tor nodes (from `0.8.0` for mainnet and Tor and from `0.9.0` for testnet), so ADAMANT apps use only nodes that support `includeDirectTransfers` chat queries and typed WebSocket subscriptions
+
+### Removed
+
+- Removed retired `dashnode2.bbry.org` and `currencyinfo2.bbry.org` proxy endpoints
+
 ## [2.7.0] - 2026-08-01
 
 ### Changed
