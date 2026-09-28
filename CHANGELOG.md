@@ -4,9 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Added optional `minVersion` to the OpenAPI `Service` schema
+
 ### Changed
 
 - Raised the minimum ADAMANT Node API version to `0.10.0` for mainnet, testnet, and Tor nodes (from `0.8.0` for mainnet and Tor and from `0.9.0` for testnet), so ADAMANT apps use only nodes that support `includeDirectTransfers` chat queries and typed WebSocket subscriptions
+- Set the minimum IPFS service API version to `0.1.0` for mainnet, testnet, and Tor `ipfsNode` services
 
 ### Removed
 

@@ -79,6 +79,11 @@
           },
           "displayName": {
             "type": "string"
+          },
+          "minVersion": {
+            "type": "string",
+            "description": "Minimal service API version",
+            "example": "1.0.0"
           }
         }
       },
