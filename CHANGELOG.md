@@ -7,12 +7,14 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Added optional `minVersion` to the OpenAPI `Service` schema
+- Added IP fallback `167.86.99.198` for the `dschubba.adm.im` node
 
 ### Changed
 
 - Raised the minimum ADAMANT Node API version to `0.10.0` for mainnet, testnet, and Tor nodes (from `0.8.0` for mainnet and Tor and from `0.9.0` for testnet), so ADAMANT apps use only nodes that support `includeDirectTransfers` chat queries and typed WebSocket subscriptions
 - Set the minimum IPFS service API version to `0.1.0` for mainnet, testnet, and Tor `ipfsNode` services
 - Updated the endless node IP fallback to `169.58.72.175`
+- Updated the testnode1 IP fallback to `167.86.99.198`
 - Updated the testnode3 IP fallback to `167.86.113.240`
 
 ### Removed

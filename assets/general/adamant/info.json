@@ -55,7 +55,8 @@
         "alt_ip": "http://154.26.159.245:36666"
       },
       {
-        "url": "https://dschubba.adm.im"
+        "url": "https://dschubba.adm.im",
+        "alt_ip": "http://167.86.99.198:36666"
       },
       {
         "url": "https://lake.bbry.org",
@@ -162,7 +163,7 @@
       "list": [
         {
           "url": "https://testnode1.adamant.im",
-          "alt_ip": "http://162.55.32.80:36667"
+          "alt_ip": "http://167.86.99.198:36667"
         },
         {
           "url": "http://81.0.247.181:36667"
