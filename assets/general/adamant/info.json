@@ -169,7 +169,7 @@
         },
         {
           "url": "https://testnode3.adm.im",
-          "alt_ip": "http://95.217.19.144:36667"
+          "alt_ip": "http://167.86.113.240:36667"
         }
       ],
       "healthCheck": {
